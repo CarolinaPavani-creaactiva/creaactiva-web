@@ -1,0 +1,18 @@
+# Evitar archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales de editores
+*.log
+*.tmp
+*.swp
+
+# Archivos de configuración locales
+.env
+
+# Dependencias (si usamos Composer o Node.js más adelante)
+vendor/
+node_modules/
+
+# Cache o datos generados por el servidor
+cache/
