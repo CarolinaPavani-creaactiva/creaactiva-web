@@ -1,0 +1,71 @@
+@import url('./base/_variables.css');
+@import url('./base/_layout.css');
+
+/* headerStyles.css */
+
+/* Header general */
+.header-principal {
+    background-color: transparent; /* fondo transparente */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Contenedor interno del header */
+.header-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo a la izquierda, resto a la derecha */
+    padding: 0.8rem 1.5rem;
+}
+
+/* Logo */
+.logo img {
+    height: 50px; /* ajustable según diseño */
+}
+
+/* Contenedor de navegación + botones */
+.nav-acciones {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* espacio entre la navegación y los botones */
+}
+
+/* Navegación */
+.navegacion ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 24px; /* espacio entre enlaces */
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: var(--color-azul-oscuro);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navegacion a:hover {
+    color: var(--color-azul-medio);
+}
+
+/* Botones de accesibilidad e idioma */
+.btn-accesibilidad,
+.btn-idioma {
+    background-color: transparent; /* sin fondo */
+    color: var(--color-azul-oscuro); /* texto visible */
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.btn-accesibilidad:hover,
+.btn-idioma:hover {
+    color: var(--color-azul-medio); /* cambio de color al pasar el ratón */
+}

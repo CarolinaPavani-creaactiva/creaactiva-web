@@ -1,0 +1,17 @@
+body {
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  background-color: var(--color-gris-claro);
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--espaciado-base);
+}

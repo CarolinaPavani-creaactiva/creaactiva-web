@@ -1,6 +1,3 @@
-</main>
-<footer>
-    <p>&copy; 2025 Mi sitio web</p>
+<footer class="footer-principal">
+    <p>&copy; 2025 CreaActiva</p>
 </footer>
-</body>
-</html>

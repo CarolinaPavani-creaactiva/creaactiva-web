@@ -1,0 +1,14 @@
+:root {
+  /* Colores principales */
+  --color-azul-oscuro: #103754;
+  --color-azul-medio: #2978b5;
+  --color-azul-claro: #c7e3f8;
+  --color-gris-claro: #f5f7f9;
+  --color-texto: #333;
+
+  /* Tipografía */
+  --fuente-principal: 'Poppins', 'Open Sans', Arial, sans-serif;
+
+  /* Espaciados */
+  --espaciado-base: 1rem;
+}

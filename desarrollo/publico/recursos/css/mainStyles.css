@@ -1,0 +1,53 @@
+/* ===== MAIN.CSS ===== */
+/* Solo sirve para importar los demás estilos */
+
+/* Archivos base (colores, fuentes, estructuras comunes) */
+@import url('./base/_reset.css');
+@import url('./base/_variables.css');
+@import url('./base/_layout.css');
+@import url('./base/_componentes.css');
+
+/* ===== Estilos por vista/página ===== */
+@import url('./vistas/homeStyles.css');
+@import url('./vistas/blogStyles.css');
+@import url('./vistas/equipoStyles.css');
+@import url('./vistas/serviciosStyle.css');
+@import url('./vistas/contactoStyles.css');
+/* Más adelante se pueden importar equipo, servicios, blog, etc. */
+
+/* ===== Estilos globales ===== */
+body {
+    margin: 0;
+    font-family: var(--fuente-principal);
+}
+
+/* Botón "volver arriba" compartido */
+#btn-subir {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-azul-medio);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 2000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: opacity 0.3s, background-color 0.3s;
+    opacity: 0; /* invisible hasta que se haga scroll */
+}
+
+#btn-subir:hover {
+    background-color: var(--color-azul-oscuro);
+}
+
+#btn-subir.mostrar {
+    opacity: 1;
+}
+
