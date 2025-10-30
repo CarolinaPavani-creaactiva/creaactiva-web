@@ -13,7 +13,7 @@
   justify-content: flex-start;
 }
 
-/* ===== FONDO CUERPO ===== */
+/* Imagen de Fondo */
 .home-fondo {
   position: absolute;
   top: 0;
@@ -36,7 +36,7 @@
   height: 589px; 
 }
 
-/* ===== CONTENIDO DE LA CABECERA ===== */
+/* Contenido de la Cabecera */
 .cabecera-contenido {
   display: flex;
   justify-content: center;
@@ -44,7 +44,7 @@
   position: relative;
 }
 
-/* ===== CAJA AZUL CLARO ===== */
+/* Recuadro azul claro */
 .caja-azul-claro {
   width: 1178px;
   height: 360px;
@@ -57,7 +57,7 @@
   border-radius: 10px;
 }
 
-/* ===== CAJA AZUL OSCURO ===== */
+/* Recuadro azul oscuro */
 .caja-azul-oscuro {
   width: 907px;
   height: 469px;
@@ -70,7 +70,7 @@
   border-radius: 10px;
 }
 
-/* ===== IMAGEN DENTRO DE LA CAJA OSCURA ===== */
+/* Imagen */
 .caja-azul-oscuro img {
   width: 870px;
   height: 440px;
@@ -79,7 +79,7 @@
   border-radius: 10px;
 }
 
-/* ===== TEXTO SOBRE LA IMAGEN ===== */
+/* Texto dentro de la imagen */
 .texto-hero {
   position: absolute;
   left: 60px;
@@ -96,4 +96,130 @@
 .texto-hero p {
   font-size: 1.2rem;
   color: var(--color-azul-medio);
+}
+
+
+/* ===== SECCIÓN PRESENTACIÓN ===== */
+
+.seccion-presentacion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+  background-color: var(--color-gris-claro);
+  box-sizing: border-box;
+}
+
+.contenedor-presentacion {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.titulo-seccion {
+  color: var(--color-azul-oscuro);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.titulo-bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--color-azul-oscuro);
+}
+
+.titulo-bloque h2 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.titulo-bloque p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  color: var(--color-texto);
+}
+
+.btn-principal {
+  background-color: var(--color-azul-medio);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-principal:hover {
+  background-color: var(--color-azul-oscuro);
+}
+
+/* Tarjetas */
+.bloque-tarjetas {
+  display: flex;
+  justify-content: center;          /* centra las tarjetas horizontalmente */
+  align-items: stretch;             /* iguala las alturas */
+  flex-wrap: nowrap;                /* no se van a la siguiente línea */
+  gap: 2rem;                        /* espacio entre tarjetas */
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 0;                      /* permite que todas ocupen el mismo ancho */
+  max-width: 270px;                 /* ancho máximo (según tu diseño) */
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tarjeta h3 {
+  font-size: 1.1rem;
+  color: var(--color-azul-oscuro);
+  margin: 0;
+}
+
+.tarjeta p {
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+/* Imagen final */
+.bloque-imagen-final {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.bloque-imagen-final img {
+  width: 95%;
+  max-width: 1200px;
+  max-height: 380px;       
+  border-radius: 12px;
+  object-fit: cover; /* Mantiene proporciones y recorta */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
