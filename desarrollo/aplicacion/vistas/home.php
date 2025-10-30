@@ -1,4 +1,4 @@
-<!-- CSS del header -->
+<!-- enlace al CSS  -->
 <link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
 
 <main class="home-principal">

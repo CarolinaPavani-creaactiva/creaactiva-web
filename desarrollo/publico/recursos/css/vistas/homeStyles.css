@@ -541,7 +541,7 @@
     color: var(--color-azul-oscuro);
     font-size: 1.4rem;
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     letter-spacing: 0.5px;
 }
 
@@ -572,25 +572,3 @@
     transform: scale(1.08);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-    .logos-colaboradores {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
-    }
-
-    .logos-colaboradores img {
-        width: 130px;
-    }
-}
-
-@media (max-width: 600px) {
-    .logos-colaboradores {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .logos-colaboradores img {
-        width: 110px;
-    }
-}

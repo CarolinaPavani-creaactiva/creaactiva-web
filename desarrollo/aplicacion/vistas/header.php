@@ -15,7 +15,7 @@
 <body>
     <header class="header-principal">
     <div class="container header-contenido">
-        <!-- LOGO -->
+        <!-- Logo -->
         <div class="logo">
             <a href="/creaactiva-web/desarrollo/index.php">
                 <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/logo_creaactiva.png" alt="Logo CreaActiva">

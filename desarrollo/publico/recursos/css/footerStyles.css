@@ -1,6 +1,117 @@
-.footer-principal {
-    background-color: var(--color-azul-oscuro);
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+@import url('./base/_variables.css');
+@import url('./base/_layout.css');
+
+/* === Ajustes globales para evitar scroll lateral === */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === FOOTER === */
+.footer {
+  background-color: var(--color-gris-claro);
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
+  border-top: 1px solid #e1e5e8;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor principal de columnas */
+.footer-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 1rem;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  margin-bottom: 1rem;
+}
+
+/* Enlaces legales (azul medio) */
+
+.footer-enlaces.enlaces-azules li a {
+  color: var(--color-azul-medio) !important;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-enlaces.enlaces-azules li a:hover {
+  color: var(--color-azul-oscuro) !important;
+  text-decoration: underline;
+}
+
+/* === Resto de enlaces === */
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-col ul li a {
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-azul-medio);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer-social img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+}
+
+/* === BARRA INFERIOR === */
+.footer-bottom {
+  background-color: var(--color-azul-oscuro); /* puedes usar azul medio si prefieres */
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  width: 100%;
+  border: none;          /* 🔹 sin borde lateral */
+  margin: 0;             /* 🔹 sin margen lateral */
 }
