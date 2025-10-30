@@ -2,10 +2,8 @@
 /* Solo sirve para importar los demás estilos */
 
 /* Archivos base (colores, fuentes, estructuras comunes) */
-@import url('./base/_reset.css');
 @import url('./base/_variables.css');
 @import url('./base/_layout.css');
-@import url('./base/_componentes.css');
 
 /* ===== Estilos por vista/página ===== */
 @import url('./vistas/homeStyles.css');

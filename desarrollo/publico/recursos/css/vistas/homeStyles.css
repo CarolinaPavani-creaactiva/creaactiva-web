@@ -1,5 +1,6 @@
 @import url('../base/_variables.css');
 @import url('../base/_layout.css');
+@import url('./responsive/respHome.css');
 
 /* ===== HOME STYLES ===== */
 

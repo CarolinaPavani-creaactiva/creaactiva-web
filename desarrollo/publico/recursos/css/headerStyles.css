@@ -69,3 +69,61 @@
 .btn-idioma:hover {
     color: var(--color-azul-medio); /* cambio de color al pasar el ratón */
 }
+
+/* =============================================
+    RESPONSIVE HEADER DESIGN
+   ============================================= */
+
+@media (max-width: 992px) {
+  /* Cabecera general */
+  .cabecera {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .texto-hero {
+    position: static;
+    max-width: 90%;
+    margin: 1rem auto;
+  }
+
+  .caja-azul-oscuro,
+  .caja-azul-claro {
+    width: 100%;
+    height: auto;
+  }
+
+  .caja-azul-oscuro img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .texto-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .texto-hero p {
+    font-size: 1rem;
+  }
+
+  .btn-principal {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .texto-hero p {
+    font-size: 0.9rem;
+  }
+}

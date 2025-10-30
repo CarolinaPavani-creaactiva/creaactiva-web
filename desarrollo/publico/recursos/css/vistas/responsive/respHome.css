@@ -1,0 +1,339 @@
+/* ===========================================================
+   RESPONSIVE DESIGN - AJUSTES GLOBALES
+   =========================================================== */
+
+/* === 💻 1. Pantallas grandes / monitores medianos (≤1200px) === */
+@media (max-width: 1200px) {
+  .contenedor-presentacion {
+    width: 95%;
+  }
+
+  .bloque-tarjetas {
+    gap: 1.5rem;
+  }
+
+  .cabecera {
+    height: auto;
+  }
+
+  .caja-azul-claro {
+    width: 90%;
+    height: auto;
+  }
+
+  .caja-azul-oscuro {
+    width: 90%;
+    height: auto;
+  }
+
+  .caja-azul-oscuro img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .texto-hero {
+    left: 40px;
+    max-width: 350px;
+  }
+
+  .mapa-contenedor {
+    height: auto;
+  }
+}
+
+/* === 💻 2. Tablets horizontales / pantallas medianas (≤992px) === */
+@media (max-width: 992px) {
+  /* ===== CABECERA ===== */
+  .cabecera {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .caja-azul-claro {
+    width: 90%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .caja-azul-oscuro {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    background-color: var(--color-azul-claro);
+    transition: background-color 0.3s ease;
+  }
+
+  .caja-azul-oscuro img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  .texto-hero {
+    position: static;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--color-azul-oscuro);
+  }
+
+  .texto-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .texto-hero p {
+    font-size: 1rem;
+  }
+
+  /* ===== SECCIÓN PRESENTACIÓN (Conócenos) ===== */
+  .contenedor-presentacion {
+    width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .titulo-bloque h2 {
+    font-size: 1.8rem;
+  }
+
+  .titulo-bloque p {
+    font-size: 1rem;
+    max-width: 550px;
+  }
+
+  .bloque-tarjetas {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .tarjeta {
+    flex: 1 1 45%;
+    max-width: 320px;
+  }
+
+  /* ===== SECCIÓN ESENCIA ===== */
+  .esencia-tarjetas {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .fila-superior {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .esencia-tarjeta {
+    max-width: 45%;
+    padding: 1.5rem;
+  }
+
+  .esencia-tarjeta.grande {
+    max-width: 90%;
+  }
+
+  /* ===== SECCIÓN MAPA ===== */
+  .mapa-contenedor {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .mapa-info {
+    padding: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .btn-contacto {
+    align-self: center;
+  }
+
+  .mapa-google {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    border-left: none;
+  }
+
+  /* ===== SECCIÓN COLABORADORES ===== */
+  .logos-colaboradores {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .logos-colaboradores img {
+    max-width: 120px;
+  }
+}
+
+/* === 📱 3. Tablets verticales / pantallas pequeñas (≤800px) === */
+@media (max-width: 800px) {
+  /* ===== CABECERA ===== */
+  .caja-azul-oscuro {
+    background-color: var(--color-gris-claro);
+  }
+
+  .texto-hero {
+    color: var(--color-azul-oscuro);
+  }
+
+  /* ===== PRESENTACIÓN ===== */
+  .bloque-tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 90%;
+    max-width: 380px;
+  }
+
+  /* ===== ESENCIA ===== */
+  .fila-superior,
+  .fila-inferior {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .esencia-tarjeta {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .esencia-tarjeta img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .esencia-tarjeta h3 {
+    font-size: 1.3rem;
+  }
+
+  .esencia-tarjeta h4 {
+    font-size: 1rem;
+  }
+
+  .esencia-tarjeta p {
+    font-size: 0.95rem;
+  }
+
+  .vision-columnas {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .vision-columnas .columna {
+    width: 100%;
+  }
+
+  /* ===== MAPA ===== */
+  .mapa-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .mapa-info .direccion {
+    font-size: 1rem;
+  }
+
+  .mapa-info .horario {
+    font-size: 0.95rem;
+  }
+
+  /* ===== COLABORADORES ===== */
+  .logos-colaboradores {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .logos-colaboradores img {
+    max-width: 100px;
+  }
+}
+
+/* === 📲 4. Móviles estándar (≤480px) === */
+@media (max-width: 480px) {
+  /* ===== CABECERA ===== */
+  .cabecera {
+    padding: 1.5rem 1rem;
+  }
+
+  .caja-azul-claro {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .caja-azul-oscuro {
+    background-color: var(--color-gris-claro);
+  }
+
+  .texto-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .texto-hero p {
+    font-size: 0.9rem;
+  }
+
+  /* ===== PRESENTACIÓN ===== */
+  .titulo-bloque h2 {
+    font-size: 1.5rem;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .tarjeta img {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* ===== ESENCIA ===== */
+  .esencia-tarjeta {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .esencia-tarjeta img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .esencia-tarjeta h3 {
+    font-size: 1.2rem;
+  }
+
+  .esencia-tarjeta p {
+    font-size: 0.9rem;
+  }
+
+  /* ===== MAPA ===== */
+  .mapa-contenedor {
+    padding: 1rem;
+  }
+
+  .mapa-info {
+    padding: 1rem;
+  }
+
+  .mapa-google {
+    height: 280px;
+  }
+
+  /* ===== COLABORADORES ===== */
+  .logos-colaboradores {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .logos-colaboradores img {
+    max-width: 90px;
+  }
+}
