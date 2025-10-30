@@ -1,18 +1,99 @@
-@import url('./base/_variables.css');
-@import url('./base/_layout.css');
+@import url('../base/_variables.css');
+@import url('../base/_layout.css');
 
 /* ===== HOME STYLES ===== */
 
 .home-principal {
-    margin-top: 94px; /* igual a la altura del header */
-    min-height: 1200px; /* suficiente espacio para scroll y probar botón */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    font-size: 1.5rem;
-    box-sizing: border-box;
-    padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px; /* altura del header hasta la cabecera */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* ===== FONDO CUERPO ===== */
+.home-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* que ocupe el ancho total del navegador */
+  height: 750px; /* alto ajustable del fondoBase */
+  background: url('../../imagenes/fondoBase.jpg') center/cover no-repeat;
+  opacity: 0.14;
+  z-index: 0;
+}
+
+/* ===== CABECERA PRINCIPAL ===== */
+.cabecera {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 589px; 
+}
+
+/* ===== CONTENIDO DE LA CABECERA ===== */
+.cabecera-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* ===== CAJA AZUL CLARO ===== */
+.caja-azul-claro {
+  width: 1178px;
+  height: 360px;
+  background-color: var(--color-azul-claro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+/* ===== CAJA AZUL OSCURO ===== */
+.caja-azul-oscuro {
+  width: 907px;
+  height: 469px;
+  background-color: var(--color-azul-oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* ===== IMAGEN DENTRO DE LA CAJA OSCURA ===== */
+.caja-azul-oscuro img {
+  width: 870px;
+  height: 440px;
+  object-fit: cover;
+  opacity: 0.9;
+  border-radius: 10px;
+}
+
+/* ===== TEXTO SOBRE LA IMAGEN ===== */
+.texto-hero {
+  position: absolute;
+  left: 60px;
+  color:var(--color-azul-medio);
+  text-align: left;
+  max-width: 400px;
+}
+
+.texto-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto-hero p {
+  font-size: 1.2rem;
+  color: var(--color-azul-medio);
 }

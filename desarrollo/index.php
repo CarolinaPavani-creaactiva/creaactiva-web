@@ -16,3 +16,4 @@ if (in_array($page, $allowed_pages)) {
 
 include 'aplicacion/vistas/footer.php';
 ?>
+

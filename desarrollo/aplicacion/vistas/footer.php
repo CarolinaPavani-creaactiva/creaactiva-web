@@ -1,3 +1,5 @@
-<footer class="footer-principal">
-    <p>&copy; 2025 CreaActiva</p>
-</footer>
+        <footer class="footer-principal">
+            <p>&copy; 2025 CreaActiva</p>
+        </footer>
+    </body>
+</html>
