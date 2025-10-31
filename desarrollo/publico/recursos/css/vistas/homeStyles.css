@@ -16,20 +16,6 @@
     justify-content: flex-start;
 }
 
-/* Imagen de Fondo */
-.home-fondo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    /* que ocupe el ancho total del navegador */
-    height: 750px;
-    /* alto ajustable del fondoBase */
-    background: url('../../imagenes/fondoBase.jpg') center/cover no-repeat;
-    opacity: 0.14;
-    z-index: 0;
-}
-
 /* ===== CABECERA PRINCIPAL ===== */
 .cabecera {
     position: relative;
@@ -505,28 +491,6 @@
 .mapa-google:hover iframe {
     transform: scale(1.03);
     filter: grayscale(0%) brightness(100%);
-}
-
-/* ===== DIVISOR DECORADO ===== */
-
-.divisor-decorado {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.08);
-}
-
-.divisor-decorado::after {
-    content: " ✧";
-    background-color: var(--color-gris-claro);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-azul-empresa);
-    padding: 0 0.8rem;
-    font-size: 1rem;
 }
 
 /* === SECCIÓN COLABORADORES === */

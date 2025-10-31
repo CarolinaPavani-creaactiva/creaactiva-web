@@ -1,0 +1,499 @@
+@import url('../base/_variables.css');
+@import url('../base/_layout.css');
+
+/* ===== SERVICIOS STYLES ===== */
+
+/* ===============================
+   PÁGINA DE SERVICIOS - ESTILOS BASE
+   =============================== */
+
+.pagina-servicios {
+  margin-top: 60px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === 1. CABECERA === */
+.serviciosCabecera {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 739px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #c7eeff 100%);
+}
+
+.serviciosCabecera-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 4rem;
+}
+
+.serviciosCabecera img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bloque-derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  text-align: left;
+}
+
+.bloque-derecha h1 {
+  font-size: 2.2rem;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 1rem;
+}
+
+.bloque-derecha p {
+  font-size: 1.1rem;
+  color: var(--color-texto);
+  margin-bottom: 1.5rem;
+}
+
+.btn-principal {
+  background-color: var(--color-azul-medio);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-principal:hover {
+  background-color: var(--color-azul-oscuro);
+  transform: translateY(-2px);
+}
+
+/* === 2. SECCIÓN COMPARATIVA === */
+.seccion-comparativa {
+  text-align: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.seccion-comparativa h2 {
+  font-size: 2rem;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.seccion-comparativa p {
+  color: var(--color-texto);
+  margin-bottom: 2rem;
+}
+
+.tabla-comparativa {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-comparativa th {
+  background: var(--color-azul-medio);
+  color: white;
+  padding: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.tabla-comparativa td {
+  padding: 1rem;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 1rem;
+  color: var(--color-texto);
+}
+
+.tabla-comparativa tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-comparativa td:nth-child(2),
+.tabla-comparativa td:nth-child(3) {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* === 3. SERVICIOS OFRECIDOS === */
+.serviciosOfrecidos {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 4rem 2rem;
+  background-color: var(--color-gris-claro);
+}
+
+.serviciosOfrecidos h2 {
+  font-size: 2rem;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.serviciosOfrecidos p {
+  color: var(--color-texto);
+  margin-bottom: 3rem;
+}
+
+.tarjetas-servicios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarjetas-servicios .tarjeta {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  width: 336px;
+  min-height: 385px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjetas-servicios .tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h4 {
+  color: var(--color-azul-medio);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.tarjeta h3 {
+  color: var(--color-azul-oscuro);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.tarjeta ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tarjeta ul li::before {
+  content: "✔️ ";
+  color: var(--color-azul-medio);
+}
+
+.tarjeta ul li {
+  font-size: 1rem;
+  color: var(--color-texto);
+  margin-bottom: 0.6rem;
+}
+
+/* === 4. TESTIMONIOS === */
+.seccion-testimonios {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto 5rem auto;
+  /* antes 5rem auto */
+  padding: 4rem 3rem;
+  background-color: var(--color-gris-claro);
+  box-sizing: border-box;
+}
+
+
+.seccion-testimonios h2 {
+  font-size: 2rem;
+  color: var(--color-azul-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.seccion-testimonios p {
+  color: var(--color-texto);
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.carrusel-testimonios {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0 1.5rem;
+  justify-content: flex-start;
+  scrollbar-width: thin;
+}
+
+.carrusel-testimonios::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carrusel-testimonios::-webkit-scrollbar-thumb {
+  background: var(--color-azul-claro);
+  border-radius: 10px;
+}
+
+/* 🔹 Tarjeta más compacta */
+.tarjeta-testimonio {
+  width: 300px;
+  height: 280px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-testimonio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-testimonio p {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.tarjeta-testimonio .datos {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.tarjeta-testimonio img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tarjeta-testimonio .info h4 {
+  color: var(--color-azul-oscuro);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.tarjeta-testimonio .info p {
+  font-size: 0.8rem;
+  color: var(--color-texto);
+  margin: 0;
+}
+
+
+/* === 5. VIDEO === */
+/*.seccion-video {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.seccion-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
+  border: none;
+}*/
+
+/* ===== SECCIÓN DE CONTACTO ===== */
+.seccion-contacto {
+  background-color: var(--color-gris-claro);
+  padding: 4rem 1.5rem;
+  /* un poco menos de padding vertical */
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-contacto {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.seccion-contacto h2 {
+  color: var(--color-azul-empresa);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-contacto p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
+.seccion-contacto {
+  background-color: var(--color-gris-claro);
+  padding: 4rem 1.5rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-contacto {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.seccion-contacto h2 {
+  color: var(--color-azul-empresa);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-contacto p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+.formulario-contacto iframe {
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* === 6. COLABORADORES === */
+.seccion-colaboradores {
+  width: 100%;
+  background-color: var(--color-gris-claro);
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.seccion-colaboradores h3 {
+  color: var(--color-azul-oscuro);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.logos-colaboradores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  justify-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.logos-colaboradores img {
+  width: 140px;
+  opacity: 0.8;
+  filter: grayscale(100%) brightness(90%);
+  transition: all 0.3s ease;
+}
+
+.logos-colaboradores img:hover {
+  opacity: 1;
+  filter: grayscale(0%) brightness(100%);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+
+/* === Tablets (max 992px) === */
+@media (max-width: 992px) {
+  .serviciosCabecera-contenido {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .bloque-derecha {
+    align-items: center;
+  }
+
+  .bloque-derecha h1 {
+    font-size: 1.9rem;
+  }
+
+  .serviciosCabecera img {
+    width: 90%;
+    height: auto;
+  }
+
+  .tabla-comparativa th,
+  .tabla-comparativa td {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .tarjetas-servicios .tarjeta {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .tarjeta-testimonio {
+    min-width: 300px;
+  }
+}
+
+/* === Móviles (max 600px) === */
+@media (max-width: 600px) {
+  .pagina-servicios {
+    margin-top: 40px;
+  }
+
+  .bloque-derecha h1 {
+    font-size: 1.6rem;
+  }
+
+  .bloque-derecha p {
+    font-size: 1rem;
+  }
+
+  .tabla-comparativa {
+    font-size: 0.9rem;
+  }
+
+  .tarjetas-servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-testimonio {
+    min-width: 260px;
+    padding: 1rem;
+  }
+
+  .tarjeta-testimonio p {
+    font-size: 0.9rem;
+  }
+}

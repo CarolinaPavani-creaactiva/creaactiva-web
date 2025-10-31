@@ -1,9 +1,9 @@
 <!-- enlace al CSS  -->
 <link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
 
-<main class="home-principal">
+<div class="home-fondo"></div> <!-- Fondo global -->
 
-    <div class="home-fondo"></div> <!-- Fondo global del body -->
+<main class="home-principal">
 
     <!-- ===== SECCIÓN CABECERA ===== -->
     <section class="cabecera">
@@ -72,6 +72,8 @@
             </div>
         </div>
     </section>
+
+     <div class="divisor-decorado"></div>
 
     <!-- ===== SECCIÓN BLOG / INTRO EMPRESA ===== -->
     <section class="seccion-blog">

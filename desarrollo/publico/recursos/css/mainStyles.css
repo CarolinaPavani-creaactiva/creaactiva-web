@@ -9,17 +9,17 @@
 @import url('./vistas/homeStyles.css');
 @import url('./vistas/blogStyles.css');
 @import url('./vistas/equipoStyles.css');
-@import url('./vistas/serviciosStyle.css');
+@import url('./vistas/serviciosStyles.css');
 @import url('./vistas/contactoStyles.css');
 /* Más adelante se pueden importar equipo, servicios, blog, etc. */
 
-/* ===== Estilos globales ===== */
+/* ===== ESTILOS GLOBALES ===== */
 body {
     margin: 0;
     font-family: var(--fuente-principal);
 }
 
-/* Botón "volver arriba" compartido */
+/* ===== BOTÓN VOLVER ARRIBA COMPARTIDO ===== */
 #btn-subir {
     position: fixed;
     bottom: 40px;
@@ -49,3 +49,38 @@ body {
     opacity: 1;
 }
 
+/* ===== IMAGEN DE FONDO  ===== */
+.home-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* que ocupe el ancho total del navegador */
+    height: 750px;
+    /* alto ajustable del fondoBase */
+    background: url('../imagenes/fondoBase.jpg') center/cover no-repeat;
+    opacity: 0.14;
+    z-index: 0;
+}
+
+/* ===== DIVISOR DECORADO ===== */
+.divisor-decorado {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin: 0 auto; /* ⬅️ centra horizontalmente sin añadir espacio vertical */
+}
+
+.divisor-decorado::after {
+  content: "✧";
+  background-color: var(--color-gris-claro);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-azul-empresa);
+  padding: 0 0.8rem;
+  font-size: 1rem;
+}
