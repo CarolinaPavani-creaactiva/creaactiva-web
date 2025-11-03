@@ -26,6 +26,7 @@
     <section class="seccion-comparativa">
         <h2>¿Por qué elegir Creactiva?</h2>
         <p>Combinamos experiencia e innovación para ofrecer resultados que marcan la diferencia.</p>
+
         <table class="tabla-comparativa">
             <thead>
                 <tr>
@@ -37,33 +38,33 @@
             <tbody>
                 <tr>
                     <td>Consultoría educativa</td>
-                    <td>✔️</td>
-                    <td>❌</td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
                 </tr>
                 <tr>
                     <td>Formación profesional</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
                 </tr>
                 <tr>
                     <td>Digitalización de centros</td>
-                    <td>✔️</td>
-                    <td>❌</td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
                 </tr>
                 <tr>
                     <td>Gestión de proyectos</td>
-                    <td>✔️</td>
-                    <td>❌</td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
                 </tr>
                 <tr>
                     <td>Soporte continuo</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
                 </tr>
                 <tr>
                     <td>Asesoría personalizada</td>
-                    <td>✔️</td>
-                    <td>❌</td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
+                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
                 </tr>
             </tbody>
         </table>
@@ -81,33 +82,45 @@
                 <h4>Inicio Educativo</h4>
                 <h3>Apoyo para nuevos centros</h3>
                 <ul>
-                    <li>Evaluación inicial</li>
-                    <li>Herramientas de gestión</li>
-                    <li>Definición de misión y visión</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Evaluación inicial</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Herramientas de gestión</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Definición de misión y visión</li>
                 </ul>
             </div>
+
             <div class="tarjeta">
                 <h4>Impulso Académico</h4>
                 <h3>Mejora del rendimiento</h3>
                 <ul>
-                    <li>Plan de estudios optimizado</li>
-                    <li>Capacitación docente</li>
-                    <li>Estrategias de evaluación</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick"> Plan
+                        de estudios optimizado</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Capacitación docente</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Estrategias de evaluación</li>
                 </ul>
             </div>
+
             <div class="tarjeta">
                 <h4>Transformación Digital</h4>
                 <h3>Innovación tecnológica</h3>
                 <ul>
-                    <li>Integración de plataformas</li>
-                    <li>Automatización de procesos</li>
-                    <li>Formación digital</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Integración de plataformas</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Automatización de procesos</li>
+                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                        Formación digital</li>
                 </ul>
             </div>
         </div>
 
         <button class="btn-principal">Consultar disponibilidad</button>
     </section>
+
 
     <div class="divisor-decorado"></div>
 
