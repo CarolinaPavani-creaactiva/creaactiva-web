@@ -106,14 +106,14 @@ html, body {
 
 /* === BARRA INFERIOR === */
 .footer-bottom {
-  background-color: var(--color-azul-oscuro); /* puedes usar azul medio si prefieres */
+  background-color: var(--color-azul-oscuro); 
   color: white;
   text-align: center;
   font-size: 0.9rem;
   padding: 1rem 0;
   width: 100%;
-  border: none;          /* 🔹 sin borde lateral */
-  margin: 0;             /* 🔹 sin margen lateral */
+  border: none;          
+  margin: 0;          
 }
 
 /* =============================================

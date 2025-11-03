@@ -8,7 +8,6 @@
     position: relative;
     overflow: hidden;
     margin-top: 50px;
-    /* altura del header hasta la cabecera */
     padding: 3.5rem;
     display: flex;
     flex-direction: column;
@@ -173,7 +172,7 @@
     flex: 1 1 0;
     /* permite que todas ocupen el mismo ancho */
     max-width: 270px;
-    /* ancho máximo (según tu diseño) */
+    /* ancho máximo */
     padding: 1.5rem;
     text-align: center;
     display: flex;
@@ -218,7 +217,6 @@
     max-height: 380px;
     border-radius: 12px;
     object-fit: cover;
-    /* Mantiene proporciones y recorta */
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -524,7 +522,6 @@
 /* Estilo de los logos */
 .logos-colaboradores img {
     width: 160px;
-    /* 🔹 Más grandes */
     height: auto;
     filter: grayscale(100%) brightness(90%);
     opacity: 0.8;

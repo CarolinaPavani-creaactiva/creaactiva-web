@@ -3,10 +3,6 @@
 
 /* ===== SERVICIOS STYLES ===== */
 
-/* ===============================
-   PÁGINA DE SERVICIOS - ESTILOS BASE
-   =============================== */
-
 .pagina-servicios {
   margin-top: 60px;
   overflow: hidden;
@@ -216,7 +212,6 @@
   width: 100%;
   max-width: 1200px;
   margin: 2rem auto 5rem auto;
-  /* antes 5rem auto */
   padding: 4rem 3rem;
   background-color: var(--color-gris-claro);
   box-sizing: border-box;
@@ -254,7 +249,7 @@
   border-radius: 10px;
 }
 
-/* 🔹 Tarjeta más compacta */
+/*  Tarjetas */
 .tarjeta-testimonio {
   width: 300px;
   height: 280px;
@@ -328,7 +323,6 @@
 .seccion-contacto {
   background-color: var(--color-gris-claro);
   padding: 4rem 1.5rem;
-  /* un poco menos de padding vertical */
   display: flex;
   justify-content: center;
 }

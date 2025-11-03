@@ -33,7 +33,7 @@
                         centros educativos.</p>
                     <button class="btn-principal">Conócenos</button>
                 </div>
-
+                <!-- ===== TARJETAS PRESENTACIÓN ===== -->
                 <div class="bloque-tarjetas">
                     <div class="tarjeta">
                         <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/consultoria.svg"

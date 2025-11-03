@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CreaActiva</title>
 
-    <!-- CSS del header -->
+    <!-- enlace al CSS -->
     <link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/headerStyles.css">
 
     <!-- Fuente -->
@@ -15,14 +15,14 @@
 <body>
     <header class="header-principal">
     <div class="container header-contenido">
-        <!-- Logo -->
+        <!-- LOGO -->
         <div class="logo">
             <a href="/creaactiva-web/desarrollo/index.php">
                 <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/logo_creaactiva.png" alt="Logo CreaActiva">
             </a>
         </div>
 
-        <!-- Navegación + Botones -->
+        <!-- NAVEGACION + BOTONES -->
         <div class="nav-acciones">
             <nav class="navegacion">
                 <ul>

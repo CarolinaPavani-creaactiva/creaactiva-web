@@ -55,9 +55,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    /* que ocupe el ancho total del navegador */
-    height: 750px;
-    /* alto ajustable del fondoBase */
+    height: 750px; /* alto ajustable del fondoBase */
     background: url('../imagenes/fondoBase.jpg') center/cover no-repeat;
     opacity: 0.14;
     z-index: 0;
@@ -70,7 +68,7 @@ body {
   max-width: 900px;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.08);
-  margin: 0 auto; /* ⬅️ centra horizontalmente sin añadir espacio vertical */
+  margin: 0 auto;
 }
 
 .divisor-decorado::after {

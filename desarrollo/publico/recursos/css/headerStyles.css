@@ -1,7 +1,8 @@
 @import url('./base/_variables.css');
 @import url('./base/_layout.css');
 
-/* headerStyles.css */
+
+/* ===== HEADER STYLES ===== */
 
 /* Header general */
 .header-principal {
@@ -17,20 +18,20 @@
 .header-contenido {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Logo a la izquierda, resto a la derecha */
+    justify-content: space-between; 
     padding: 0.8rem 1.5rem;
 }
 
 /* Logo */
 .logo img {
-    height: 50px; /* ajustable según diseño */
+    height: 50px; 
 }
 
 /* Contenedor de navegación + botones */
 .nav-acciones {
     display: flex;
     align-items: center;
-    gap: 24px; /* espacio entre la navegación y los botones */
+    gap: 24px; 
 }
 
 /* Navegación */
@@ -39,7 +40,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 24px; /* espacio entre enlaces */
+    gap: 24px; 
 }
 
 .navegacion a {
@@ -57,7 +58,7 @@
 .btn-accesibilidad,
 .btn-idioma {
     background-color: transparent; /* sin fondo */
-    color: var(--color-azul-oscuro); /* texto visible */
+    color: var(--color-azul-oscuro); 
     border: none;
     padding: 0.4rem 0.8rem;
     cursor: pointer;
@@ -67,7 +68,7 @@
 
 .btn-accesibilidad:hover,
 .btn-idioma:hover {
-    color: var(--color-azul-medio); /* cambio de color al pasar el ratón */
+    color: var(--color-azul-medio); 
 }
 
 /* =============================================

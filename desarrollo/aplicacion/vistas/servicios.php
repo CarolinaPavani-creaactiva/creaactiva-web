@@ -5,7 +5,7 @@
 
 <main class="servicios-principal">
 
-    <!-- 🟦 1. CABECERA -->
+    <!-- 1. CABECERA -->
     <section class="serviciosCabecera">
         <div class="serviciosCabecera-contenido">
             <div class="bloque-izquierda">
@@ -22,7 +22,7 @@
 
     <div class="divisor-decorado"></div>
 
-    <!-- 🧾 2. SECCIÓN COMPARATIVA -->
+    <!-- 2. SECCIÓN COMPARATIVA -->
     <section class="seccion-comparativa">
         <h2>¿Por qué elegir Creactiva?</h2>
         <p>Combinamos experiencia e innovación para ofrecer resultados que marcan la diferencia.</p>
@@ -71,7 +71,7 @@
 
     <div class="divisor-decorado"></div>
 
-    <!-- 💡 3. SERVICIOS OFRECIDOS -->
+    <!-- 3. SERVICIOS OFRECIDOS -->
     <section class="serviciosOfrecidos">
         <h2>Servicios destacados</h2>
         <p>Consulta los servicios más populares adaptados a tus necesidades.</p>
@@ -111,7 +111,7 @@
 
     <div class="divisor-decorado"></div>
 
-    <!-- 💬 4. TESTIMONIOS -->
+    <!-- 4. TESTIMONIOS -->
     <section class="seccion-testimonios">
         <h2>Testimonios</h2>
         <p>Lo que opinan nuestros clientes</p>
@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <!-- Añade 4 más para el scroll -->
+            <!-- Scroll de tarjeta-testimonio -->
             <div class="tarjeta-testimonio">
                 <p>“Servicio impecable y muy humano.”</p>
                 <div class="datos"><img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg">
@@ -181,7 +181,7 @@
 
     <div class="divisor-decorado"></div>
 
-    <!-- 🎥 5. VIDEO 
+    <!-- 5. VIDEO 
     <section class="seccion-video">
         <a href="https://www.youtube.com/watch?v=XXXX" target="_blank" class="video-enlace">
             <video autoplay loop muted playsinline>
@@ -209,7 +209,7 @@
         </div>
     </section>
 
-    <!-- 🧩 6. LICENCIAS / COLABORADORES -->
+    <!-- 6. LICENCIAS / COLABORADORES -->
     <section class="seccion-colaboradores">
         <h3>Nuestras licencias y colaboradores</h3>
         <div class="logos-colaboradores">

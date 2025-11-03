@@ -4,7 +4,7 @@
 <footer class="footer">
     <div class="footer-contenedor">
 
-        <!-- Columna 1: Logo + info -->
+        <!-- COLUMNA 1: LOGO + INFO -->
         <div class="footer-col">
             <h3>Creaactiva</h3>
             <p>Consultoría educativa y formación digital</p>
@@ -23,7 +23,7 @@
             </div>
         </div>
 
-        <!-- Columna 2 -->
+        <!-- COLUMNA 2 -->
         <div class="footer-col">
             <h4>Departamentos</h4>
             <ul>
@@ -33,7 +33,7 @@
             </ul>
         </div>
 
-        <!-- Columna 3 -->
+        <!-- COLUMNA 3 -->
         <div class="footer-col">
             <h4>Leer sobre</h4>
             <ul>
@@ -44,7 +44,7 @@
             </ul>
         </div>
 
-        <!-- Columna 4 -->
+        <!-- COLUMNA 4 -->
         <div class="footer-col">
             <h4>Soporte</h4>
             <ul>
@@ -54,7 +54,7 @@
         </div>
 
     </div>
-    <!-- Barra inferior -->
+    <!-- BARRA INFERIOR -->
     <div class="footer-bottom">
         <p>© 2025 Creaactiva. Todos los derechos reservados.</p>
     </div>

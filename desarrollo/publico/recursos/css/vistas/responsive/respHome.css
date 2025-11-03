@@ -2,8 +2,9 @@
    RESPONSIVE DESIGN - AJUSTES GLOBALES
    =========================================================== */
 
-/* === 💻 1. Pantallas grandes / monitores medianos (≤1200px) === */
+/* === 1. Pantallas grandes / monitores medianos (≤1200px) === */
 @media (max-width: 1200px) {
+  
   .contenedor-presentacion {
     width: 95%;
   }
@@ -42,8 +43,9 @@
   }
 }
 
-/* === 💻 2. Tablets horizontales / pantallas medianas (≤992px) === */
+/* === 2. Tablets horizontales / pantallas medianas (≤992px) === */
 @media (max-width: 992px) {
+
   /* ===== CABECERA ===== */
   .cabecera {
     padding: 2rem 1rem;
@@ -172,8 +174,9 @@
   }
 }
 
-/* === 📱 3. Tablets verticales / pantallas pequeñas (≤800px) === */
+/* === 3. Tablets verticales / pantallas pequeñas (≤800px) === */
 @media (max-width: 800px) {
+
   /* ===== CABECERA ===== */
   .caja-azul-oscuro {
     background-color: var(--color-gris-claro);
@@ -256,8 +259,9 @@
   }
 }
 
-/* === 📲 4. Móviles estándar (≤480px) === */
+/* === 4. Móviles estándar (≤480px) === */
 @media (max-width: 480px) {
+
   /* ===== CABECERA ===== */
   .cabecera {
     padding: 1.5rem 1rem;
