@@ -13,6 +13,14 @@
 @import url('./vistas/contactoStyles.css');
 /* Más adelante se pueden importar equipo, servicios, blog, etc. */
 
+/* ===== Responsive de las paginas ===== */
+@import url('./vistas/responsive/respHome.css');
+@import url('./vistas/responsive/respHeader.css');
+@import url('./vistas/responsive/respFooter.css');
+@import url('./vistas/responsive/respServicios.css');
+
+
+
 /* ===== ESTILOS GLOBALES ===== */
 body {
     margin: 0;
@@ -82,3 +90,31 @@ body {
   padding: 0 0.8rem;
   font-size: 1rem;
 }
+
+/* ==== CENTRAR TARJETAS EN MÓVIL ==== */
+@media (max-width: 768px) {
+  .fila-superior {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra horizontalmente */
+    justify-content: center;
+  }
+
+  .esencia-tarjeta {
+    width: 90%; /* ajusta el tamaño */
+    max-width: 400px; /* opcional: evita que se hagan muy grandes */
+    margin: 10px 0; /* separa verticalmente */
+  }
+
+  .esencia-tarjeta img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .esencia-tarjeta h4,
+  .esencia-tarjeta p {
+    text-align: center;
+  }
+}
+
+

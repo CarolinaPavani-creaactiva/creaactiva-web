@@ -22,53 +22,68 @@
 
     <div class="divisor-decorado"></div>
 
-    <!-- 2. SECCIÓN COMPARATIVA -->
+    <!-- ===== SECCIÓN COMPARATIVA ===== -->
     <section class="seccion-comparativa">
         <h2>¿Por qué elegir Creactiva?</h2>
         <p>Combinamos experiencia e innovación para ofrecer resultados que marcan la diferencia.</p>
 
-        <table class="tabla-comparativa">
-            <thead>
-                <tr>
-                    <th>Servicio</th>
-                    <th>Creactiva</th>
-                    <th>Otros proveedores</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Consultoría educativa</td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
-                </tr>
-                <tr>
-                    <td>Formación profesional</td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                </tr>
-                <tr>
-                    <td>Digitalización de centros</td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
-                </tr>
-                <tr>
-                    <td>Gestión de proyectos</td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
-                </tr>
-                <tr>
-                    <td>Soporte continuo</td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                </tr>
-                <tr>
-                    <td>Asesoría personalizada</td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí"></td>
-                    <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="comparativa-grupo">
+            <table class="tabla-comparativa">
+                <thead>
+                    <tr>
+                        <th>Servicio</th>
+                        <th>Creactiva</th>
+                        <th>Otros proveedores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Consultoría educativa</td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Formación profesional</td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Digitalización de centros</td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gestión de proyectos</td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Soporte continuo</td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Asesoría personalizada</td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        </td>
+                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
+
 
     <div class="divisor-decorado"></div>
 

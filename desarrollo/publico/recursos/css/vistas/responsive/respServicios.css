@@ -1,0 +1,167 @@
+/* =========================
+   RESPONSIVE SERVICIOS
+========================= */
+
+/* === TABLET (hasta 1024px) === */
+@media (max-width: 1024px) {
+  .serviciosCabecera-contenido {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Imagen más grande */
+  .bloque-izquierda img {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+  }
+
+  .bloque-derecha {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bloque-derecha h1 {
+    font-size: 1.9rem;
+  }
+
+  /* Centrar el botón */
+  .bloque-derecha .btn-principal {
+    align-self: center;
+    margin: 1.5rem auto 0;
+  }
+
+  .seccion-comparativa {
+    padding: 2rem 1.5rem;
+  }
+
+  .tabla-comparativa {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .tabla-comparativa th,
+  .tabla-comparativa td {
+    padding: 0.8rem;
+  }
+}
+
+/* === MÓVIL (hasta 768px) === */
+@media (max-width: 768px) {
+  main.servicios-principal {
+    padding: 0 1rem;
+  }
+
+  .serviciosCabecera {
+    padding: 3rem 1rem;
+  }
+
+  .serviciosCabecera-contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Imagen aún grande, más centrada */
+  .bloque-izquierda img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+  }
+
+  .bloque-derecha {
+    align-items: center;
+    text-align: center;
+  }
+
+  .bloque-derecha h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .bloque-derecha p {
+    font-size: 1rem;
+  }
+
+  /* Centrar el botón también aquí */
+  .bloque-derecha .btn-principal {
+    align-self: center;
+    margin: 1.2rem auto 0;
+  }
+
+  .seccion-comparativa {
+    padding: 2rem 1rem;
+  }
+
+  .tabla-comparativa {
+    width: 95%;
+    font-size: 0.85rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .tabla-comparativa th,
+  .tabla-comparativa td {
+    padding: 0.6rem;
+  }
+
+  .tabla-comparativa img {
+    height: 18px;
+  }
+}
+
+/* === MÓVIL PEQUEÑO (hasta 480px) === */
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .serviciosCabecera {
+    padding: 2.5rem 0.8rem;
+    text-align: center;
+  }
+
+  .bloque-izquierda img {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 1rem;
+  }
+
+  .bloque-derecha {
+    align-items: center;
+  }
+
+  .bloque-derecha h1 {
+    font-size: 1.4rem;
+  }
+
+  .bloque-derecha p {
+    font-size: 0.95rem;
+  }
+
+  /* Botón bien centrado */
+  .bloque-derecha .btn-principal {
+    align-self: center;
+    margin: 1rem auto 0;
+  }
+
+  .seccion-comparativa {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .tabla-comparativa {
+    width: 100%;
+    max-width: 340px;
+    font-size: 0.8rem;
+  }
+
+  .tabla-comparativa th,
+  .tabla-comparativa td {
+    padding: 0.5rem;
+  }
+
+  .tabla-comparativa td img {
+    width: 18px;
+    height: 18px;
+  }
+}

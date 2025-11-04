@@ -77,6 +77,7 @@
 }
 
 /* === 2. SECCIÓN COMPARATIVA === */
+/* === 2. SECCIÓN COMPARATIVA === */
 .seccion-comparativa {
   text-align: center;
   width: 100%;
@@ -93,18 +94,30 @@
 
 .seccion-comparativa p {
   color: var(--color-texto);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.comparativa-grupo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* === TABLA COMPARATIVA === */
 .tabla-comparativa {
   width: 100%;
+  max-width: 900px;
   border-collapse: collapse;
-  background: #ffffff;
-  border-radius: 4px;
+  background: #fff;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  table-layout: fixed;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tabla-comparativa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .tabla-comparativa th {
@@ -118,7 +131,7 @@
 
 .tabla-comparativa td {
   padding: 1rem;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: 1px solid #eaeaea;
   font-size: 1rem;
   color: var(--color-texto);
 }
@@ -143,21 +156,20 @@
   opacity: 0.95;
 }
 
-/* ✅ Tick (verde) Aplicación de filtro para modificar el color de negro a verde*/
+/* ✅ Tick verde */
 .tabla-comparativa td img[src*="tick"] {
   width: 26px;
   height: 26px;
   filter: brightness(0) saturate(100%) invert(33%) sepia(94%) saturate(1334%) hue-rotate(186deg) brightness(97%) contrast(101%);
 }
 
-/* ❌ Cross (rojo) Aplicación de filtro para modificar el color de negro a rojo */
+/* ❌ Cross rojo */
 .tabla-comparativa td img[src*="cross"] {
   width: 22px;
   height: 22px;
   filter: brightness(0) saturate(100%) invert(76%) sepia(0%) saturate(0%) hue-rotate(177deg) brightness(92%) contrast(92%);
 }
 
-/* Hover sutil */
 .tabla-comparativa td img:hover {
   transform: scale(1.1);
   opacity: 1;
@@ -433,76 +445,3 @@
   transform: scale(1.05);
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-   =============================== */
-
-/* === Tablets (max 992px) === */
-@media (max-width: 992px) {
-  .serviciosCabecera-contenido {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .bloque-derecha {
-    align-items: center;
-  }
-
-  .bloque-derecha h1 {
-    font-size: 1.9rem;
-  }
-
-  .serviciosCabecera img {
-    width: 90%;
-    height: auto;
-  }
-
-  .tabla-comparativa th,
-  .tabla-comparativa td {
-    font-size: 0.95rem;
-    padding: 0.8rem;
-  }
-
-  .tarjetas-servicios .tarjeta {
-    width: 90%;
-    max-width: 400px;
-  }
-
-  .tarjeta-testimonio {
-    min-width: 300px;
-  }
-}
-
-/* === Móviles (max 600px) === */
-@media (max-width: 600px) {
-  .pagina-servicios {
-    margin-top: 40px;
-  }
-
-  .bloque-derecha h1 {
-    font-size: 1.6rem;
-  }
-
-  .bloque-derecha p {
-    font-size: 1rem;
-  }
-
-  .tabla-comparativa {
-    font-size: 0.9rem;
-  }
-
-  .tarjetas-servicios {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tarjeta-testimonio {
-    min-width: 260px;
-    padding: 1rem;
-  }
-
-  .tarjeta-testimonio p {
-    font-size: 0.9rem;
-  }
-}

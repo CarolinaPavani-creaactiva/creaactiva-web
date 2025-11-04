@@ -1,130 +1,101 @@
 @import url('./base/_variables.css');
 @import url('./base/_layout.css');
 
-
 /* ===== HEADER STYLES ===== */
 
 /* Header general */
 .header-principal {
-    background-color: #f5f7f9; 
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    position: relative;
-    top: 0;
-    z-index: 1000;
+  background-color: #f5f7f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  z-index: 1000;
 }
-
 
 /* Contenedor interno del header */
 .header-contenido {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  flex-wrap: nowrap;
 }
 
 /* Logo */
 .logo img {
-    height: 50px; 
+  height: 50px;
 }
 
 /* Contenedor de navegación + botones */
 .nav-acciones {
-    display: flex;
-    align-items: center;
-    gap: 24px; 
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
-/* Navegación */
+/* ===== NAVEGACIÓN ===== */
 .navegacion ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 24px; 
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
 }
 
 .navegacion a {
-    text-decoration: none;
-    color: var(--color-azul-oscuro);
-    font-weight: 500;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: var(--color-azul-oscuro);
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .navegacion a:hover {
-    color: var(--color-azul-medio);
+  color: var(--color-azul-medio);
 }
 
-/* Botones de accesibilidad e idioma */
+/* ===== BOTONES ===== */
 .btn-accesibilidad,
 .btn-idioma {
-    background-color: transparent; /* sin fondo */
-    color: var(--color-azul-oscuro); 
-    border: none;
-    padding: 0.4rem 0.8rem;
-    cursor: pointer;
-    font-weight: 600;
-    transition: color 0.3s;
+  background-color: transparent;
+  color: var(--color-azul-oscuro);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 .btn-accesibilidad:hover,
 .btn-idioma:hover {
-    color: var(--color-azul-medio); 
+  color: var(--color-azul-medio);
 }
 
-/* =============================================
-    RESPONSIVE HEADER DESIGN
-   ============================================= */
-
-@media (max-width: 992px) {
-  /* Cabecera general */
-  .cabecera {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .texto-hero {
-    position: static;
-    max-width: 90%;
-    margin: 1rem auto;
-  }
-
-  .caja-azul-oscuro,
-  .caja-azul-claro {
-    width: 100%;
-    height: auto;
-  }
-
-  .caja-azul-oscuro img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+/* === BOTÓN HAMBURGUESA (BASE) === */
+.btn-menu {
+  position: relative;
+  width: 32px;
+  height: 24px;
+  display: none; /* solo visible en móvil */
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1001;
 }
 
-@media (max-width: 768px) {
-  .texto-hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .texto-hero p {
-    font-size: 1rem;
-  }
-
-  .btn-principal {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.8rem;
-  }
+.btn-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--color-azul-oscuro);
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
 }
 
-@media (max-width: 480px) {
-  .texto-hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .texto-hero p {
-    font-size: 0.9rem;
-  }
+/* Hover del botón */
+.btn-menu:hover span {
+  background: var(--color-azul-medio);
 }
+

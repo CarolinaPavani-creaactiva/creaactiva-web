@@ -1,0 +1,120 @@
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+/* === TABLET (768px - 991px) === */
+@media (max-width: 991px) {
+  .header-contenido {
+    padding: 0.6rem 1rem;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .navegacion ul {
+    gap: 16px;
+  }
+
+  .navegacion a {
+    font-size: 0.95rem;
+  }
+
+  .acciones-header {
+    gap: 12px;
+  }
+}
+
+/* === MÓVIL (<768px) === */
+@media (max-width: 768px) {
+  .btn-menu {
+    display: flex;
+  }
+
+  .header-contenido {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Menú oculto inicialmente */
+  .navegacion {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 999;
+  }
+
+  /* Cuando el menú está activo */
+  .navegacion.activo {
+    max-height: 300px; /* controla altura visible */
+    opacity: 1;
+  }
+
+  /* Estilos del listado */
+  .navegacion ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 1rem 0;
+    margin: 0;
+  }
+
+  .navegacion a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-azul-oscuro);
+    transition: color 0.3s, transform 0.2s;
+  }
+
+  .navegacion a:hover {
+    color: var(--color-azul-medio);
+    transform: translateY(-2px);
+  }
+
+  /* Botones debajo del menú */
+  .acciones-header {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  /* Animación fade-in del contenido */
+  .navegacion.activo ul li {
+    animation: fadeSlide 0.4s ease forwards;
+  }
+
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Botón menú más grande y con efecto */
+  .btn-menu {
+    font-size: 1.9rem;
+    background: none;
+    border: none;
+    color: var(--color-azul-oscuro);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-menu:hover {
+    transform: scale(1.1);
+  }
+}
