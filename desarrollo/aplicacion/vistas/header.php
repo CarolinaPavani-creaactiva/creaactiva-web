@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CreaActiva</title>
+    <title>Crea Activa</title>
 
     <!-- enlace al CSS -->
     <link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/headerStyles.css">
@@ -40,6 +40,7 @@
                 <!-- MENÚ DE NAVEGACIÓN -->
                 <nav class="navegacion" id="navegacion">
                     <ul>
+                        <li><a href="/creaactiva-web/desarrollo/index.php?page=home">Inicio</a></li>
                         <li><a href="/creaactiva-web/desarrollo/index.php?page=equipo">Equipo</a></li>
                         <li><a href="/creaactiva-web/desarrollo/index.php?page=servicios">Servicios</a></li>
                         <li><a href="/creaactiva-web/desarrollo/index.php?page=blog">Blog</a></li>

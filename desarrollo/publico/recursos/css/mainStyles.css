@@ -11,6 +11,7 @@
 @import url('./vistas/equipoStyles.css');
 @import url('./vistas/serviciosStyles.css');
 @import url('./vistas/contactoStyles.css');
+@import url('./vistas/mantenimientoStyles.css');
 /* Más adelante se pueden importar equipo, servicios, blog, etc. */
 
 /* ===== Responsive de las paginas ===== */

@@ -24,7 +24,7 @@
 
     <!-- ===== SECCIÓN COMPARATIVA ===== -->
     <section class="seccion-comparativa">
-        <h2>¿Por qué elegir Creactiva?</h2>
+        <h2>¿Por qué elegir Crea Activa?</h2>
         <p>Combinamos experiencia e innovación para ofrecer resultados que marcan la diferencia.</p>
 
         <div class="comparativa-grupo">
@@ -32,7 +32,7 @@
                 <thead>
                     <tr>
                         <th>Servicio</th>
-                        <th>Creactiva</th>
+                        <th>Crea Activa</th>
                         <th>Otros proveedores</th>
                     </tr>
                 </thead>
@@ -146,7 +146,7 @@
         <div class="carrusel-testimonios" id="carruselTestimonios">
             <!-- Cada testimonio -->
             <div class="tarjeta-testimonio">
-                <p>“Gracias a la consultoría de Creactiva hemos digitalizado todo el proceso académico sin estrés.”</p>
+                <p>“Gracias a la consultoría de Crea Activa hemos digitalizado todo el proceso académico sin estrés.”</p>
                 <div class="datos">
                     <img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg" alt="Cliente">
                     <div class="info">

@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
 
 <main class="contacto-principal">
-    <p>Estas en Contacto</p>
+    <?php include __DIR__ . '/mantenimiento.php'; ?>
 
     <!-- Botón para subir arriba -->
     <button id="btn-subir" title="Subir arriba">↑</button>

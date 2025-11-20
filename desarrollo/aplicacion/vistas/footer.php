@@ -6,7 +6,7 @@
 
         <!-- COLUMNA 1: LOGO + INFO -->
         <div class="footer-col">
-            <h3>Creaactiva</h3>
+            <h3>Crea Activa</h3>
             <p>Consultoría educativa y formación digital</p>
 
             <ul class="footer-enlaces enlaces-azules">
@@ -56,7 +56,7 @@
     </div>
     <!-- BARRA INFERIOR -->
     <div class="footer-bottom">
-        <p>© 2025 Creaactiva. Todos los derechos reservados.</p>
+        <p>© 2025 Crea Activa. Todos los derechos reservados.</p>
     </div>
 </footer>
 </body>

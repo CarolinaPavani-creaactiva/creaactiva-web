@@ -1,0 +1,127 @@
+/* ============================================================
+   ESTILOS DE LA PÁGINA DE MANTENIMIENTO (COLORES ORIGINALES)
+   ============================================================ */
+
+.blog-principal,
+.blog-principal > * {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+}
+
+body, html {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* ==== Wrapper ==== */
+.mnto_wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #f5f7f9;
+}
+
+/* ==== Contenedor azul ==== */
+.mnto_container {
+    background: #e9f1fa;
+    border: 1px solid #c9d8e6;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 1100px;
+    padding: 25px 35px !important;
+    margin: 0 auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Texto bonito original ===== */
+.mnto_title,
+.mnto_titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-azul-oscuro);
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.mnto_subtitle,
+.mnto_description,
+.mnto_texto {
+    font-size: 1.15rem;
+    color: var(--color-texto);
+    text-align: center;
+    max-width: 750px;
+    margin-bottom: 18px;
+}
+
+/* ===== IMAGEN RECTANGULAR Y MÁS ANCHA ===== */
+.mnto_image_box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.mnto_imagen {
+    width: 80%;          
+    max-width: 900px;
+    height: 260px;        
+    object-fit: cover;    
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.mnto_update_section,
+.mnto_contact_box {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    padding: 20px 25px;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+/* ===== Mantener colores originales ===== */
+.mnto_update_title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-azul-oscuro);
+}
+.mnto_update_time,
+.mnto_contact_box a {
+    color: var(--color-azul-empresa);
+    font-weight: 600;
+}
+
+.mnto_contact_box {
+    font-size: 1.1rem;
+}
+
+.footer,
+.footer-contenedor,
+.footer-bottom {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+    .mnto_container {
+        padding: 18px 20px !important;
+    }
+
+    .mnto_imagen {
+        width: 95%;
+        height: 180px; /* rectangular también en móvil */
+    }
+}
