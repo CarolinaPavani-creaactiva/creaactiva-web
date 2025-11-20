@@ -28,6 +28,11 @@ body {
     font-family: var(--fuente-principal);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ===== BOTÓN VOLVER ARRIBA COMPARTIDO ===== */
 #btn-subir {
     position: fixed;
