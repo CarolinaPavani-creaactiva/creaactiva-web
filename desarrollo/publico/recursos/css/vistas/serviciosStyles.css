@@ -14,13 +14,17 @@
 /* === 1. CABECERA === */
 .serviciosCabecera {
   width: 100%;
-  max-width: 1200px;
   min-height: 739px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem 2rem;
   background: linear-gradient(180deg, #ffffff 0%, #c7eeff 100%);
+}
+
+.serviciosCabecera > * {
+  max-width: 1200px;
+  width: 100%;
 }
 
 .serviciosCabecera-contenido {

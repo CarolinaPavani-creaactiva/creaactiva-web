@@ -31,7 +31,9 @@
                     <h2>Nuestro compromiso con la innovación educativa</h2>
                     <p>Ofrecemos soluciones personalizadas que impulsan la transformación digital y pedagógica en
                         centros educativos.</p>
-                    <button class="btn-principal">Conócenos</button>
+                    <button class="btn-principal">
+                        <a href="/creaactiva-web/desarrollo/index.php?page=equipo" class="btn-principal">Conócenos</a>
+                    </button>
                 </div>
                 <!-- ===== TARJETAS PRESENTACIÓN ===== -->
                 <div class="bloque-tarjetas">
@@ -97,7 +99,9 @@
                     asegurando resultados medibles y un apoyo constante.</div>
             </div>
 
-            <button class="blog-btn">Consulta nuestro blog!</button>
+            <button class="blog-btn">
+                <a href="/creaactiva-web/desarrollo/index.php?page=blog" class="btn-principal">Consulta Nuestro Blog</a>
+            </button>
         </div>
     </section>
 
@@ -192,7 +196,9 @@
                 <p class="direccion">Calle Alberola Nº9, Valencia, España</p>
                 <p class="horario">Horario de atención: Lunes a Viernes de 09:00 AM a 13:00 PM</p>
                 <p class="soporte">Nuestro soporte online estará disponible 24/7</p>
-                <button class="btn-contacto">Contáctanos</button>
+                <button class="btn-contacto">
+                    <a href="/creaactiva-web/desarrollo/index.php?page=contacto" class="btn-principal">Contáctanos</a>
+                </button>
             </div>
 
             <!-- LADO DERECHO: MAPA -->

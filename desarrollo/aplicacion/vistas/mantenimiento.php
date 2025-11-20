@@ -1,16 +1,24 @@
+<?php
+if (!isset($vistaActual)) {
+    $vistaActual = "esta sección";
+}
+?>
+
 <div class="mnto_wrapper">
     <div class="mnto_container">
 
-        <div class="mnto_icon">⚙️</div>
-
-        <h2 class="mnto_titulo">Sitio en Mantenimiento</h2>
+        <h2 class="mnto_titulo">
+            Estás en <b><?php echo $vistaActual; ?></b><br>
+            Actualmente está en mantenimiento
+        </h2>
 
         <p class="mnto_subtitulo">
             Estamos trabajando para mejorar tu experiencia
         </p>
 
         <p class="mnto_descripcion">
-            Actualmente estamos realizando mejoras en nuestro sitio web. Volveremos pronto con nuevas funcionalidades y una mejor experiencia para ti.
+            Actualmente estamos realizando mejoras en nuestro sitio web. Volveremos pronto con nuevas funcionalidades y
+            una mejor experiencia para ti.
         </p>
 
         <div class="mnto_update_section">
@@ -20,17 +28,14 @@
         </div>
 
         <div class="mnto_image_box">
-            <img 
-                class="mnto_imagen"
-                src="/creaactiva-web/desarrollo/publico/recursos/imagenes/mantenimientoP.jpg"
-                alt="Programación en pantalla"
-            >
+            <img class="mnto_imagen" src="/creaactiva-web/desarrollo/publico/recursos/imagenes/mantenimientoP.jpg"
+                alt="Programación en pantalla">
         </div>
 
         <div class="mnto_contact_box">
             ¿Necesitas ayuda urgente?
             <br>
-            Contáctanos en 
+            Contáctanos en
             <a href="mailto:creactiva@creactiva.es">creactiva@creactiva.es</a>
         </div>
 

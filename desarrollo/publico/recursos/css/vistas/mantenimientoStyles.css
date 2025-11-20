@@ -1,14 +1,6 @@
 /* ============================================================
    ESTILOS DE LA PÁGINA DE MANTENIMIENTO (COLORES ORIGINALES)
    ============================================================ */
-
-.blog-principal,
-.blog-principal > * {
-    margin: 0 !important;
-    padding: 0 !important;
-    gap: 0 !important;
-}
-
 body, html {
     padding: 0 !important;
     margin: 0 !important;

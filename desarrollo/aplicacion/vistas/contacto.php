@@ -2,7 +2,10 @@
 <link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
 
 <main class="contacto-principal">
-    <?php include __DIR__ . '/mantenimiento.php'; ?>
+    <?php
+    $vistaActual = "Contacto";
+    include __DIR__ . '/mantenimiento.php';
+    ?>
 
     <!-- Botón para subir arriba -->
     <button id="btn-subir" title="Subir arriba">↑</button>

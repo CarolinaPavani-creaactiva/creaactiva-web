@@ -1,10 +1,13 @@
- <!-- CSS del Blog -->
+<!-- CSS del Blog -->
 <link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
 
 <main class="blog-principal">
-     <?php include __DIR__ . '/mantenimiento.php'; ?>
+    <?php
+    $vistaActual = "El Blog";
+    include __DIR__ . '/mantenimiento.php';
+    ?>
 
-<!-- Botón para subir arriba -->
+    <!-- Botón para subir arriba -->
     <button id="btn-subir" title="Subir arriba">↑</button>
 </main>
 
