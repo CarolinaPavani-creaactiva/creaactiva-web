@@ -9,8 +9,7 @@
     <section class="serviciosCabecera">
         <div class="serviciosCabecera-contenido">
             <div class="bloque-izquierda">
-                <img src="publico/recursos/imagenes/serviciosHead.jpg"
-                    alt="Servicios educativos">
+                <img src="publico/recursos/imagenes/serviciosHead.jpg" alt="Servicios educativos">
             </div>
             <div class="bloque-derecha">
                 <h1>Nuestros servicios diseñados para tu éxito</h1>
@@ -146,7 +145,8 @@
         <div class="carrusel-testimonios" id="carruselTestimonios">
             <!-- Cada testimonio -->
             <div class="tarjeta-testimonio">
-                <p>“Gracias a la consultoría de Crea Activa hemos digitalizado todo el proceso académico sin estrés.”</p>
+                <p>“Gracias a la consultoría de Crea Activa hemos digitalizado todo el proceso académico sin estrés.”
+                </p>
                 <div class="datos">
                     <img src="publico\recursos\imagenes\iconos\user.svg" alt="Cliente">
                     <div class="info">
@@ -228,11 +228,14 @@
                 pronto.</p>
 
             <div class="formulario-contacto">
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLScOWproTh9CZgmtynH9N9_zHSM4PwfH29YqPYBWmK8SGcWsDA/viewform?usp=dialog"
-                    width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">
-                    Cargando…
+                <iframe id="JotFormIFrame-253241594028860" title="Contacto Web Crea Activa"
+                    onload="window.parent.scrollTo(0,0)" allowtransparency="true"
+                    allow="geolocation; microphone; camera; fullscreen; payment"
+                    src="https://creaactiva.jotform.com/253241594028860" frameborder="0"
+                    style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no">
                 </iframe>
+                <script src='https://creaactiva.jotform.com/s/umd/latest/for-form-embed-handler.js'></script>
+                <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-253241594028860']", "https://creaactiva.jotform.com/")</script>
             </div>
         </div>
     </section>
@@ -241,16 +244,11 @@
     <section class="seccion-colaboradores">
         <h3>Nuestras licencias y colaboradores</h3>
         <div class="logos-colaboradores">
-            <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png"
-                alt="Colaborador 1">
-            <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png"
-                alt="Colaborador 2">
-            <img src="publico/recursos/imagenes/entidades/EntidadPrueba3.png"
-                alt="Colaborador 3">
-            <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png"
-                alt="Colaborador 4">
-            <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png"
-                alt="Colaborador 5">
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png" alt="Colaborador 1">
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png" alt="Colaborador 2">
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba3.png" alt="Colaborador 3">
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png" alt="Colaborador 4">
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png" alt="Colaborador 5">
         </div>
     </section>
 </main>

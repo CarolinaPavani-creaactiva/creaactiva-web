@@ -3,12 +3,17 @@
 
 /* ===== SERVICIOS STYLES ===== */
 
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
 .pagina-servicios {
   margin-top: 60px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 /* === 1. CABECERA === */
@@ -185,6 +190,7 @@
   text-align: center;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
   padding: 4rem 2rem;
   background-color: var(--color-gris-claro);
 }

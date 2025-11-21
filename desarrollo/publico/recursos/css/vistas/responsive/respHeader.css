@@ -1,43 +1,38 @@
-/* ================================================
-   RESPONSIVE DESIGN
-   ================================================ */
-
-/* === TABLET (768px - 991px) === */
+/* TABLET */
 @media (max-width: 991px) {
-  .header-contenido {
+  .h_header-contenido {
     padding: 0.6rem 1rem;
   }
 
-  .logo img {
+  .h_logo img {
     height: 45px;
   }
 
-  .navegacion ul {
+  .h_navegacion ul {
     gap: 16px;
   }
 
-  .navegacion a {
+  .h_navegacion a {
     font-size: 0.95rem;
   }
 
-  .acciones-header {
+  .h_acciones-header {
     gap: 12px;
   }
 }
 
-/* === MÓVIL (<768px) === */
+/* MÓVIL */
 @media (max-width: 768px) {
-  .btn-menu {
-    display: flex;
+  .h_btn-menu {
+    display: flex !important;
   }
 
-  .header-contenido {
+  .h_header-contenido {
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  /* Menú oculto inicialmente */
-  .navegacion {
+  .h_navegacion {
     position: absolute;
     top: 100%;
     left: 0;
@@ -53,14 +48,12 @@
     z-index: 999;
   }
 
-  /* Cuando el menú está activo */
-  .navegacion.activo {
-    max-height: 300px; /* controla altura visible */
+  .h_navegacion.h_activo {
+    max-height: 300px;
     opacity: 1;
   }
 
-  /* Estilos del listado */
-  .navegacion ul {
+  .h_navegacion ul {
     flex-direction: column;
     align-items: center;
     gap: 18px;
@@ -68,53 +61,24 @@
     margin: 0;
   }
 
-  .navegacion a {
+  .h_navegacion a {
     font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-azul-oscuro);
     transition: color 0.3s, transform 0.2s;
   }
 
-  .navegacion a:hover {
-    color: var(--color-azul-medio);
+  .h_navegacion a:hover {
     transform: translateY(-2px);
+    color: var(--color-azul-medio);
   }
 
-  /* Botones debajo del menú */
-  .acciones-header {
+  .h_acciones-header {
     order: 3;
     width: 100%;
     justify-content: center;
     margin-top: 0.5rem;
   }
 
-  /* Animación fade-in del contenido */
-  .navegacion.activo ul li {
-    animation: fadeSlide 0.4s ease forwards;
-  }
-
-  @keyframes fadeSlide {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Botón menú más grande y con efecto */
-  .btn-menu {
-    font-size: 1.9rem;
-    background: none;
-    border: none;
-    color: var(--color-azul-oscuro);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-
-  .btn-menu:hover {
+  .h_btn-menu:hover {
     transform: scale(1.1);
   }
 }

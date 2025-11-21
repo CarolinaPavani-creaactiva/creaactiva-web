@@ -1,6 +1,6 @@
 @import url('./base/_variables.css');
 @import url('./base/_layout.css');
-@import url('responsive/respFooter.css');
+@import url('./vistas/responsive/respFooter.css');
 
 /* === Ajustes globales para evitar scroll lateral === */
 html, body {
