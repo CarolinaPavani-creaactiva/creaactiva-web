@@ -56,7 +56,7 @@
     </div>
     <!-- BARRA INFERIOR -->
     <div class="footer-bottom">
-        <p>© 2025 Crea Activa. Todos los derechos reservados.</p>
+        <p>© 2026 · Crea Activa Desarrollo y Gestión S.L. · Todos los derechos reservados.</p>
     </div>
 </footer>
 </body>

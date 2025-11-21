@@ -70,7 +70,7 @@
             </div>
 
             <div class="bloque-imagen-final">
-                <img src="publico/recursos/imagenes/clase_inicio.jpg" alt="Equipo educativo">
+                <img src="publico/recursos/imagenes/clase_Inicio.jpg" alt="Equipo educativo">
             </div>
         </div>
     </section>

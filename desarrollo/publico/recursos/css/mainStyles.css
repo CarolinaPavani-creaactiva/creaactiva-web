@@ -16,8 +16,6 @@
 
 /* ===== Responsive de las paginas ===== */
 @import url('./vistas/responsive/respHome.css');
-@import url('./vistas/responsive/respHeader.css');
-@import url('./vistas/responsive/respFooter.css');
 @import url('./vistas/responsive/respServicios.css');
 
 
