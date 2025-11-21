@@ -55,5 +55,5 @@
     </div>
 </header>
 
-<script src="publico/recursos/js/botonHamburguesaHeader.js"></script>
+<script src="publico/recursos/js/botonHamburguesaHeader.js" defer></script>
 <!-- fin header.php -->
