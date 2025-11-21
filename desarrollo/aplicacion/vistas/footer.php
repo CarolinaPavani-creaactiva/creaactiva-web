@@ -1,32 +1,34 @@
 <!-- enlace al CSS -->
-<link rel="stylesheet" href="publico/recursos/css/footerStyles.css">
+<link rel="stylesheet" href="publico/recursos/css/footerStyles.css?v=2">
 
-<footer class="footer">
-    <div class="footer-contenedor">
+<footer class="f_footer">
+    <div class="f_contenedor">
 
         <!-- COLUMNA 1: LOGO + INFO -->
-        <div class="footer-col">
-            <h3>Crea Activa</h3>
-            <p>Consultoría educativa y formación digital</p>
+        <div class="f_col">
+            <h3 class="f_titulo">Crea Activa</h3>
+            <p class="f_descripcion">Consultoría educativa y formación digital</p>
 
-            <ul class="footer-enlaces enlaces-azules">
+            <ul class="f_enlaces f_enlaces-azules">
                 <li><a href="#">Aviso Legal</a></li>
                 <li><a href="#">Política de cookies</a></li>
                 <li><a href="#">Sistema de gestiones</a></li>
             </ul>
 
-            <div class="footer-social">
-                <a href="#"><img src="publico/recursos/imagenes/iconos/instagram.svg"
-                        alt="Instagram"></a>
-                <a href="#"><img src="publico/recursos/imagenes/iconos/linkedin.svg"
-                        alt="LinkedIn"></a>
+            <div class="f_social">
+                <a href="#">
+                    <img src="publico/recursos/imagenes/iconos/instagram.svg" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="publico/recursos/imagenes/iconos/linkedin.svg" alt="LinkedIn">
+                </a>
             </div>
         </div>
 
         <!-- COLUMNA 2 -->
-        <div class="footer-col">
-            <h4>Departamentos</h4>
-            <ul>
+        <div class="f_col">
+            <h4 class="f_subtitulo">Departamentos</h4>
+            <ul class="f_lista">
                 <li><a href="#">Trabaja con nosotros</a></li>
                 <li><a href="index.php?page=blog">Blog</a></li>
                 <li><a href="index.php?page=equipo">Equipo</a></li>
@@ -34,9 +36,9 @@
         </div>
 
         <!-- COLUMNA 3 -->
-        <div class="footer-col">
-            <h4>Leer sobre</h4>
-            <ul>
+        <div class="f_col">
+            <h4 class="f_subtitulo">Leer sobre</h4>
+            <ul class="f_lista">
                 <li><a href="#">Tecnología educativa</a></li>
                 <li><a href="#">Metodología e Innovación</a></li>
                 <li><a href="#">Gestión y Liderazgo Educativo</a></li>
@@ -45,20 +47,19 @@
         </div>
 
         <!-- COLUMNA 4 -->
-        <div class="footer-col">
-            <h4>Soporte</h4>
-            <ul>
+        <div class="f_col">
+            <h4 class="f_subtitulo">Soporte</h4>
+            <ul class="f_lista">
                 <li><a href="index.php?page=contacto">Contacto</a></li>
                 <li><a href="#">Soporte</a></li>
             </ul>
         </div>
 
     </div>
+
     <!-- BARRA INFERIOR -->
-    <div class="footer-bottom">
+    <div class="f_bottom">
         <p>© 2026 · Crea Activa Desarrollo y Gestión S.L. · Todos los derechos reservados.</p>
     </div>
 </footer>
-</body>
-
-</html>
+<!-- Fin footer -->

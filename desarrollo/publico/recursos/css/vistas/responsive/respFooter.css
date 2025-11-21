@@ -1,36 +1,69 @@
 /* =============================================
-    RESPONSIVE FOOTER
-   ============================================= */
+   MOBILE (320px – 480px)
+   2 columnas (arriba Crea Activa + Departamentos,
+   abajo Leer sobre + Soporte)
+============================================= */
+@media (max-width: 480px) {
 
-@media (max-width: 992px) {
-  .footer-contenedor {
-    grid-template-columns: 1fr 1fr;
+  .f_contenedor {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto auto !important;
     gap: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer-contenedor {
-    grid-template-columns: 1fr;
+    padding: 2.5rem 1rem;
     text-align: center;
+    width: 100%;
   }
 
-  .footer-social {
+  /* Ajuste fuerte: evitar que se corten palabras */
+  .f_col {
+    min-width: 0 !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* Íconos centrados */
+  .f_social {
     justify-content: center;
   }
 
-  .footer-bottom {
-    font-size: 0.8rem;
-    padding: 0.8rem 0;
+  .f_bottom {
+    font-size: 0.75rem;
   }
 }
 
-@media (max-width: 480px) {
-  .footer {
-    padding: 2rem 1rem;
+/* =============================================
+   TABLETS (481px – 768px)
+============================================= */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .f_contenedor {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: center;
   }
 
-  .footer-social img {
-    width: 20px;
+  .f_social {
+    justify-content: center;
+  }
+}
+
+/* =============================================
+   LAPTOPS (769px – 1024px)
+============================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .f_contenedor {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* =============================================
+   DESKTOPS (1025px+)
+============================================= */
+@media (min-width: 1025px) {
+  .f_contenedor {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 }
