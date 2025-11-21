@@ -1,5 +1,5 @@
 <!-- enlace al CSS -->
-<link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/footerStyles.css">
+<link rel="stylesheet" href="publico/recursos/css/footerStyles.css">
 
 <footer class="footer">
     <div class="footer-contenedor">
@@ -16,9 +16,9 @@
             </ul>
 
             <div class="footer-social">
-                <a href="#"><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/instagram.svg"
+                <a href="#"><img src="publico/recursos/imagenes/iconos/instagram.svg"
                         alt="Instagram"></a>
-                <a href="#"><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/linkedin.svg"
+                <a href="#"><img src="publico/recursos/imagenes/iconos/linkedin.svg"
                         alt="LinkedIn"></a>
             </div>
         </div>
@@ -28,8 +28,8 @@
             <h4>Departamentos</h4>
             <ul>
                 <li><a href="#">Trabaja con nosotros</a></li>
-                <li><a href="/creaactiva-web/desarrollo/index.php?page=blog">Blog</a></li>
-                <li><a href="/creaactiva-web/desarrollo/index.php?page=equipo">Equipo</a></li>
+                <li><a href="index.php?page=blog">Blog</a></li>
+                <li><a href="index.php?page=equipo">Equipo</a></li>
             </ul>
         </div>
 
@@ -48,7 +48,7 @@
         <div class="footer-col">
             <h4>Soporte</h4>
             <ul>
-                <li><a href="/creaactiva-web/desarrollo/index.php?page=contacto">Contacto</a></li>
+                <li><a href="index.php?page=contacto">Contacto</a></li>
                 <li><a href="#">Soporte</a></li>
             </ul>
         </div>

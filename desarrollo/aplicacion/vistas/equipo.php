@@ -1,5 +1,5 @@
 <!-- CSS de equipo -->
-<link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
+<link rel="stylesheet" href="publico/recursos/css/mainStyles.css">
 
 <main class="equipo-principal">
     <?php
@@ -12,4 +12,4 @@
 </main>
 
 <!-- JS específico de la página -->
-<script src="/creaactiva-web/desarrollo/publico/recursos/js/botonArriba.js"></script>
+<script src="publico/recursos/js/botonArriba.js"></script>

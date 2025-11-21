@@ -1,5 +1,5 @@
 <!-- CSS de Contacto -->
-<link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
+<link rel="stylesheet" href="publico/recursos/css/mainStyles.css">
 
 <main class="contacto-principal">
     <?php
@@ -13,4 +13,4 @@
 
 
 <!-- JS específico de la página -->
-<script src="/creaactiva-web/desarrollo/publico/recursos/js/botonArriba.js"></script>
+<script src="publico/recursos/js/botonArriba.js"></script>

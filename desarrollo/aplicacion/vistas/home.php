@@ -1,5 +1,5 @@
 <!-- enlace al CSS  -->
-<link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
+<link rel="stylesheet" href="publico/recursos/css/mainStyles.css">
 
 <div class="home-fondo"></div> <!-- Fondo global -->
 
@@ -10,7 +10,7 @@
         <div class="cabecera-contenido">
             <div class="caja-azul-claro">
                 <div class="caja-azul-oscuro">
-                    <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/cabecera_inicio.jpg"
+                    <img src="publico/recursos/imagenes/cabecera_inicio.jpg"
                         alt="Servicios educativos">
                     <div class="texto-hero">
                         <h1>Nuestros servicios diseñados para tu éxito</h1>
@@ -32,13 +32,13 @@
                     <p>Ofrecemos soluciones personalizadas que impulsan la transformación digital y pedagógica en
                         centros educativos.</p>
                     <button class="btn-principal">
-                        <a href="/creaactiva-web/desarrollo/index.php?page=equipo" class="btn-principal">Conócenos</a>
+                        <a href="index.php?page=equipo" class="btn-principal">Conócenos</a>
                     </button>
                 </div>
                 <!-- ===== TARJETAS PRESENTACIÓN ===== -->
                 <div class="bloque-tarjetas">
                     <div class="tarjeta">
-                        <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/consultoria.svg"
+                        <img src="publico/recursos/imagenes/iconos/consultoria.svg"
                             alt="Consultoría educativa">
                         <h3>Consultoría educativa</h3>
                         <p>Ayudamos a centros y organizaciones a adaptarse a las nuevas exigencias tecnológicas y
@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="tarjeta">
-                        <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/formacion.svg"
+                        <img src="publico/recursos/imagenes/iconos/formacion.svg"
                             alt="Formación profesional">
                         <h3>Formación profesional</h3>
                         <p>Ofrecemos cursos y talleres prácticos orientados a docentes y directivos con enfoque
@@ -54,14 +54,14 @@
                     </div>
 
                     <div class="tarjeta">
-                        <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tecnologia.svg"
+                        <img src="publico/recursos/imagenes/iconos/tecnologia.svg"
                             alt="Digitalización y tecnología">
                         <h3>Digitalización y tecnología</h3>
                         <p>Implementamos herramientas digitales para impulsar la innovación en centros educativos.</p>
                     </div>
 
                     <div class="tarjeta">
-                        <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/idea.svg"
+                        <img src="publico/recursos/imagenes/iconos/idea.svg"
                             alt="Proyectos personalizados">
                         <h3>Proyectos personalizados</h3>
                         <p>Diseñamos estrategias y proyectos a medida, alineadas con tus objetivos educativos.</p>
@@ -70,7 +70,7 @@
             </div>
 
             <div class="bloque-imagen-final">
-                <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/clase_inicio.jpg" alt="Equipo educativo">
+                <img src="publico/recursos/imagenes/clase_inicio.jpg" alt="Equipo educativo">
             </div>
         </div>
     </section>
@@ -100,7 +100,7 @@
             </div>
 
             <button class="blog-btn">
-                <a href="/creaactiva-web/desarrollo/index.php?page=blog" class="btn-principal">Consulta Nuestro Blog</a>
+                <a href="index.php?page=blog" class="btn-principal">Consulta Nuestro Blog</a>
             </button>
         </div>
     </section>
@@ -121,7 +121,7 @@
             <div class="fila-superior">
                 <div class="esencia-tarjeta">
                     <h3 class="titulo-fondo">Misión</h3>
-                    <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/mision.png" alt="Misión">
+                    <img src="publico/recursos/imagenes/iconos/mision.png" alt="Misión">
                     <h4>¿Cuál es nuestro propósito?</h4>
                     <p>
                         Contribuimos a la mejora de la calidad educativa, apoyando la innovación y el desarrollo
@@ -133,7 +133,7 @@
 
                 <div class="esencia-tarjeta">
                     <h3 class="titulo-fondo">Valores</h3>
-                    <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/valores.png" alt="Valores">
+                    <img src="publico/recursos/imagenes/iconos/valores.png" alt="Valores">
                     <h4>¿Qué nos guía?</h4>
                     <p>
                         Compromiso, transparencia y confianza. Apostamos por la mejora continua, la profesionalidad y la
@@ -146,7 +146,7 @@
             <div class="fila-inferior">
                 <div class="esencia-tarjeta grande">
                     <h3 class="titulo-fondo">Visión</h3>
-                    <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/vision.png" alt="Visión">
+                    <img src="publico/recursos/imagenes/iconos/vision.png" alt="Visión">
                     <h4>¿Qué principios orientan nuestras aspiraciones y objetivos?</h4>
                     <div class="vision-columnas">
                         <div class="columna">
@@ -197,7 +197,7 @@
                 <p class="horario">Horario de atención: Lunes a Viernes de 09:00 AM a 13:00 PM</p>
                 <p class="soporte">Nuestro soporte online estará disponible 24/7</p>
                 <button class="btn-contacto">
-                    <a href="/creaactiva-web/desarrollo/index.php?page=contacto" class="btn-principal">Contáctanos</a>
+                    <a href="index.php?page=contacto" class="btn-principal">Contáctanos</a>
                 </button>
             </div>
 
@@ -221,15 +221,15 @@
 
         <div class="logos-scroll">
             <div class="logos-colaboradores">
-                <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba1.png"
+                <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png"
                     alt="Colaborador 1">
-                <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba2.png"
+                <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png"
                     alt="Colaborador 2">
-                <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba3.png"
+                <img src="publico/recursos/imagenes/entidades/EntidadPrueba3.png"
                     alt="Colaborador 3">
-                <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba1.png"
+                <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png"
                     alt="Colaborador 4">
-                <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba2.png"
+                <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png"
                     alt="Colaborador 5">
 
             </div>
@@ -241,4 +241,4 @@
 </main>
 
 <!-- JS del botón subir arriba -->
-<script src="/creaactiva-web/desarrollo/publico/recursos/js/botonArriba.js"></script>
+<script src="publico/recursos/js/botonArriba.js"></script>

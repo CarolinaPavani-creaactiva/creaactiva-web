@@ -28,7 +28,7 @@ if (!isset($vistaActual)) {
         </div>
 
         <div class="mnto_image_box">
-            <img class="mnto_imagen" src="/creaactiva-web/desarrollo/publico/recursos/imagenes/mantenimientoP.jpg"
+            <img class="mnto_imagen" src="publico/recursos/imagenes/mantenimientoP.jpg"
                 alt="Programación en pantalla">
         </div>
 

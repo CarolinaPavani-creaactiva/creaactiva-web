@@ -1,5 +1,5 @@
 <!-- CSS de servicios -->
-<link rel="stylesheet" href="/creaactiva-web/desarrollo/publico/recursos/css/mainStyles.css">
+<link rel="stylesheet" href="publico/recursos/css/mainStyles.css">
 
 <div class="home-fondo"></div> <!-- Fondo global -->
 
@@ -9,7 +9,7 @@
     <section class="serviciosCabecera">
         <div class="serviciosCabecera-contenido">
             <div class="bloque-izquierda">
-                <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/serviciosHead.jpg"
+                <img src="publico/recursos/imagenes/serviciosHead.jpg"
                     alt="Servicios educativos">
             </div>
             <div class="bloque-derecha">
@@ -39,44 +39,44 @@
                 <tbody>
                     <tr>
                         <td>Consultoría educativa</td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No">
                         </td>
                     </tr>
                     <tr>
                         <td>Formación profesional</td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
                     </tr>
                     <tr>
                         <td>Digitalización de centros</td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No">
                         </td>
                     </tr>
                     <tr>
                         <td>Gestión de proyectos</td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No">
                         </td>
                     </tr>
                     <tr>
                         <td>Soporte continuo</td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
                     </tr>
                     <tr>
                         <td>Asesoría personalizada</td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí">
                         </td>
-                        <td><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/cross.svg" alt="No">
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No">
                         </td>
                     </tr>
                 </tbody>
@@ -97,11 +97,11 @@
                 <h4>Inicio Educativo</h4>
                 <h3>Apoyo para nuevos centros</h3>
                 <ul>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Evaluación inicial</li>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Herramientas de gestión</li>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Definición de misión y visión</li>
                 </ul>
             </div>
@@ -110,11 +110,11 @@
                 <h4>Impulso Académico</h4>
                 <h3>Mejora del rendimiento</h3>
                 <ul>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick"> Plan
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick"> Plan
                         de estudios optimizado</li>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Capacitación docente</li>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Estrategias de evaluación</li>
                 </ul>
             </div>
@@ -123,11 +123,11 @@
                 <h4>Transformación Digital</h4>
                 <h3>Innovación tecnológica</h3>
                 <ul>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Integración de plataformas</li>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Automatización de procesos</li>
-                    <li><img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Tick">
                         Formación digital</li>
                 </ul>
             </div>
@@ -148,7 +148,7 @@
             <div class="tarjeta-testimonio">
                 <p>“Gracias a la consultoría de Crea Activa hemos digitalizado todo el proceso académico sin estrés.”</p>
                 <div class="datos">
-                    <img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg" alt="Cliente">
+                    <img src="publico\recursos\imagenes\iconos\user.svg" alt="Cliente">
                     <div class="info">
                         <h4>María López</h4>
                         <p>Directora de Centro Educativo</p>
@@ -159,7 +159,7 @@
             <div class="tarjeta-testimonio">
                 <p>“Las sesiones nos ayudaron a reorganizar la estructura interna y optimizar la comunicación.”</p>
                 <div class="datos">
-                    <img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg" alt="Cliente">
+                    <img src="publico\recursos\imagenes\iconos\user.svg" alt="Cliente">
                     <div class="info">
                         <h4>Luis Serrano</h4>
                         <p>Coordinador Pedagógico</p>
@@ -170,7 +170,7 @@
             <!-- Scroll de tarjeta-testimonio -->
             <div class="tarjeta-testimonio">
                 <p>“Servicio impecable y muy humano.”</p>
-                <div class="datos"><img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg">
+                <div class="datos"><img src="publico\recursos\imagenes\iconos\user.svg">
                     <div class="info">
                         <h4>Clara Ruiz</h4>
                         <p>Formadora</p>
@@ -179,7 +179,7 @@
             </div>
             <div class="tarjeta-testimonio">
                 <p>“Nos acompañaron en cada paso.”</p>
-                <div class="datos"><img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg">
+                <div class="datos"><img src="publico\recursos\imagenes\iconos\user.svg">
                     <div class="info">
                         <h4>Andrés Pardo</h4>
                         <p>Gestor Educativo</p>
@@ -188,7 +188,7 @@
             </div>
             <div class="tarjeta-testimonio">
                 <p>“Totalmente recomendados.”</p>
-                <div class="datos"><img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg">
+                <div class="datos"><img src="publico\recursos\imagenes\iconos\user.svg">
                     <div class="info">
                         <h4>Elena Martín</h4>
                         <p>Responsable TIC</p>
@@ -197,7 +197,7 @@
             </div>
             <div class="tarjeta-testimonio">
                 <p>“Resultados desde el primer mes.”</p>
-                <div class="datos"><img src="\creaactiva-web\desarrollo\publico\recursos\imagenes\iconos\user.svg">
+                <div class="datos"><img src="publico\recursos\imagenes\iconos\user.svg">
                     <div class="info">
                         <h4>David Ramos</h4>
                         <p>Consultor académico</p>
@@ -241,15 +241,15 @@
     <section class="seccion-colaboradores">
         <h3>Nuestras licencias y colaboradores</h3>
         <div class="logos-colaboradores">
-            <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba1.png"
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png"
                 alt="Colaborador 1">
-            <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba2.png"
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png"
                 alt="Colaborador 2">
-            <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba3.png"
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba3.png"
                 alt="Colaborador 3">
-            <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba1.png"
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba1.png"
                 alt="Colaborador 4">
-            <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/entidades/EntidadPrueba2.png"
+            <img src="publico/recursos/imagenes/entidades/EntidadPrueba2.png"
                 alt="Colaborador 5">
         </div>
     </section>
@@ -260,4 +260,4 @@
 </main>
 
 <!-- JS del botón subir arriba -->
-<script src="/creaactiva-web/desarrollo/publico/recursos/js/botonArriba.js"></script>
+<script src="publico/recursos/js/botonArriba.js"></script>
