@@ -2,20 +2,38 @@
    RESPONSIVE SERVICIOS
 ========================= */
 
-/* === TABLET (hasta 1024px) === */
+/* ===========================================================
+   📱 TABLET (≤1024px)
+   =========================================================== */
 @media (max-width: 1024px) {
+
+  /* Aseguramos que la cabecera ocupe todo el ancho y el contenido
+     interno tenga padding, así el fondo no parece separarse. */
+  .serviciosCabecera {
+    padding: 3rem 0;        /* sin padding lateral para que el fondo llegue al borde */
+    box-sizing: border-box;
+    width: 100%;
+  }
+
   .serviciosCabecera-contenido {
     flex-direction: column;
     gap: 2.5rem;
     text-align: center;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;        /* padding interior para separar del borde en móviles */
+    box-sizing: border-box;
   }
 
-  /* Imagen más grande */
+  /* Imagen más responsiva y centrada */
   .bloque-izquierda img {
     width: 90%;
     max-width: 600px;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .bloque-derecha {
@@ -27,19 +45,22 @@
     font-size: 1.9rem;
   }
 
-  /* Centrar el botón */
+  /* Centrar botón */
   .bloque-derecha .btn-principal {
     align-self: center;
     margin: 1.5rem auto 0;
   }
 
+  /* Tabla comparativa */
   .seccion-comparativa {
     padding: 2rem 1.5rem;
+    box-sizing: border-box;
   }
 
   .tabla-comparativa {
     max-width: 90%;
     font-size: 0.9rem;
+    margin: 0 auto;
   }
 
   .tabla-comparativa th,
@@ -48,31 +69,48 @@
   }
 }
 
-/* === MÓVIL (hasta 768px) === */
+/* ===========================================================
+   📱 MÓVIL (≤768px)
+   =========================================================== */
 @media (max-width: 768px) {
+
+  /* Evitamos overflow general en móviles */
+  html, body {
+    box-sizing: border-box;
+  }
+
   main.servicios-principal {
-    padding: 0 1rem;
+    padding: 0 0; /* controlamos padding por secciones */
   }
 
   .serviciosCabecera {
-    padding: 3rem 1rem;
+    padding: 3rem 0; /* fondo ocupa todo el ancho */
+    box-sizing: border-box;
   }
 
   .serviciosCabecera-contenido {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;          /* espacio lateral interior */
+    box-sizing: border-box;
   }
 
-  /* Imagen aún grande, más centrada */
+  /* Imagen centrada y fluida */
   .bloque-izquierda img {
     width: 100%;
     max-width: 480px;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .bloque-derecha {
     align-items: center;
     text-align: center;
+    padding: 0 0.5rem;
   }
 
   .bloque-derecha h1 {
@@ -84,12 +122,12 @@
     font-size: 1rem;
   }
 
-  /* Centrar el botón también aquí */
   .bloque-derecha .btn-principal {
     align-self: center;
     margin: 1.2rem auto 0;
   }
 
+  /* Tabla comparativa */
   .seccion-comparativa {
     padding: 2rem 1rem;
   }
@@ -98,6 +136,7 @@
     width: 95%;
     font-size: 0.85rem;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
   }
 
   .tabla-comparativa th,
@@ -108,27 +147,51 @@
   .tabla-comparativa img {
     height: 18px;
   }
+
+  /* Tarjetas servicios: dejamos padding interno en la sección para que no toquen bordes */
+  .serviciosOfrecidos {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .tarjetas-servicios {
+    padding: 0 1rem;
+  }
 }
 
-/* === MÓVIL PEQUEÑO (hasta 480px) === */
+/* ===========================================================
+   📱 MÓVIL PEQUEÑO (≤480px)
+   =========================================================== */
 @media (max-width: 480px) {
-  body {
+
+  /* Forzamos no overflow horizontal */
+  html, body {
     overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   .serviciosCabecera {
-    padding: 2.5rem 0.8rem;
-    text-align: center;
+    padding: 2.5rem 0;    /* fondo sin margen lateral */
+  }
+
+  .serviciosCabecera-contenido {
+    padding: 0 0.5rem;    /* pequeño padding interior para contenido */
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .bloque-izquierda img {
     width: 100%;
     max-width: 360px;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
+    display: block;
   }
 
   .bloque-derecha {
     align-items: center;
+    padding: 0 0.5rem;
   }
 
   .bloque-derecha h1 {
@@ -139,12 +202,12 @@
     font-size: 0.95rem;
   }
 
-  /* Botón bien centrado */
   .bloque-derecha .btn-principal {
     align-self: center;
     margin: 1rem auto 0;
   }
 
+  /* Tabla comparativa */
   .seccion-comparativa {
     padding: 1.5rem 0.5rem;
   }
@@ -153,6 +216,7 @@
     width: 100%;
     max-width: 340px;
     font-size: 0.8rem;
+    margin: 0 auto;
   }
 
   .tabla-comparativa th,
@@ -163,5 +227,11 @@
   .tabla-comparativa td img {
     width: 18px;
     height: 18px;
+  }
+
+  /* Tarjetas y testimonios mantienen el padding interior para no tocar el borde */
+  .tarjetas-servicios,
+  .carrusel-testimonios {
+    padding: 0 0.75rem;
   }
 }

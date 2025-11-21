@@ -1,5 +1,5 @@
 /* ===========================================================
-   💻 VERSIÓN TABLET (≤992px)
+   📱 VERSIÓN TABLET (≤992px)
    =========================================================== */
 @media (max-width: 992px) {
 
@@ -56,7 +56,7 @@
     gap: 1.5rem;
   }
 
-  .tarjeta {
+  .bloque-tarjetas .tarjeta {
     flex: 1 1 45%;
     max-width: 320px;
   }
@@ -77,20 +77,34 @@
     max-width: 90%;
   }
 
-  /* ===== MAPA ===== */
-  @media (max-width: 1024px) {
+  /* ===== COLABORADORES ===== */
+  .logos-colaboradores {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .logos-colaboradores img {
+    max-width: 120px;
+  }
+}
+
+/* ===========================================================
+   🗺️ VERSIÓN TABLET MEDIA (≤1024px)
+   SOLO afecta al mapa
+   =========================================================== */
+@media (max-width: 1024px) {
+
   .mapa-contenedor {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto; 
+    height: auto;
   }
 
   .mapa-info {
     width: 100%;
-    padding: 2rem 2rem 1.5rem 2rem;
+    padding: 2rem;
     text-align: center;
-    align-items: center;
     background: linear-gradient(180deg, #ffffff 0%, #eef5fa 100%);
   }
 
@@ -110,9 +124,9 @@
 
   .mapa-google {
     width: 100%;
+    height: 380px;
     border-left: none;
     border-top: 3px solid var(--color-azul-empresa);
-    height: 380px;
   }
 
   .mapa-google iframe {
@@ -120,142 +134,57 @@
   }
 }
 
-  /* ===== COLABORADORES ===== */
-  .logos-colaboradores {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .logos-colaboradores img {
-    max-width: 120px;
-  }
-}
-
-
 /* ===========================================================
-   📱 VERSIÓN MÓVIL (≤600px)
+   📱 MOBILE (≤600px)
+   Correcciones: centrado y evitar bordes pegados
    =========================================================== */
 @media (max-width: 600px) {
 
-  /* ===== CABECERA ===== */
-  .cabecera {
-    padding: 1.5rem 1rem;
-  }
-
-  .texto-hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .texto-hero p {
-    font-size: 0.95rem;
-  }
-
-  /* ===== PRESENTACIÓN ===== */
-  .titulo-bloque h2 {
-    font-size: 1.5rem;
-  }
-
-  .tarjeta {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  .tarjeta img {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* ===== ESENCIA ===== */
-  .esencia-tarjetas,
-  .fila-superior,
-  .fila-inferior {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+  /* Contenedor general ESENCIA */
+  .esencia-contenedor {
+    text-align: center;
+    padding: 0 1rem;
   }
 
   .esencia-tarjeta {
-    width: 100%;
-    max-width: 380px;
-    padding: 1.2rem;
+    width: 90%;
+    max-width: 420px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
   }
 
   .esencia-tarjeta.grande {
     width: 90%;
     max-width: 420px;
-    margin: 0 auto; 
+    margin: 0 auto 2rem auto !important;
+    padding: 1.8rem 1.2rem;
   }
 
-  .esencia-tarjeta img {
-    width: 45px;
-    height: 45px;
+  .esencia-tarjeta h3,
+  .esencia-tarjeta.grande h3 {
+    text-align: center;
   }
 
-  .esencia-tarjeta h3 {
-    font-size: 1.2rem;
+  /* Botones centrados */
+  .esencia-boton-contenedor,
+  .esencia-tarjeta a,
+  .blog-btn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto;
   }
 
-  .esencia-tarjeta p {
-    font-size: 0.9rem;
-  }
-
-   .vision-columnas {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
+  /* Columnas internas VISIÓN */
+  .vision-columnas {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    text-align: center;
   }
 
   .vision-columnas .columna:nth-child(3) {
-    grid-column: 1 / 3;  
-  }
-
-  /* ===== MAPA ===== */
-@media (max-width: 768px) {
-  .seccion-mapa {
-    margin: 2rem auto 4rem auto;
-    padding: 0 1rem;
-  }
-
-  .mapa-info {
-    padding: 1.5rem 1rem;
-  }
-
-  .mapa-info h2 {
-    font-size: 1.6rem;
-  }
-
-  .mapa-info .direccion {
-    font-size: 1rem;
-  }
-
-  .mapa-info .horario {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .btn-contacto {
-    font-size: 0.9rem;
-    padding: 0.7rem 1.5rem;
-  }
-
-  .mapa-google {
-    height: 300px;
-    border-top: 2px solid var(--color-azul-empresa);
-  }
-
-  .mapa-google iframe {
-    height: 100%;
+    grid-column: 1 / 3;
+    margin: 0 auto;
   }
 }
-
-  /* ===== COLABORADORES ===== */
-  .logos-colaboradores {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .logos-colaboradores img {
-    max-width: 90px;
-  }
-}
-

@@ -142,7 +142,7 @@
             </div>
 
             <div class="fila-inferior">
-                <div class="esencia-tarjeta grande">
+               <div class="esencia-tarjeta grande tarjeta-vision">
                     <h3 class="titulo-fondo">Visión</h3>
                     <img src="publico/recursos/imagenes/iconos/vision.png" alt="Visión">
                     <h4>¿Qué principios orientan nuestras aspiraciones y objetivos?</h4>

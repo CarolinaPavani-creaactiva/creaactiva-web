@@ -1,38 +1,38 @@
 /* ===== MAIN.CSS ===== */
-/* Solo sirve para importar los demás estilos */
+/* Solo importa estilos base y estilos por vista */
 
-/* Archivos base (colores, fuentes, estructuras comunes) */
+/* ----- VARIABLES Y LAYOUT ----- */
 @import url('./base/_variables.css');
 @import url('./base/_layout.css');
 
-/* ===== Estilos por vista/página ===== */
+/* ----- ESTILOS POR PANTALLA ----- */
 @import url('./vistas/homeStyles.css');
 @import url('./vistas/blogStyles.css');
 @import url('./vistas/equipoStyles.css');
 @import url('./vistas/serviciosStyles.css');
 @import url('./vistas/contactoStyles.css');
 @import url('./vistas/mantenimientoStyles.css');
-/* Más adelante se pueden importar equipo, servicios, blog, etc. */
 
-/* ===== Responsive de las paginas ===== */
+/* ----- RESPONSIVE POR PANTALLA ----- */
 @import url('./vistas/responsive/respHome.css');
 @import url('./vistas/responsive/respServicios.css');
 
+/* ======================================================
+   🌐 ESTILOS GLOBALÍSIMOS (solo cosas realmente globales)
+====================================================== */
 
-
-/* ===== ESTILOS GLOBALES ===== */
 body {
     margin: 0;
     font-family: var(--fuente-principal);
+    background-color: #ffffff;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
-     text-decoration: none !important;
+    text-decoration: none !important;
 }
 
-/* ===== BOTÓN VOLVER ARRIBA COMPARTIDO ===== */
+/* ---- BOTÓN SUBIR ---- */
 #btn-subir {
     position: fixed;
     bottom: 40px;
@@ -49,77 +49,48 @@ a {
     justify-content: center;
     font-size: 24px;
     z-index: 2000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    opacity: 0;
     transition: opacity 0.3s, background-color 0.3s;
-    opacity: 0; /* invisible hasta que se haga scroll */
 }
 
-#btn-subir:hover {
-    background-color: var(--color-azul-oscuro);
+#btn-subir:hover { 
+    background-color: var(--color-azul-oscuro); 
 }
 
-#btn-subir.mostrar {
-    opacity: 1;
+#btn-subir.mostrar { 
+    opacity: 1; 
 }
 
-/* ===== IMAGEN DE FONDO  ===== */
+/* ---- FONDO HOME GLOBAL (solo para la página Home) ---- */
 .home-fondo {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 750px; /* alto ajustable del fondoBase */
+    height: 750px;
     background: url('../imagenes/fondoBase.jpg') center/cover no-repeat;
     opacity: 0.14;
     z-index: 0;
 }
 
-/* ===== DIVISOR DECORADO ===== */
+/* ---- DIVISOR UNIVERSAL ---- */
 .divisor-decorado {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.08);
-  margin: 0 auto;
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
 }
 
 .divisor-decorado::after {
-  content: "✧";
-  background-color: var(--color-gris-claro);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--color-azul-empresa);
-  padding: 0 0.8rem;
-  font-size: 1rem;
+    content: "✧";
+    background-color: var(--color-gris-claro);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-azul-empresa);
+    padding: 0 0.8rem;
+    font-size: 1rem;
 }
-
-/* ==== CENTRAR TARJETAS EN MÓVIL ==== */
-@media (max-width: 768px) {
-  .fila-superior {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* centra horizontalmente */
-    justify-content: center;
-  }
-
-  .esencia-tarjeta {
-    width: 90%; /* ajusta el tamaño */
-    max-width: 400px; /* opcional: evita que se hagan muy grandes */
-    margin: 10px 0; /* separa verticalmente */
-  }
-
-  .esencia-tarjeta img {
-    margin: 0 auto;
-    display: block;
-  }
-
-  .esencia-tarjeta h4,
-  .esencia-tarjeta p {
-    text-align: center;
-  }
-}
-
-
