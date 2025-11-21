@@ -99,9 +99,7 @@
                     asegurando resultados medibles y un apoyo constante.</div>
             </div>
 
-            <button class="blog-btn">
-                <a href="index.php?page=blog" class="btn-principal">Consulta Nuestro Blog</a>
-            </button>
+            <a href="index.php?page=blog" class="blog-btn">Consulta Nuestro Blog</a>
         </div>
     </section>
 
