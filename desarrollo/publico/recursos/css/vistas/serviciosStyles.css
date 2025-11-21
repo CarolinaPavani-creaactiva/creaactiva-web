@@ -382,6 +382,19 @@ section {
   color: var(--color-texto);
 }
 
+/* ============================
+   CONTACTO – ESTILOS BASE
+============================ */
+.seccion-contacto {
+    padding: 4rem 2rem;      /* → separa del borde en PC y tablet */
+    box-sizing: border-box;
+}
+
+.contenedor-contacto {
+    max-width: 900px;        /* → evita que el texto se extienda demasiado */
+    margin: 0 auto;          /* → centra todo */
+}
+
 /* ============================================================
    6. COLABORADORES
 ============================================================ */

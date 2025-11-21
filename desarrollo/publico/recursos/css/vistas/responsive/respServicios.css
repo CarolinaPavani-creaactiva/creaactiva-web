@@ -157,6 +157,49 @@
   .tarjetas-servicios {
     padding: 0 1rem;
   }
+
+   /* La sección debe tener padding más pequeño y simétrico */
+  .seccion-testimonios {
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+  }
+
+  /* El carrusel debe tener padding a ambos lados */
+  .carrusel-testimonios {
+    padding: 0 1rem !important;
+    scroll-padding-left: 1rem;
+    gap: 1rem;
+  }
+
+  /* Testimonios ocupan un ancho más cómodo en móvil */
+  .tarjeta-testimonio {
+    width: 260px;
+  }
+
+  .seccion-contacto {
+    padding: 2.5rem 1rem;   /* añade espacio lateral */
+    box-sizing: border-box;
+  }
+
+  .contenedor-contacto {
+    padding: 0 0.5rem;      /* extra padding interno */
+    text-align: center;     /* opcional: queda más bonito en móvil */
+  }
+
+  .contenedor-contacto h2 {
+    font-size: 1.6rem;
+  }
+
+  .contenedor-contacto p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .formulario-contacto iframe {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* ===========================================================

@@ -62,4 +62,5 @@
         <p>© 2026 · Crea Activa Desarrollo y Gestión S.L. · Todos los derechos reservados.</p>
     </div>
 </footer>
+</html>
 <!-- Fin footer -->
