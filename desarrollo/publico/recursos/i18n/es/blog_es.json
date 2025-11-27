@@ -1,9 +1,6 @@
 {
   "blog": {
     "titulo": "Blog",
-    "descripcion": "Artículos, noticias y recursos sobre tecnología educativa, metodología e innovación.",
-    "boton": {
-      "subir": "Subir arriba"
-    }
+    "descripcion": "Artículos, noticias y recursos sobre tecnología educativa, metodología e innovación."
   }
 }

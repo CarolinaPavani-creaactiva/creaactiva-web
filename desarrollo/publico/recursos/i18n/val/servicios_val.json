@@ -1,27 +1,103 @@
 {
-    "header": {
-        "inicio": "Inici",
-        "equipo": "Equip",
-        "servicios": "Serveis",
-        "blog": "Blog",
-        "contacto": "Contacte",
-        "idiomaActual": "VAL",
-        "english": "Anglés",
-        "valenciano": "Valencià"
-    },
+  "cabecera": {
+    "titulo": "Els nostres serveis dissenyats per al teu èxit",
+    "descripcion": "Oferim solucions completes per a la formació educativa, gestió i digitalització.",
+    "boton": "Consulta els preus",
+    "alt": "Serveis educatius"
+  },
 
-    "boton": {
-        "subir": "Pujar amunt"
+  "comparativa": {
+    "titulo": "Per què triar Crea Activa?",
+    "descripcion": "Combinen experiència i innovació per oferir resultats que marquen la diferència.",
+    "tabla": {
+      "servicio": "Servei",
+      "creaActiva": "Crea Activa",
+      "otros": "Altres proveïdors"
     },
-
-    "mantenimiento": {
-        "estasEn": "Estàs en",
-        "mantenimiento": "Actualment està en manteniment",
-        "subtitulo": "Estem treballant per millorar la teua experiència",
-        "descripcion": "Actualment estem realitzant millores al nostre lloc web. Tornarem prompte amb noves funcionalitats i una millor experiència per a tu.",
-        "ultimaActualizacion": "Última actualització",
-        "necesitasAyuda": "Necessites ajuda urgent?",
-        "contactanos": "Contacta'ns en",
-        "gracias": "Gràcies per la teua paciència i comprensió"
+    "si": "Sí",
+    "no": "No",
+    "items": {
+      "consultoria": "Consultoria educativa",
+      "formacion": "Formació professional",
+      "digitalizacion": "Digitalització de centres",
+      "gestion": "Gestió de projectes",
+      "soporte": "Suport continu",
+      "asesoria": "Assessoria personalitzada"
     }
+  },
+
+  "ofrecidos": {
+    "titulo": "Serveis destacats",
+    "descripcion": "Explora els serveis més populars adaptats a les teues necessitats.",
+    "boton": "Consulta la disponibilitat",
+
+    "inicio": {
+      "subtitulo": "Inici Educatiu",
+      "titulo": "Suport per a nous centres",
+      "item1": "Avaluació inicial",
+      "item2": "Eines de gestió",
+      "item3": "Definició de missió i visió"
+    },
+
+    "impulso": {
+      "subtitulo": "Impuls Acadèmic",
+      "titulo": "Millora del rendiment",
+      "item1": "Curriculum optimitzat",
+      "item2": "Formació per al professorat",
+      "item3": "Estratègies d’avaluació"
+    },
+
+    "digital": {
+      "subtitulo": "Transformació Digital",
+      "titulo": "Innovació tecnològica",
+      "item1": "Integració de plataformes",
+      "item2": "Automatització de processos",
+      "item3": "Formació digital"
+    }
+  },
+
+  "testimonios": {
+    "titulo": "Testimonis",
+    "subtitulo": "Què diuen els nostres clients",
+
+    "t1": {
+      "txt": "“Gràcies a la consultoria de Crea Activa vam digitalitzar tot el procés acadèmic sense complicacions.”",
+      "nombre": "María López",
+      "rol": "Directora de centre"
+    },
+    "t2": {
+      "txt": "“Les sessions ens van ajudar a reorganitzar l'estructura interna i optimitzar la comunicació.”",
+      "nombre": "Luis Serrano",
+      "rol": "Coordinador pedagògic"
+    },
+    "t3": {
+      "txt": "“Servei impecable i molt humà.”",
+      "nombre": "Clara Ruiz",
+      "rol": "Instructora"
+    },
+    "t4": {
+      "txt": "“Ens van acompanyar en tot moment.”",
+      "nombre": "Andrés Pardo",
+      "rol": "Gestor educatiu"
+    },
+    "t5": {
+      "txt": "“Totalment recomanable.”",
+      "nombre": "Elena Martín",
+      "rol": "Responsable TIC"
+    },
+    "t6": {
+      "txt": "“Resultats des del primer mes.”",
+      "nombre": "David Ramos",
+      "rol": "Consultor acadèmic"
+    }
+  },
+
+  "contacto": {
+    "titulo": "Contacta amb nosaltres",
+    "descripcion": "Tens dubtes o vols més informació? Completa el formulari i et respondrem prompte."
+  },
+
+  "colaboradores": {
+    "titulo": "Les nostres llicències i col·laboradors"
+  }
 }
