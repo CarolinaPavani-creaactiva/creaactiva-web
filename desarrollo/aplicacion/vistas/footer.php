@@ -6,13 +6,13 @@
 
         <!-- COLUMNA 1: LOGO + INFO -->
         <div class="f_col">
-            <h3 class="f_titulo">Crea Activa</h3>
-            <p class="f_descripcion">Consultoría educativa y formación digital</p>
+            <h3 class="f_titulo" data-i18n="footer.col1.titulo">Crea Activa</h3>
+            <p class="f_descripcion" data-i18n="footer.col1.descripcion">Consultoría educativa y formación digital</p>
 
             <ul class="f_enlaces f_enlaces-azules">
-                <li><a href="#">Aviso Legal</a></li>
-                <li><a href="#">Política de cookies</a></li>
-                <li><a href="#">Sistema de gestiones</a></li>
+                <li><a href="#" data-i18n="footer.col1.avisoLegal">Aviso Legal</a></li>
+                <li><a href="#" data-i18n="footer.col1.cookies">Política de cookies</a></li>
+                <li><a href="#" data-i18n="footer.col1.gestiones">Sistema de gestiones</a></li>
             </ul>
 
             <div class="f_social">
@@ -27,31 +27,31 @@
 
         <!-- COLUMNA 2 -->
         <div class="f_col">
-            <h4 class="f_subtitulo">Departamentos</h4>
+            <h4 class="f_subtitulo" data-i18n="footer.col2.titulo">Departamentos</h4>
             <ul class="f_lista">
-                <li><a href="#">Trabaja con nosotros</a></li>
-                <li><a href="index.php?page=blog">Blog</a></li>
-                <li><a href="index.php?page=equipo">Equipo</a></li>
+                <li><a href="#" data-i18n="footer.col2.trabaja">Trabaja con nosotros</a></li>
+                <li><a href="index.php?page=blog" data-i18n="footer.col2.blog">Blog</a></li>
+                <li><a href="index.php?page=equipo" data-i18n="footer.col2.equipo">Equipo</a></li>
             </ul>
         </div>
 
         <!-- COLUMNA 3 -->
         <div class="f_col">
-            <h4 class="f_subtitulo">Leer sobre</h4>
+            <h4 class="f_subtitulo" data-i18n="footer.col3.titulo">Leer sobre</h4>
             <ul class="f_lista">
-                <li><a href="#">Tecnología educativa</a></li>
-                <li><a href="#">Metodología e Innovación</a></li>
-                <li><a href="#">Gestión y Liderazgo Educativo</a></li>
-                <li><a href="#">Formación y Recursos</a></li>
+                <li><a href="#" data-i18n="footer.col3.tecnologia">Tecnología educativa</a></li>
+                <li><a href="#" data-i18n="footer.col3.metodologia">Metodología e Innovación</a></li>
+                <li><a href="#" data-i18n="footer.col3.gestion">Gestión y Liderazgo Educativo</a></li>
+                <li><a href="#" data-i18n="footer.col3.formacion">Formación y Recursos</a></li>
             </ul>
         </div>
 
         <!-- COLUMNA 4 -->
         <div class="f_col">
-            <h4 class="f_subtitulo">Soporte</h4>
+            <h4 class="f_subtitulo" data-i18n="footer.col4.titulo">Soporte</h4>
             <ul class="f_lista">
-                <li><a href="index.php?page=contacto">Contacto</a></li>
-                <li><a href="#">Soporte</a></li>
+                <li><a href="index.php?page=contacto" data-i18n="footer.col4.contacto">Contacto</a></li>
+                <li><a href="#" data-i18n="footer.col4.soporte">Soporte</a></li>
             </ul>
         </div>
 
@@ -59,8 +59,7 @@
 
     <!-- BARRA INFERIOR -->
     <div class="f_bottom">
-        <p>© 2026 · Crea Activa Desarrollo y Gestión S.L. · Todos los derechos reservados.</p>
+        <p data-i18n="footer.bottom">© 2026 · Crea Activa Desarrollo y Gestión S.L. · Todos los derechos reservados.</p>
     </div>
 </footer>
 </html>
-<!-- Fin footer -->

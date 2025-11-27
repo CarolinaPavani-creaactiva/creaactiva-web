@@ -1,0 +1,12 @@
+{
+    "header": {
+        "inicio": "Home",
+        "equipo": "Team",
+        "servicios": "Services",
+        "blog": "Blog",
+        "contacto": "Contact",
+        "idiomaActual": "EN",
+        "english": "English",
+        "valenciano": "Valencian"
+    }
+}

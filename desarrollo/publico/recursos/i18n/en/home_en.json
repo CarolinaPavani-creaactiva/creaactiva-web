@@ -1,0 +1,81 @@
+{
+  "home": {
+    "hero": {
+      "title": "Our services designed for your success",
+      "subtitle": "Creative solutions tailored to your needs."
+    },
+
+    "presentation": {
+      "section_title": "About us",
+      "title": "Our commitment to educational innovation",
+      "text": "We offer personalized solutions that drive digital and pedagogical transformation.",
+      "button": "Meet us"
+    },
+
+    "cards": {
+      "1": {
+        "title": "Educational consulting",
+        "text": "We help institutions and organizations adapt to new technological demands."
+      },
+      "2": {
+        "title": "Professional training",
+        "text": "We provide practical courses and workshops for teachers and managers."
+      },
+      "3": {
+        "title": "Digitization and technology",
+        "text": "We implement digital tools to promote educational innovation."
+      },
+      "4": {
+        "title": "Custom projects",
+        "text": "We design strategies and projects aligned with your goals."
+      }
+    },
+
+    "blog": {
+      "title": "Boost your educational center or company",
+      "text": "At Crea Activa we combine experience, innovation, and personalized solutions.",
+      "item1": "We transform your educational and training processes.",
+      "item2": "Practical courses and workshops you can apply immediately.",
+      "item3": "Digital tools that improve management and communication.",
+      "item4": "Continuous support and measurable results.",
+      "button": "Visit our blog"
+    },
+
+    "essence": {
+      "title": "Our Essence",
+      "text": "A constant commitment to improving educational quality."
+    },
+
+    "mission": {
+      "title": "Mission",
+      "question": "What is our purpose?",
+      "text": "We contribute to improving educational quality and efficient development."
+    },
+
+    "values": {
+      "title": "Values",
+      "question": "What guides us?",
+      "text": "Commitment, transparency, trust, and continuous improvement."
+    },
+
+    "vision": {
+      "title": "Vision",
+      "question": "Which principles guide our aspirations?",
+      "item1": "To become an essential element for our clients.",
+      "item2": "To make daily work easier by simplifying processes and improving quality.",
+      "item3": "To be an excellent place to work, where people feel inspired."
+    },
+
+    "map": {
+      "title": "Where can you find us?",
+      "address": "Alberola Street Nº9, Valencia, Spain",
+      "schedule": "Customer service hours: Monday to Friday 09:00–13:00",
+      "support": "Our online support is available 24/7",
+      "button": "Contact us"
+    },
+
+    "partners": {
+      "title": "Partner associations and collaborating entities"
+    }
+  }
+}

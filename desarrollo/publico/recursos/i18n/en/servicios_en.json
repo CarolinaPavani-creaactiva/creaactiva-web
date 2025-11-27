@@ -1,0 +1,107 @@
+{
+  "cabecera": {
+    "titulo": "Our services designed for your success",
+    "descripcion": "We offer comprehensive solutions for educational training, management, and digitalization.",
+    "boton": "Check pricing",
+    "alt": "Educational services"
+  },
+
+  "comparativa": {
+    "titulo": "Why choose Crea Activa?",
+    "descripcion": "We combine experience and innovation to deliver results that make a difference.",
+    "tabla": {
+      "servicio": "Service",
+      "creaActiva": "Crea Activa",
+      "otros": "Other providers"
+    },
+    "si": "Yes",
+    "no": "No",
+    "items": {
+      "consultoria": "Educational consultancy",
+      "formacion": "Professional training",
+      "digitalizacion": "Center digitalization",
+      "gestion": "Project management",
+      "soporte": "Continuous support",
+      "asesoria": "Personalized advisory"
+    }
+  },
+
+  "ofrecidos": {
+    "titulo": "Featured services",
+    "descripcion": "Explore the most popular services tailored to your needs.",
+    "boton": "Check availability",
+
+    "inicio": {
+      "subtitulo": "Educational Start",
+      "titulo": "Support for new centers",
+      "item1": "Initial evaluation",
+      "item2": "Management tools",
+      "item3": "Mission and vision definition"
+    },
+
+    "impulso": {
+      "subtitulo": "Academic Boost",
+      "titulo": "Performance improvement",
+      "item1": "Optimized curriculum",
+      "item2": "Teacher training",
+      "item3": "Assessment strategies"
+    },
+
+    "digital": {
+      "subtitulo": "Digital Transformation",
+      "titulo": "Technological innovation",
+      "item1": "Platform integration",
+      "item2": "Process automation",
+      "item3": "Digital training"
+    }
+  },
+
+  "testimonios": {
+    "titulo": "Testimonials",
+    "subtitulo": "What our clients say",
+
+    "t1": {
+      "txt": "“Thanks to Crea Activa's consultancy we digitalized the entire academic process effortlessly.”",
+      "nombre": "María López",
+      "rol": "School Director"
+    },
+    "t2": {
+      "txt": "“The sessions helped us reorganize internal structure and optimize communication.”",
+      "nombre": "Luis Serrano",
+      "rol": "Pedagogical Coordinator"
+    },
+    "t3": {
+      "txt": "“Impeccable and very human service.”",
+      "nombre": "Clara Ruiz",
+      "rol": "Instructor"
+    },
+    "t4": {
+      "txt": "“They accompanied us every step of the way.”",
+      "nombre": "Andrés Pardo",
+      "rol": "Educational Manager"
+    },
+    "t5": {
+      "txt": "“Totally recommended.”",
+      "nombre": "Elena Martín",
+      "rol": "ICT Manager"
+    },
+    "t6": {
+      "txt": "“Results from the first month.”",
+      "nombre": "David Ramos",
+      "rol": "Academic Consultant"
+    }
+  },
+
+  "contacto": {
+    "titulo": "Contact us",
+    "descripcion": "Do you have questions or want more information? Fill out the form and we will reply soon."
+  },
+
+  "colaboradores": {
+    "titulo": "Our licenses and partners"
+  },
+
+  "boton": {
+    "subir": "Scroll to top"
+  }
+}

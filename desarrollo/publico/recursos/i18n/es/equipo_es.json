@@ -1,0 +1,9 @@
+{
+  "equipo": {
+    "titulo": "Nuestro Equipo",
+    "descripcion": "Conoce al equipo humano detrás de Crea Activa: profesionales en educación, tecnología y gestión.",
+    "boton": {
+      "subir": "Subir arriba"
+    }
+  }
+}

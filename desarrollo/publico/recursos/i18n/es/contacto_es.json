@@ -1,0 +1,9 @@
+{
+  "contacto": {
+    "titulo": "Contacto",
+    "descripcion": "¿Tienes alguna pregunta o deseas más información? Completa el formulario y te responderemos pronto.",
+    "boton": {
+      "subir": "Subir arriba"
+    }
+  }
+}

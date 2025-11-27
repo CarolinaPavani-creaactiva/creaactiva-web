@@ -8,38 +8,41 @@ if (!isset($vistaActual)) {
     <div class="mnto_container">
 
         <h2 class="mnto_titulo">
-            Estás en <b><?php echo $vistaActual; ?></b><br>
-            Actualmente está en mantenimiento
+            <span data-i18n="mantenimiento.estasEn">Estás en</span>
+            <b><?php echo $vistaActual; ?></b><br>
+            <span data-i18n="mantenimiento.enMantenimiento">Actualmente está en mantenimiento</span>
         </h2>
 
-        <p class="mnto_subtitulo">
+        <p class="mnto_subtitulo" data-i18n="mantenimiento.subtitulo">
             Estamos trabajando para mejorar tu experiencia
         </p>
 
-        <p class="mnto_descripcion">
-            Actualmente estamos realizando mejoras en nuestro sitio web. Volveremos pronto con nuevas funcionalidades y
-            una mejor experiencia para ti.
+        <p class="mnto_descripcion" data-i18n="mantenimiento.descripcion">
+            Actualmente estamos realizando mejoras en nuestro sitio web. Volveremos pronto con nuevas funcionalidades y una mejor experiencia para ti.
         </p>
 
         <div class="mnto_update_section">
             <div class="mnto_update_icon">🔄</div>
-            <p class="mnto_update_title">Última actualización</p>
+            <p class="mnto_update_title" data-i18n="mantenimiento.ultimaActualizacion">Última actualización</p>
             <p class="mnto_update_time">20/11/2025</p>
         </div>
 
         <div class="mnto_image_box">
-            <img class="mnto_imagen" src="publico/recursos/imagenes/mantenimientoP.jpg"
-                alt="Programación en pantalla">
+            <img class="mnto_imagen"
+                 src="publico/recursos/imagenes/mantenimientoP.jpg"
+                 alt="Programación en pantalla"
+                 data-i18n="mantenimiento.altImagen"
+                 data-i18n-attr="alt">
         </div>
 
         <div class="mnto_contact_box">
-            ¿Necesitas ayuda urgente?
+            <span data-i18n="mantenimiento.necesitasAyuda">¿Necesitas ayuda urgente?</span>
             <br>
-            Contáctanos en
+            <span data-i18n="mantenimiento.contactanos">Contáctanos en</span>
             <a href="mailto:creactiva@creactiva.es">creactiva@creactiva.es</a>
         </div>
 
-        <p class="mnto_footer">
+        <p class="mnto_footer" data-i18n="mantenimiento.gracias">
             Gracias por tu paciencia y comprensión
         </p>
 

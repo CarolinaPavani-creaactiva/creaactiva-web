@@ -97,3 +97,48 @@
   background: var(--color-azul-medio);
 }
 
+/* ===== MENÚ DESPLEGABLE DE IDIOMA ===== */
+
+.lang-menu {
+    position: absolute;
+    top: 60px;   /* 🔽 Bajado respecto al botón */
+    right: 0;
+
+    display: flex;
+    flex-direction: column;   /* Vertical */
+    gap: 6px;
+
+    background: rgba(255, 255, 255, 0.85); /* Transparencia */
+    backdrop-filter: blur(6px);            /* Efecto cristal */
+    padding: 10px 14px;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Mostrar el menú */
+.lang-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.lang-menu span {
+    cursor: pointer;
+    padding: 6px 10px;
+    display: block;
+    white-space: nowrap;
+    border-radius: 4px;
+    transition: background .2s ease;
+}
+
+.lang-menu span:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+/* ------------------------------------------- */

@@ -3,12 +3,12 @@
 
 <main class="blog-principal">
     <?php
-    $vistaActual = "El Blog";
+    $vistaActual = "blog";
     include __DIR__ . '/mantenimiento.php';
     ?>
 
     <!-- Botón para subir arriba -->
-    <button id="btn-subir" title="Subir arriba">↑</button>
+    <button id="btn-subir" title="Subir arriba" data-i18n="blog.boton.subir">↑</button>
 </main>
 
 <!-- JS específico de la página -->
