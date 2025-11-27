@@ -33,7 +33,7 @@
                         Ofrecemos soluciones personalizadas que impulsan la transformación digital y pedagógica.
                     </p>
                     <button class="btn-principal">
-                        <a data-i18n="home.presentation.button" href="index.php?page=equipo" class="btn-principal">Conócenos</a>
+                        <a data-i18n="home.presentation.button" href="/equipo" class="btn-principal">Conócenos</a>
                     </button>
                 </div>
 
@@ -210,7 +210,7 @@
                 <p class="horario" data-i18n="home.map.schedule">Horario de atención: Lunes a Viernes 09:00–13:00</p>
                 <p class="soporte" data-i18n="home.map.support">Nuestro soporte online estará disponible 24/7</p>
                 <button class="btn-contacto">
-                    <a href="index.php?page=contacto" class="btn-principal" data-i18n="home.map.button">Contáctanos</a>
+                    <a href="/equipo" class="btn-principal" data-i18n="home.map.button">Contáctanos</a>
                 </button>
             </div>
 

@@ -29,7 +29,7 @@
         <div class="f_col">
             <h4 class="f_subtitulo" data-i18n="footer.col2.titulo">Departamentos</h4>
             <ul class="f_lista">
-                <li><a href="#" data-i18n="footer.col2.trabaja">Trabaja con nosotros</a></li>
+                <li><a href="/equipo" data-i18n="footer.col2.trabaja">Trabaja con nosotros</a></li>
                 <li><a href="index.php?page=blog" data-i18n="footer.col2.blog">Blog</a></li>
                 <li><a href="index.php?page=equipo" data-i18n="footer.col2.equipo">Equipo</a></li>
             </ul>
@@ -39,10 +39,10 @@
         <div class="f_col">
             <h4 class="f_subtitulo" data-i18n="footer.col3.titulo">Leer sobre</h4>
             <ul class="f_lista">
-                <li><a href="#" data-i18n="footer.col3.tecnologia">Tecnología educativa</a></li>
-                <li><a href="#" data-i18n="footer.col3.metodologia">Metodología e Innovación</a></li>
-                <li><a href="#" data-i18n="footer.col3.gestion">Gestión y Liderazgo Educativo</a></li>
-                <li><a href="#" data-i18n="footer.col3.formacion">Formación y Recursos</a></li>
+                <li><a href="/blog" data-i18n="footer.col3.tecnologia">Tecnología educativa</a></li>
+                <li><a href="/blog" data-i18n="footer.col3.metodologia">Metodología e Innovación</a></li>
+                <li><a href="/blog" data-i18n="footer.col3.gestion">Gestión y Liderazgo Educativo</a></li>
+                <li><a href="/blog" data-i18n="footer.col3.formacion">Formación y Recursos</a></li>
             </ul>
         </div>
 
@@ -50,8 +50,8 @@
         <div class="f_col">
             <h4 class="f_subtitulo" data-i18n="footer.col4.titulo">Soporte</h4>
             <ul class="f_lista">
-                <li><a href="index.php?page=contacto" data-i18n="footer.col4.contacto">Contacto</a></li>
-                <li><a href="#" data-i18n="footer.col4.soporte">Soporte</a></li>
+                <li><a href="/contacto" data-i18n="footer.col4.contacto">Contacto</a></li>
+                <li><a href="/contacto" data-i18n="footer.col4.soporte">Soporte</a></li>
             </ul>
         </div>
 
