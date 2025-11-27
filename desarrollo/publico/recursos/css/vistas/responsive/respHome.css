@@ -158,7 +158,7 @@
 ============================================ */
 @media (max-width: 768px) {
 
-  /* reducir paddings generales */
+  /* Reducir paddings generales */
   .home-principal {
     padding: 0.8rem;
   }
@@ -221,6 +221,16 @@
     grid-column: 1 / 3;
   }
 
+  /* CENTRAR ICONOS VISIÓN - VALORES - MISIÓN */
+  .vision-columnas .columna {
+    text-align: center;
+  }
+
+  .vision-columnas .columna img {
+    margin: 0 auto;
+    display: block;
+  }
+
   /* MAPA */
   .seccion-mapa {
     margin: 2rem auto 4rem;
@@ -229,6 +239,8 @@
 
   .mapa-info {
     padding: 1.5rem 1rem;
+    text-align: center;
+    align-items: center;
   }
 
   .mapa-info h2 {
@@ -250,11 +262,59 @@
     max-width: 95px;
   }
 
-  /* evitar overflow-x raro en móviles */
+  /* Evitar overflow-x en móviles */
   body {
     overflow-x: hidden;
   }
+
+  /* BLOG — centrar texto y el botón */
+  .blog-contenido {
+    text-align: center;
+  }
+
+  .blog-btn {
+    display: inline-block;
+    margin: 1rem auto 0;
+    text-align: center;
+    width: auto;
+  }
+
+  /* Botón "Contáctanos" */
+  .btn-contacto {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+
+  .btn-contacto .btn-principal {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .mapa-info .btn-contacto {
+    align-self: center;
+  }
+
+  /* CENTRAR botón "Conócenos" en móvil */
+  /* Centrar botón "Conócenos" en móvil sin cambiar su tamaño */
+  .titulo-bloque {
+    text-align: center;
+  }
+
+  .titulo-bloque .btn-principal,
+  .titulo-bloque a.btn-principal {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    /* mantiene el tamaño original */
+  }
+
 }
+
 
 /* ============================================
    MÓVIL PEQUEÑO (≤600px)
@@ -282,14 +342,14 @@
     height: 260px;
   }
 
- .logos-colaboradores {
+  .logos-colaboradores {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
     padding: 0 0.5rem;
   }
 
   .logos-colaboradores img {
-    max-width: 110px;   
+    max-width: 110px;
     width: 100%;
   }
 }
@@ -300,7 +360,7 @@
 @media (max-width: 400px) {
 
   .logos-colaboradores {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 

@@ -16,63 +16,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body>  
 
-    <header class="h_header-principal">
-        <div class="h_header-contenido">
+<header class="h_header-principal">
+    <div class="h_header-contenido">
 
-            <!-- LOGO -->
-            <div class="h_logo">
-                <a href="/">
-                    <img src="/publico/recursos/imagenes/logo_creaactiva.png" alt="Logo CreaActiva">
-                </a>
-            </div>
+        <!-- HAMBURGUESA IZQUIERDA -->
+        <button class="h_btn-menu" id="h_btn-menu" aria-label="Menú principal">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-            <!-- NAV + BOTONES -->
-            <div class="h_nav-acciones">
+        <!-- LOGO CENTRO -->
+        <div class="h_logo">
+            <a href="/">
+                <img src="/publico/recursos/imagenes/logo_creaactiva.png" alt="Logo CreaActiva">
+            </a>
+        </div>
 
-                <!-- HAMBURGUESA -->
-                <button class="h_btn-menu" id="h_btn-menu" aria-label="Menú principal">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <!-- DERECHA — NAV + ACCIONES -->
+        <div class="h_nav-acciones">
+
+            <!-- MENÚ -->
+            <nav class="h_navegacion" id="h_navegacion">
+                <ul>
+                    <li><a href="/home" data-i18n="header.inicio">Inicio</a></li>
+                    <li><a href="/equipo" data-i18n="header.equipo">Equipo</a></li>
+                    <li><a href="/servicios" data-i18n="header.servicios">Servicios</a></li>
+                    <li><a href="/blog" data-i18n="header.blog">Blog</a></li>
+                    <li><a href="/contacto" data-i18n="header.contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- ACCESIBILIDAD + IDIOMA -->
+            <div class="h_acciones-header">
+
+                <button class="h_btn-accesibilidad">
+                    <img src="/publico/recursos/imagenes/iconos/oido.png" 
+                         alt="Accesibilidad"
+                         style="height: 24px; width: 24px;">
                 </button>
 
-                <!-- MENÚ -->
-                <nav class="h_navegacion" id="h_navegacion">
-                    <ul>
-                        <li><a href="/home" data-i18n="header.inicio">Inicio</a></li>
-                        <li><a href="/equipo" data-i18n="header.equipo">Equipo</a></li>
-                        <li><a href="/servicios" data-i18n="header.servicios">Servicios</a></li>
-                        <li><a href="/blog" data-i18n="header.blog">Blog</a></li>
-                        <li><a href="/contacto" data-i18n="header.contacto">Contacto</a></li>
-                    </ul>
-                </nav>
+                <button id="lang-btn" class="h_btn-idioma">ES</button>
 
-                <!-- BOTONES ACCESIBILIDAD E IDIOMA -->
-                <div class="h_acciones-header">
-
-                    <button class="h_btn-accesibilidad">
-                        <img src="/publico/recursos/imagenes/iconos/oido.png" 
-                             alt="Accesibilidad"
-                             style="height: 24px; width: 24px;">
-                    </button>
-
-                    <!-- BOTÓN IDIOMA -->
-                    <button id="lang-btn" class="h_btn-idioma">ES</button>
-
-                    <!-- MENÚ IDIOMAS (oculto) -->
-                    <div id="lang-menu" class="lang-menu">
-                        <span data-lang="es" data-i18n="header.espanol">Español</span>
-                        <span data-lang="en" data-i18n="header.english">English</span>
-                        <span data-lang="val" data-i18n="header.valenciano">Valencià</span>
-                    </div>
-
+                <div id="lang-menu" class="lang-menu">
+                    <span data-lang="es" data-i18n="header.espanol">Español</span>
+                    <span data-lang="en" data-i18n="header.english">English</span>
+                    <span data-lang="val" data-i18n="header.valenciano">Valencià</span>
                 </div>
 
             </div>
+
         </div>
-    </header>
+    </div>
+</header>
+
 
     <!-- script menu hamburguesa -->
     <script src="/publico/recursos/js/botonHamburguesaHeader.js" defer></script>

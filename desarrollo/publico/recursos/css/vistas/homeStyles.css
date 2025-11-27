@@ -114,11 +114,11 @@
 
 .seccion-presentacion {
     width: 100%;
-    display: flex;
-    justify-content: center;
     padding: 4rem 0;
     background-color: var(--color-gris-claro);
     box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start; 
 }
 
 .contenedor-presentacion {
@@ -127,7 +127,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    margin: 0 auto;
+    margin: 0;  
     padding: 0 1rem;
     box-sizing: border-box;
 }
@@ -141,7 +141,7 @@
 }
 
 .titulo-bloque {
-    text-align: center;
+    text-align: left;
 }
 
 .titulo-bloque .btn-principal {
@@ -320,6 +320,7 @@
     align-items: center;
 }
 
+/* Filas */
 .fila-superior {
     display: flex;
     justify-content: center;
@@ -339,7 +340,8 @@
     box-sizing: border-box;
 }
 
-/* Tarjetas pequeñas */
+/* Tarjetas pequeñas: misión / valores*/
+
 .esencia-tarjeta {
     background: #fff;
     border-radius: 4px;
@@ -350,6 +352,7 @@
     flex-direction: column;
     gap: 0.6rem;
     text-align: center;
+    align-items: center;     
     box-shadow: 0 3px 14px rgba(0,0,0,0.08);
     transition: 0.3s;
     box-sizing: border-box;
@@ -363,15 +366,20 @@
 .esencia-tarjeta img {
     width: 40px;
     height: 40px;
+    display: block;
+    margin: 0 auto;          
 }
 
-/* Tarjeta grande (Visión) */
+/* Tarjeta grande: visión*/
+
 .esencia-tarjeta.grande {
     max-width: 720px;
     width: 100%;
     padding: 2.2rem 2rem;
     min-height: 420px;
     margin: 0 auto;
+    text-align: center;        
+    align-items: center;      
     box-sizing: border-box;
 }
 
@@ -389,22 +397,28 @@
     font-weight: 500;
 }
 
-/* Columnas internas del bloque grande */
+/* Columnas internad visión*/
+
 .vision-columnas {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
+    text-align: center;         
+    align-items: center;       
 }
 
 .vision-columnas .columna {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    align-items: center;        
 }
 
 .vision-columnas .numero {
     font-size: 1.3rem;
 }
+
 
 /* ============================================
    MAPA

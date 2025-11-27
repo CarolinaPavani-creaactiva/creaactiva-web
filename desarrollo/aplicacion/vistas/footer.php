@@ -30,8 +30,8 @@
             <h4 class="f_subtitulo" data-i18n="footer.col2.titulo">Departamentos</h4>
             <ul class="f_lista">
                 <li><a href="/equipo" data-i18n="footer.col2.trabaja">Trabaja con nosotros</a></li>
-                <li><a href="index.php?page=blog" data-i18n="footer.col2.blog">Blog</a></li>
-                <li><a href="index.php?page=equipo" data-i18n="footer.col2.equipo">Equipo</a></li>
+                <li><a href="/blog" data-i18n="footer.col2.blog">Blog</a></li>
+                <li><a href="/equipo" data-i18n="footer.col2.equipo">Equipo</a></li>
             </ul>
         </div>
 
