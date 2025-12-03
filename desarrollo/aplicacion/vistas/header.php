@@ -31,7 +31,7 @@
             <!-- LOGO CENTRO -->
             <div class="h_logo">
                 <a href="/creaactiva-web/desarrollo">
-                    <img src="/publico/recursos/imagenes/logo_creaactiva.png" alt="Logo CreaActiva">
+                    <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/logo_creaactiva.png" alt="Logo CreaActiva">
                 </a>
             </div>
 

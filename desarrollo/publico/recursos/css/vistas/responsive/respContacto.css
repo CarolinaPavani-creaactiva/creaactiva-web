@@ -1,0 +1,88 @@
+/* =====================================================================================
+   📱 MOBILE — 320px a 480px
+   ===================================================================================== */
+@media (max-width: 480px) {
+
+  .contacto-contenedor {
+    grid-template-columns: 1fr;      /* una sola columna */
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .contacto-form {
+    padding: 10px;
+  }
+
+  iframe {
+    height: 600px !important;        /* se adapta mejor al móvil */
+  }
+
+  .contacto-directo {
+    width: 100%;
+    padding: 18px;
+    font-size: 0.85rem;
+  }
+
+  .contacto-directo h3 {
+    font-size: 1rem;
+  }
+
+  .contacto-directo a {
+    font-size: 0.85rem;
+  }
+
+  .contacto-fondo-img {
+    object-position: center;
+  }
+}
+
+/* =====================================================================================
+   📲 TABLETS — 481px a 768px
+   ===================================================================================== */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .contacto-contenedor {
+    grid-template-columns: 1fr;  /* una columna, pero con más margen */
+    padding: 30px 35px;
+    gap: 30px;
+  }
+
+  iframe {
+    height: 650px !important;
+  }
+
+  .contacto-directo {
+    width: 70%;
+    margin: 0 auto;         /* centrado */
+    padding: 22px;
+  }
+
+  .contacto-directo h3 {
+    font-size: 1.05rem;
+  }
+
+  .contacto-directo p,
+  .contacto-directo a {
+    font-size: 0.9rem;
+  }
+}
+
+/* =====================================================================================
+   💻 LAPTOPS — 769px a 1024px
+   ===================================================================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .contacto-contenedor {
+    grid-template-columns: 2fr 1fr;  /* formulario más ancho, contacto al lado */
+    padding: 40px;
+    gap: 35px;
+  }
+
+  iframe {
+    height: 700px !important;
+  }
+
+  .contacto-directo {
+    padding: 25px;
+  }
+}
