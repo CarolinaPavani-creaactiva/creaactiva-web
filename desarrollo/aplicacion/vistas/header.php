@@ -63,7 +63,7 @@
                 <div id="lang-menu" class="lang-menu">
                     <span data-lang="es" data-i18n="header.espanol">Español</span>
                     <span data-lang="en" data-i18n="header.english">English</span>
-                    <span data-lang="val" data-i18n="header.valenciano">Valencià</span>
+                    <span data-lang="va" data-i18n="header.valenciano">Valencià</span>
                 </div>
 
             </div>

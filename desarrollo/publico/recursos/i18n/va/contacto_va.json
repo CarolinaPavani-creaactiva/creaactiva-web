@@ -1,12 +1,12 @@
 {
   "contacto": {
-    "titulo": "Datos de Contacto",
+    "titulo": "Dades de Contacte",
     "oficina": "Oficina",
     "direccion": {
       "linea1": "Carrer d'Alberola, 9",
-      "linea2": "46013 Valencia, España"
+      "linea2": "46013 València, Espanya"
     },
-    "comoLlegar": "Cómo llegar »",
+    "comoLlegar": "Com arribar »",
     "empresa": "Empresa:",
     "correo": "gestion@creactiva.com",
     "telefono": "+34 609 55 56 57",

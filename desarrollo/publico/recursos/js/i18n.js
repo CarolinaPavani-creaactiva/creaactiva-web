@@ -1,40 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   const BASE = "publico/recursos/i18n";
   const langBtn = document.getElementById("lang-btn");
   const langMenu = document.getElementById("lang-menu");
 
-  const supported = ["es", "en", "val"];
+  const supported = ["es", "en", "va"]; // idiomas válidos en tu web
 
+  // Idioma inicial desde localStorage
   let lang = localStorage.getItem("lang") || "es";
   actualizarBotonIdioma(lang);
 
-  // Abrir / cerrar menú
+  // ============================
+  // ABRIR / CERRAR MENÚ IDIOMAS
+  // ============================
   langBtn?.addEventListener("click", () => {
     langMenu?.classList.toggle("show");
   });
 
-  // Cambio de idioma
+  // ============================
+  // CAMBIO DE IDIOMA
+  // ============================
   document.querySelectorAll("#lang-menu span[data-lang]").forEach(span => {
     span.addEventListener("click", async () => {
       const nuevoLang = span.dataset.lang;
 
       if (!supported.includes(nuevoLang)) return;
 
+      // Guardar
       localStorage.setItem("lang", nuevoLang);
       lang = nuevoLang;
 
       actualizarBotonIdioma(lang);
+
+      // 🔥 ACTUALIZAR FORMULARIO JOTFORM SI ESTAMOS EN CONTACTO
+      actualizarIframeFormulario(lang);
+
       langMenu?.classList.remove("show");
 
+      // Aplicar traducciones al contenido de tu web
       await aplicarTraducciones();
     });
   });
 
+  // Aplicar traducciones iniciales
   aplicarTraducciones();
 
-  // ===========================
+  // ============================
   // FUNCIONES
-  // ===========================
+  // ============================
 
   function actualizarBotonIdioma(l) {
     if (!langBtn) return;
@@ -45,15 +58,22 @@ document.addEventListener("DOMContentLoaded", () => {
   async function aplicarTraducciones() {
     lang = localStorage.getItem("lang") || "es";
 
+    // 👇 Mapeo: "va" y "val" usan JSON en carpeta "va"
+    const mapLang = {
+      val: "va",
+      ca: "va"
+    };
+
+    lang = mapLang[lang] || lang;
+
     const page = obtenerNombrePagina();
 
-    // 🔥 IMPORTANTE: mantenimiento necesita su JSON siempre
     const urls = [
       `${BASE}/${lang}/header_${lang}.json`,
       `${BASE}/${lang}/common_${lang}.json`,
       `${BASE}/${lang}/${page}_${lang}.json`,
       `${BASE}/${lang}/footer_${lang}.json`,
-      `${BASE}/${lang}/mantenimiento_${lang}.json` // <-- AÑADIDO
+      `${BASE}/${lang}/mantenimiento_${lang}.json`
     ];
 
     const responses = await Promise.allSettled(
@@ -77,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!jsons.length) return;
 
-    // 🔥 Ahora también soporta data-i18n-attr="alt" placeholder, title...
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.dataset.i18n.trim();
       const attr = el.dataset.i18nAttr;
@@ -95,10 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (valor === null || valor === undefined) return;
 
       if (attr) {
-        // si tiene atributo para traducir
         el.setAttribute(attr, valor);
       } else {
-        // si solo es texto
         el.textContent = valor;
       }
     });
@@ -123,4 +140,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return file.replace(/\.[^/.]+$/, "");
   }
+
+  // ============================================
+  // 🔥 ACTUALIZAR FORMULARIO JOTFORM SEGÚN IDIOMA
+  // ============================================
+  function actualizarIframeFormulario(langWeb) {
+    const iframe = document.getElementById("JotFormIFrame-253363021678861");
+    if (!iframe) return; // si NO estamos en la página contacto, salir
+
+    // Valenciano/valenciano/catalán usan "ca" en JotForm
+    let langJotform = (langWeb === "va" || langWeb === "val") ? "ca" : langWeb;
+
+    iframe.src = `https://creaactiva.jotform.com/253363021678861?language=${langJotform}`;
+  }
+
 });
