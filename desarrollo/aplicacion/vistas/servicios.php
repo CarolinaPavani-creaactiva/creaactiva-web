@@ -179,11 +179,31 @@
 
     <div class="divisor-decorado"></div>
 
-    <!-- 5. CONTACTO -->
+   <!-- 5. CONTACTO -->
     <section class="seccion-contacto">
         <div class="contenedor-contacto">
             <h2 data-i18n="contacto.titulo">Contáctanos</h2>
-            <p data-i18n="contacto.descripcion">¿Tienes alguna pregunta o deseas más información? Completa el siguiente formulario y te responderemos pronto.</p>
+            <p data-i18n="contacto.descripcion">
+                ¿Tienes alguna pregunta o deseas más información? Completa el siguiente
+                formulario y te responderemos pronto.
+            </p>
+        </div>
+
+        <!-- FORMULARIO JOTFORM -->
+        <div class="contenedor-formulario">
+            <iframe id="JotFormIFrame-253241594028860" title="Contacto Web Crea Activa"
+                onload="window.parent.scrollTo(0,0)" allowtransparency="true"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://creaactiva.jotform.com/253241594028860" frameborder="0"
+                style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no"></iframe>
+
+            <script src="https://creaactiva.jotform.com/s/umd/latest/for-form-embed-handler.js"></script>
+            <script>
+                window.jotformEmbedHandler(
+                    "iframe[id='JotFormIFrame-253241594028860']",
+                    "https://creaactiva.jotform.com/"
+                );
+            </script>
         </div>
     </section>
 
