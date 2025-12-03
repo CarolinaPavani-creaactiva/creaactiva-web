@@ -9,13 +9,13 @@
     <section class="serviciosCabecera">
         <div class="serviciosCabecera-contenido">
             <div class="bloque-izquierda">
-                <img src="publico/recursos/imagenes/serviciosHead.jpg" 
-                     alt="Servicios educativos" 
-                     data-i18n-alt="cabecera.alt">
+                <img src="publico/recursos/imagenes/serviciosHead.jpg" alt="Servicios educativos"
+                    data-i18n-alt="cabecera.alt">
             </div>
             <div class="bloque-derecha">
                 <h1 data-i18n="cabecera.titulo">Nuestros servicios diseñados para tu éxito</h1>
-                <p data-i18n="cabecera.descripcion">Ofrecemos soluciones integrales para la formación, gestión y digitalización educativa.</p>
+                <p data-i18n="cabecera.descripcion">Ofrecemos soluciones integrales para la formación, gestión y
+                    digitalización educativa.</p>
                 <button class="btn-principal" data-i18n="cabecera.boton">Consultar tarifas</button>
             </div>
         </div>
@@ -26,7 +26,8 @@
     <!-- 2. SECCIÓN COMPARATIVA -->
     <section class="seccion-comparativa">
         <h2 data-i18n="comparativa.titulo">¿Por qué elegir Crea Activa?</h2>
-        <p data-i18n="comparativa.descripcion">Combinamos experiencia e innovación para ofrecer resultados que marcan la diferencia.</p>
+        <p data-i18n="comparativa.descripcion">Combinamos experiencia e innovación para ofrecer resultados que marcan la
+            diferencia.</p>
 
         <div class="comparativa-grupo">
             <table class="tabla-comparativa">
@@ -40,33 +41,45 @@
                 <tbody>
                     <tr>
                         <td data-i18n="comparativa.items.consultoria">Consultoría educativa</td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
-                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No" data-i18n-alt="comparativa.no"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No"
+                                data-i18n-alt="comparativa.no"></td>
                     </tr>
                     <tr>
                         <td data-i18n="comparativa.items.formacion">Formación profesional</td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
                     </tr>
                     <tr>
                         <td data-i18n="comparativa.items.digitalizacion">Digitalización de centros</td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
-                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No" data-i18n-alt="comparativa.no"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No"
+                                data-i18n-alt="comparativa.no"></td>
                     </tr>
                     <tr>
                         <td data-i18n="comparativa.items.gestion">Gestión de proyectos</td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
-                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No" data-i18n-alt="comparativa.no"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No"
+                                data-i18n-alt="comparativa.no"></td>
                     </tr>
                     <tr>
                         <td data-i18n="comparativa.items.soporte">Soporte continuo</td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
                     </tr>
                     <tr>
                         <td data-i18n="comparativa.items.asesoria">Asesoría personalizada</td>
-                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí" data-i18n-alt="comparativa.si"></td>
-                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No" data-i18n-alt="comparativa.no"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/tick.svg" alt="Sí"
+                                data-i18n-alt="comparativa.si"></td>
+                        <td><img src="publico/recursos/imagenes/iconos/cross.svg" alt="No"
+                                data-i18n-alt="comparativa.no"></td>
                     </tr>
                 </tbody>
             </table>
@@ -86,9 +99,12 @@
                 <h4 data-i18n="ofrecidos.inicio.subtitulo">Inicio Educativo</h4>
                 <h3 data-i18n="ofrecidos.inicio.titulo">Apoyo para nuevos centros</h3>
                 <ul>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.inicio.item1">Evaluación inicial</span></li>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.inicio.item2">Herramientas de gestión</span></li>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.inicio.item3">Definición de misión y visión</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.inicio.item1">Evaluación inicial</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.inicio.item2">Herramientas de gestión</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.inicio.item3">Definición de misión y visión</span></li>
                 </ul>
             </div>
 
@@ -96,9 +112,12 @@
                 <h4 data-i18n="ofrecidos.impulso.subtitulo">Impulso Académico</h4>
                 <h3 data-i18n="ofrecidos.impulso.titulo">Mejora del rendimiento</h3>
                 <ul>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.impulso.item1">Plan de estudios optimizado</span></li>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.impulso.item2">Capacitación docente</span></li>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.impulso.item3">Estrategias de evaluación</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.impulso.item1">Plan de estudios optimizado</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.impulso.item2">Capacitación docente</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.impulso.item3">Estrategias de evaluación</span></li>
                 </ul>
             </div>
 
@@ -106,9 +125,12 @@
                 <h4 data-i18n="ofrecidos.digital.subtitulo">Transformación Digital</h4>
                 <h3 data-i18n="ofrecidos.digital.titulo">Innovación tecnológica</h3>
                 <ul>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.digital.item1">Integración de plataformas</span></li>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.digital.item2">Automatización de procesos</span></li>
-                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span data-i18n="ofrecidos.digital.item3">Formación digital</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.digital.item1">Integración de plataformas</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.digital.item2">Automatización de procesos</span></li>
+                    <li><img src="publico/recursos/imagenes/iconos/tick.svg"> <span
+                            data-i18n="ofrecidos.digital.item3">Formación digital</span></li>
                 </ul>
             </div>
 
@@ -127,7 +149,8 @@
         <div class="carrusel-testimonios" id="carruselTestimonios">
 
             <div class="tarjeta-testimonio">
-                <p data-i18n="testimonios.t1.txt">“Gracias a la consultoría de Crea Activa hemos digitalizado todo el proceso académico sin estrés.”</p>
+                <p data-i18n="testimonios.t1.txt">“Gracias a la consultoría de Crea Activa hemos digitalizado todo el
+                    proceso académico sin estrés.”</p>
                 <div class="datos">
                     <h4 data-i18n="testimonios.t1.nombre">María López</h4>
                     <p data-i18n="testimonios.t1.rol">Directora de Centro Educativo</p>
@@ -135,7 +158,8 @@
             </div>
 
             <div class="tarjeta-testimonio">
-                <p data-i18n="testimonios.t2.txt">“Las sesiones nos ayudaron a reorganizar la estructura interna y optimizar la comunicación.”</p>
+                <p data-i18n="testimonios.t2.txt">“Las sesiones nos ayudaron a reorganizar la estructura interna y
+                    optimizar la comunicación.”</p>
                 <div class="datos">
                     <h4 data-i18n="testimonios.t2.nombre">Luis Serrano</h4>
                     <p data-i18n="testimonios.t2.rol">Coordinador Pedagógico</p>
@@ -183,7 +207,27 @@
     <section class="seccion-contacto">
         <div class="contenedor-contacto">
             <h2 data-i18n="contacto.titulo">Contáctanos</h2>
-            <p data-i18n="contacto.descripcion">¿Tienes alguna pregunta o deseas más información? Completa el siguiente formulario y te responderemos pronto.</p>
+            <p data-i18n="contacto.descripcion">
+                ¿Tienes alguna pregunta o deseas más información? Completa el siguiente
+                formulario y te responderemos pronto.
+            </p>
+        </div>
+
+        <!-- FORMULARIO JOTFORM -->
+        <div class="contenedor-formulario">
+            <iframe id="JotFormIFrame-253241594028860" title="Contacto Web Crea Activa"
+                onload="window.parent.scrollTo(0,0)" allowtransparency="true"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://creaactiva.jotform.com/253241594028860" frameborder="0"
+                style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no"></iframe>
+
+            <script src="https://creaactiva.jotform.com/s/umd/latest/for-form-embed-handler.js"></script>
+            <script>
+                window.jotformEmbedHandler(
+                    "iframe[id='JotFormIFrame-253241594028860']",
+                    "https://creaactiva.jotform.com/"
+                );
+            </script>
         </div>
     </section>
 
