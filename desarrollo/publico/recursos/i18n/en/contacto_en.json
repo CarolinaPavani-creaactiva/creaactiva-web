@@ -1,5 +1,9 @@
 {
   "contacto": {
+    "header": {
+      "titulo": "Contact",
+      "subtitulo": "We are here to help you. Fill out the form or contact us directly."
+    },
     "titulo": "Contact Information",
     "oficina": "Office",
     "direccion": {

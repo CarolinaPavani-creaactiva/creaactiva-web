@@ -8,9 +8,19 @@
 
     <section class="contacto-section">
 
+        <!-- ============================
+             CABECERA DE LA PÁGINA CONTACTO
+             ============================ -->
+        <div class="contacto-header">
+            <h1 data-i18n="contacto.header.titulo">Contacto</h1>
+            <p data-i18n="contacto.header.subtitulo">
+                Estamos aquí para ayudarte. Rellena el formulario o contáctanos directamente.
+            </p>
+        </div>
+
         <div class="contacto-contenedor">
 
-            <!-- FORMULARIO -->
+            <!-- FORMULARIO --> 
             <div class="contacto-form">
                 <iframe id="JotFormIFrame-253363021678861" 
                         title="Formulario de Contacto" 

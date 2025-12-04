@@ -1,7 +1,11 @@
 @import url('../base/_variables.css');
 @import url('../base/_layout.css');
 
-/* El main ocupa toda la página sin espacios */
+/* ================================
+   CONTACTO — ESTILOS BASE (PC)
+================================ */
+
+/* Contenedor principal */
 .contacto-principal {
   position: relative;
   width: 100%;
@@ -9,78 +13,113 @@
   padding: 0;
 }
 
-/* Imagen de fondo */
+/* Imagen de fondo — ocupa TODA la pantalla */
 .contacto-fondo-img {
-  position: absolute;
+  position: fixed;          /* fija para cubrir toda la pantalla */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;    /* para que se vea perfecta */
+  height: 100vh;            /* altura completa */
+  object-fit: cover;
+  object-position: center;
   z-index: -1;
 }
 
-/* Contenedor general */
-.contacto-contenedor {
-  display: grid;
-  grid-template-columns: 1fr 320px; /* formulario grande + contacto directo */
-  gap: 40px;
-  padding: 40px 60px;
-  margin-top: 0;
+/* ============================
+   CABECERA CONTACTO (PC)
+============================= */
+
+.contacto-header {
+  width: 100%;
+  padding: 1.8rem 1rem;      /* más baja */
+  margin: 0 0 2rem 0;
+
+  background: rgba(255,255,255,0.55); /* translúcido tipo móvil */
+  backdrop-filter: blur(6px);
+
+  text-align: center;
+  border-radius: 0;
 }
 
-/* FORMULARIO PRINCIPAL */
+/* Título */
+.contacto-header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* Subtítulo */
+.contacto-header p {
+  font-size: 1.15rem;
+  color: #444;
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.45;
+}
+
+/* Evitar margen blanco arriba */
+.contacto-principal {
+  padding-top: 0 !important;
+}
+
+/* ================================
+   CONTENEDOR GENERAL
+================================ */
+.contacto-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 40px;
+  padding: 40px 70px;
+}
+
+/* Formulario */
 .contacto-form {
-  background: #ffffffd9;  /* blanco con leve transparencia */
+  background: rgba(255,255,255,0.85);
   border-radius: 15px;
   padding: 20px;
   backdrop-filter: blur(4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-/* CONTACTO DIRECTO */
+/* Información de contacto */
 .contacto-directo {
-  background: #ffffffcc;
+  background: rgba(255,255,255,0.85);
   padding: 25px;
   border-radius: 15px;
   height: fit-content;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  font-family: var(--fuente-principal, 'Inter', sans-serif);
-  color: #444; 
+  color: var(--color-texto);
+  font-family: var(--fuente-principal);
   line-height: 1.45;
 }
 
-/* Título principal */
 .contacto-directo h3 {
   margin: 0 0 15px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #333;
+  color: #222;
 }
 
-/* Subtítulos */
 .contacto-directo .subtitulo {
   margin-top: 18px;
   margin-bottom: 4px;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #333;
 }
 
-/* Texto normal */
 .contacto-directo p {
   margin: 3px 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #555;
 }
 
-/* Enlace tipo “Get Directions” */
 .contacto-directo a {
   display: inline-block;
   margin-top: 6px;
-  font-size: 0.85rem;
-  color: #1c75c8;     /* dorado suave */
+  font-size: 0.9rem;
+  color: var(--color-azul-medio);
   text-decoration: none;
   font-weight: 500;
   transition: opacity .2s;
@@ -89,5 +128,3 @@
 .contacto-directo a:hover {
   opacity: 0.7;
 }
-
-

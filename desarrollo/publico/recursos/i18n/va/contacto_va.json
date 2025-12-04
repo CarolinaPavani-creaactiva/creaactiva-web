@@ -1,5 +1,9 @@
 {
   "contacto": {
+    "header": {
+      "titulo": "Contacte",
+      "subtitulo": "Estem ací per a ajudar-te. Ompli el formulari o contacta amb nosaltres directament."
+    },
     "titulo": "Dades de Contacte",
     "oficina": "Oficina",
     "direccion": {
