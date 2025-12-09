@@ -1,4 +1,9 @@
 <!-- header.php -->
+<?php
+session_start();
+$usuarioLogueado = isset($_SESSION['curso']);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -31,7 +36,8 @@
             <!-- LOGO CENTRO -->
             <div class="h_logo">
                 <a href="/creaactiva-web/desarrollo">
-                    <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/logo_creaactiva.png" alt="Logo CreaActiva">
+                    <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/logo_creaactiva.png"
+                        alt="Logo CreaActiva">
                 </a>
             </div>
 
@@ -54,8 +60,8 @@
                 <div class="h_acciones-header">
 
                     <button class="h_btn-accesibilidad">
-                        <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/oido.png" alt="Accesibilidad"
-                            style="height: 24px; width: 24px;">
+                        <img src="/creaactiva-web/desarrollo/publico/recursos/imagenes/iconos/oido.png"
+                            alt="Accesibilidad" style="height: 24px; width: 24px;">
                     </button>
 
                     <button id="lang-btn" class="h_btn-idioma">ES</button>
@@ -66,8 +72,14 @@
                         <span data-lang="val" data-i18n="header.valenciano">Valencià</span>
                     </div>
 
+                    <!-- EL BOTÓN LOGIN -->
+                    <?php if (!$usuarioLogueado): ?>
+                        <a href="index.php?page=login" class="h_btn-login" data-i18n="header.login">Login</a>
+                    <?php else: ?>
+                        <a href="/aplicacion/controlador/logout.php" class="h_btn-login"
+                            data-i18n="header.logout">Logout</a>
+                    <?php endif; ?>
                 </div>
-
             </div>
         </div>
     </header>
