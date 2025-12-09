@@ -12,11 +12,11 @@
 
   /* 🔥 Cabecera con menos altura + margen (más compacta y translúcida) */
   .contacto-header {
-    padding: 1.2rem 1rem;      /* mucho menos alto */
+    padding: 1.2rem 1rem;    
     margin-top: 8px;
     margin-bottom: 12px;
     width: 94%;
-    background: rgba(255,255,255,0.55); /* translúcido blanco */
+    background: rgba(255,255,255,0.55); 
     backdrop-filter: blur(6px);
     border-radius: 12px;
   }
@@ -31,8 +31,6 @@
     line-height: 1.35;
     margin: 6px 0 0;
   }
-
-  /* 🔥 Imagen de fondo SOLO en cabecera (como antes) */
   .contacto-fondo-img {
     width: 100%;
     height: 220px;
@@ -41,10 +39,9 @@
     display: block;
   }
 
-  /* Formulario: blanco translúcido (como en PC) */
   .contacto-form {
     padding: 10px;
-    background: rgba(255,255,255,0.6); /* blanco translúcido */
+    background: rgba(255,255,255,0.6); 
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     border-radius: 10px;
   }
@@ -55,7 +52,6 @@
     border-radius: 8px;
   }
 
-  /* Datos de contacto: igual que PC (blanco translúcido) */
   .contacto-directo {
     width: 100%;
     padding: 16px;
@@ -79,7 +75,6 @@
     gap: 25px;
   }
 
-  /* Cabecera más compacta y translúcida */
   .contacto-header {
     padding: 1.6rem 1.2rem;
     margin-top: 14px;
@@ -100,7 +95,6 @@
     margin: 6px 0 0;
   }
 
-  /* Imagen solo en cabecera, ocupa bien */
   .contacto-fondo-img {
     width: 100%;
     height: 260px;
@@ -113,7 +107,6 @@
     min-height: 690px !important;
   }
 
-  /* Datos de contacto en tablet: blanco translúcido */
   .contacto-directo {
     width: 90%;
     margin: 0 auto;
@@ -136,7 +129,6 @@
     gap: 25px;
   }
 
-  /* Cabecera más corta en laptop (reduce espacio vertical) */
   .contacto-header {
     padding: 1.8rem 1.6rem;
     margin-top: 16px;
@@ -167,7 +159,6 @@
     min-height: 730px !important;
   }
 
-  /* Aseguramos que datos de contacto mantengan estilo claro */
   .contacto-directo {
     background: rgba(255,255,255,0.8);
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);

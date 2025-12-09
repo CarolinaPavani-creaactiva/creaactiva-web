@@ -262,12 +262,10 @@
     max-width: 95px;
   }
 
-  /* Evitar overflow-x en móviles */
   body {
     overflow-x: hidden;
   }
 
-  /* BLOG — centrar texto y el botón */
   .blog-contenido {
     text-align: center;
   }
@@ -279,7 +277,6 @@
     width: auto;
   }
 
-  /* Botón "Contáctanos" */
   .btn-contacto {
     display: inline-flex;
     justify-content: center;
@@ -299,8 +296,6 @@
     align-self: center;
   }
 
-  /* CENTRAR botón "Conócenos" en móvil */
-  /* Centrar botón "Conócenos" en móvil sin cambiar su tamaño */
   .titulo-bloque {
     text-align: center;
   }
@@ -310,7 +305,6 @@
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
-    /* mantiene el tamaño original */
   }
 
 }

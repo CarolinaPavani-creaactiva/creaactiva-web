@@ -7,10 +7,8 @@
    =========================================================== */
 @media (max-width: 1024px) {
 
-  /* Aseguramos que la cabecera ocupe todo el ancho y el contenido
-     interno tenga padding, así el fondo no parece separarse. */
   .serviciosCabecera {
-    padding: 3rem 0;        /* sin padding lateral para que el fondo llegue al borde */
+    padding: 3rem 0;        
     box-sizing: border-box;
     width: 100%;
   }
@@ -23,11 +21,10 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;        /* padding interior para separar del borde en móviles */
+    padding: 0 1rem;       
     box-sizing: border-box;
   }
 
-  /* Imagen más responsiva y centrada */
   .bloque-izquierda img {
     width: 90%;
     max-width: 600px;
@@ -45,7 +42,6 @@
     font-size: 1.9rem;
   }
 
-  /* Centrar botón */
   .bloque-derecha .btn-principal {
     align-self: center;
     margin: 1.5rem auto 0;
@@ -74,17 +70,16 @@
    =========================================================== */
 @media (max-width: 768px) {
 
-  /* Evitamos overflow general en móviles */
   html, body {
     box-sizing: border-box;
   }
 
   main.servicios-principal {
-    padding: 0 0; /* controlamos padding por secciones */
+    padding: 0 0; 
   }
 
   .serviciosCabecera {
-    padding: 3rem 0; /* fondo ocupa todo el ancho */
+    padding: 3rem 0; 
     box-sizing: border-box;
   }
 
@@ -94,11 +89,10 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;          /* espacio lateral interior */
+    padding: 0 1rem;          
     box-sizing: border-box;
   }
 
-  /* Imagen centrada y fluida */
   .bloque-izquierda img {
     width: 100%;
     max-width: 480px;
@@ -127,7 +121,6 @@
     margin: 1.2rem auto 0;
   }
 
-  /* Tabla comparativa */
   .seccion-comparativa {
     padding: 2rem 1rem;
   }
@@ -148,7 +141,6 @@
     height: 18px;
   }
 
-  /* Tarjetas servicios: dejamos padding interno en la sección para que no toquen bordes */
   .serviciosOfrecidos {
     padding-left: 0;
     padding-right: 0;
@@ -158,32 +150,29 @@
     padding: 0 1rem;
   }
 
-   /* La sección debe tener padding más pequeño y simétrico */
   .seccion-testimonios {
     padding: 3rem 1rem;
     box-sizing: border-box;
   }
 
-  /* El carrusel debe tener padding a ambos lados */
   .carrusel-testimonios {
     padding: 0 1rem !important;
     scroll-padding-left: 1rem;
     gap: 1rem;
   }
 
-  /* Testimonios ocupan un ancho más cómodo en móvil */
   .tarjeta-testimonio {
     width: 260px;
   }
 
   .seccion-contacto {
-    padding: 2.5rem 1rem;   /* añade espacio lateral */
+    padding: 2.5rem 1rem;   
     box-sizing: border-box;
   }
 
   .contenedor-contacto {
-    padding: 0 0.5rem;      /* extra padding interno */
-    text-align: center;     /* opcional: queda más bonito en móvil */
+    padding: 0 0.5rem;      
+    text-align: center;     
   }
 
   .contenedor-contacto h2 {
@@ -207,7 +196,6 @@
    =========================================================== */
 @media (max-width: 480px) {
 
-  /* Forzamos no overflow horizontal */
   html, body {
     overflow-x: hidden;
     box-sizing: border-box;
@@ -216,11 +204,11 @@
   }
 
   .serviciosCabecera {
-    padding: 2.5rem 0;    /* fondo sin margen lateral */
+    padding: 2.5rem 0;    
   }
 
   .serviciosCabecera-contenido {
-    padding: 0 0.5rem;    /* pequeño padding interior para contenido */
+    padding: 0 0.5rem;    
     width: 100%;
     box-sizing: border-box;
   }
@@ -250,7 +238,6 @@
     margin: 1rem auto 0;
   }
 
-  /* Tabla comparativa */
   .seccion-comparativa {
     padding: 1.5rem 0.5rem;
   }
@@ -272,7 +259,6 @@
     height: 18px;
   }
 
-  /* Tarjetas y testimonios mantienen el padding interior para no tocar el borde */
   .tarjetas-servicios,
   .carrusel-testimonios {
     padding: 0 0.75rem;
