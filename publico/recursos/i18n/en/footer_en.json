@@ -1,0 +1,30 @@
+{
+    "footer": {
+        "col1": {
+            "titulo": "Crea Activa",
+            "descripcion": "Educational consulting and digital training",
+            "avisoLegal": "Legal Notice",
+            "cookies": "Cookie Policy",
+            "gestiones": "Management System"
+        },
+        "col2": {
+            "titulo": "Departments",
+            "trabaja": "Work with us",
+            "blog": "Blog",
+            "equipo": "Team"
+        },
+        "col3": {
+            "titulo": "Read about",
+            "tecnologia": "Educational Technology",
+            "metodologia": "Methodology & Innovation",
+            "gestion": "Educational Management & Leadership",
+            "formacion": "Training & Resources"
+        },
+        "col4": {
+            "titulo": "Support",
+            "contacto": "Contact",
+            "soporte": "Support"
+        },
+        "bottom": "© 2026 · Crea Activa Development and Management S.L. · All rights reserved."
+    }
+}

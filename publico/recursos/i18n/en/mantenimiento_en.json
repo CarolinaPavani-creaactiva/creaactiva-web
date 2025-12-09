@@ -1,0 +1,13 @@
+{
+    "mantenimiento": {
+        "estasEn": "You are in",
+        "enMantenimiento": "This section is currently under maintenance",
+        "subtitulo": "We are working to improve your experience",
+        "descripcion": "We are currently making improvements to our website. We will be back soon with new features and a better experience for you.",
+        "ultimaActualizacion": "Last update",
+        "altImagen": "Programming on screen",
+        "necesitasAyuda": "Need urgent help?",
+        "contactanos": "Contact us at",
+        "gracias": "Thank you for your patience and understanding"
+    }
+}

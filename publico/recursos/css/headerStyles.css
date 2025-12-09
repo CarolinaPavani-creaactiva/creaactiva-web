@@ -1,0 +1,138 @@
+@import url('./base/_variables.css');
+@import url('./base/_layout.css');
+@import url('./vistas/responsive/respHeader.css');
+
+/* HEADER GENERAL */
+.h_header-principal {
+  background-color: #f5f7f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+/* CONTENEDOR */
+.h_header-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  flex-wrap: nowrap;
+}
+
+/* LOGO */
+.h_logo img {
+  height: 50px;
+}
+
+/* NAV + BOTONES */
+.h_nav-acciones {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* NAV */
+.h_navegacion ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.h_navegacion a {
+  text-decoration: none;
+  color: var(--color-azul-oscuro);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.h_navegacion a:hover {
+  color: var(--color-azul-medio);
+}
+
+/* BOTONES */
+.h_btn-accesibilidad,
+.h_btn-idioma {
+  background-color: transparent;
+  color: var(--color-azul-oscuro);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+
+.h_btn-accesibilidad:hover,
+.h_btn-idioma:hover {
+  color: var(--color-azul-medio);
+}
+
+/* HAMBURGUESA */
+.h_btn-menu {
+  width: 32px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  position: relative;
+  z-index: 1001;
+}
+
+.h_btn-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--color-azul-oscuro);
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.h_btn-menu:hover span {
+  background: var(--color-azul-medio);
+}
+
+/* ===== MENÚ DESPLEGABLE DE IDIOMA ===== */
+
+.lang-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Mostrar el menú */
+.lang-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.lang-menu span {
+    cursor: pointer;
+    padding: 6px 10px;
+    display: block;
+    white-space: nowrap;
+    border-radius: 4px;
+    transition: background .2s ease;
+}
+
+.lang-menu span:hover {
+    background: rgba(0, 0, 0, 0.08);
+}

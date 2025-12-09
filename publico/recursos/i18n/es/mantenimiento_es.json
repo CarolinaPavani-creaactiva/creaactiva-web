@@ -1,0 +1,13 @@
+{
+    "mantenimiento": {
+        "estasEn": "Estás en",
+        "enMantenimiento": "Actualmente está en mantenimiento",
+        "subtitulo": "Estamos trabajando para mejorar tu experiencia",
+        "descripcion": "Actualmente estamos realizando mejoras en nuestro sitio web. Volveremos pronto con nuevas funcionalidades y una mejor experiencia para ti.",
+        "ultimaActualizacion": "Última actualización",
+        "altImagen": "Programación en pantalla",
+        "necesitasAyuda": "¿Necesitas ayuda urgente?",
+        "contactanos": "Contáctanos en",
+        "gracias": "Gracias por tu paciencia y comprensión"
+    }
+}
