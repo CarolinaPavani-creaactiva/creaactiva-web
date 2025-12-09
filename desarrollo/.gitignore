@@ -16,3 +16,7 @@ node_modules/
 
 # Cache o datos generados por el servidor
 cache/
+
+# Para no suibirlo nunca al repositorio
+/aplicacion/config.php
+

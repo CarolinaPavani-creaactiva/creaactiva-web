@@ -136,3 +136,34 @@
 .lang-menu span:hover {
     background: rgba(0, 0, 0, 0.08);
 }
+
+/* ===== BOTÓN LOGIN / LOGOUT (con icono) ===== */
+
+.h_login-logout .btn-login {
+    background: var(--color-azul-oscuro);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.12s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 14px rgba(8,40,80,0.06);
+    border: 0;
+}
+
+.h_login-logout .btn-login:hover {
+    background: var(--color-azul-medio);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(8,40,80,0.08);
+}
+
+.h_login-logout .btn-login img {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0)); /* placeholder: no color change */
+}
+

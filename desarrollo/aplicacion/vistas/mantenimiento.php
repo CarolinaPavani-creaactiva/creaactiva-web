@@ -9,7 +9,7 @@ if (!isset($vistaActual)) {
 
         <h2 class="mnto_titulo">
             <span data-i18n="mantenimiento.estasEn">Estás en</span>
-            <b><?php echo $vistaActual; ?></b><br>
+            <b><?= htmlspecialchars($vistaActual) ?></b><br>
             <span data-i18n="mantenimiento.enMantenimiento">Actualmente está en mantenimiento</span>
         </h2>
 
@@ -29,7 +29,7 @@ if (!isset($vistaActual)) {
 
         <div class="mnto_image_box">
             <img class="mnto_imagen"
-                 src="publico/recursos/imagenes/mantenimientoP.jpg"
+                 src="<?= url('publico/recursos/imagenes/mantenimientoP.jpg') ?>"
                  alt="Programación en pantalla"
                  data-i18n="mantenimiento.altImagen"
                  data-i18n-attr="alt">

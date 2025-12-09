@@ -1,5 +1,5 @@
 <!-- CSS del Blog -->
-<link rel="stylesheet" href="publico/recursos/css/mainStyles.css">
+<link rel="stylesheet" href="<?= url('publico/recursos/css/mainStyles.css') ?>">
 
 <main class="blog-principal">
     <?php
@@ -12,4 +12,4 @@
 </main>
 
 <!-- JS específico de la página -->
-<script src="publico/recursos/js/botonArriba.js"></script>
+<script src="<?= url('publico/recursos/js/botonArriba.js') ?>"></script>

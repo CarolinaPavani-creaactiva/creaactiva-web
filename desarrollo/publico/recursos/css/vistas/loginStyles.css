@@ -1,0 +1,92 @@
+@import url('../base/_variables.css');
+@import url('../base/_layout.css');
+@import url('./responsive/respLogin.css');
+
+/* CONTENEDOR GENERAL */
+.login-container {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f7f9;
+    padding: 20px;
+}
+
+/* TARJETA */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    text-align: center;
+    border-top: 4px solid var(--color-azul-medio, #004aad);
+}
+
+.login-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--color-azul-oscuro, #002b5c);
+    font-weight: 600;
+}
+
+/* ERRORES */
+.login-error {
+    background: #ffdddd;
+    color: #d30000;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #ffb3b3;
+}
+
+/* CAMPOS */
+.login-form {
+    text-align: left;
+}
+
+.login-field {
+    margin-bottom: 1rem;
+}
+
+.login-field label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333;
+    font-weight: 500;
+}
+
+.login-field input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    transition: border-color .3s ease;
+}
+
+.login-field input:focus {
+    outline: none;
+    border-color: var(--color-azul-medio, #004aad);
+}
+
+/* BOTÓN */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: var(--color-azul-medio, #004aad);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.login-btn:hover {
+    background: var(--color-azul-oscuro, #002b5c);
+}

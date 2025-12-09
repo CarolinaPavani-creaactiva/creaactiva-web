@@ -25,19 +25,26 @@
     position: relative;
   }
 
+  .h_login-logout .btn-login {
+    padding: 6px 10px;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+
   /* FORZAR VISIBILIDAD DE LA HAMBURGUESA */
-.h_btn-menu {
+  .h_btn-menu {
     display: flex !important;
     z-index: 9999 !important;
-}
+  }
 
-.h_btn-menu span {
+  .h_btn-menu span {
     display: block !important;
     background: var(--color-azul-oscuro) !important;
     width: 26px !important;
     height: 3px !important;
     border-radius: 2px !important;
-}
+  }
 
   /* LOGO CENTRADO */
   .h_logo {
@@ -83,7 +90,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: rgba(255,255,255,0.96);
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
     max-height: 0;
     opacity: 0;

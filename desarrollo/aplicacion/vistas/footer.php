@@ -1,5 +1,5 @@
 <!-- enlace al CSS -->
-<link rel="stylesheet" href="publico/recursos/css/footerStyles.css?v=2">
+<link rel="stylesheet" href="<?= url('publico/recursos/css/footerStyles.css?v=2') ?>">
 
 <footer class="f_footer">
     <div class="f_contenedor">
@@ -17,10 +17,10 @@
 
             <div class="f_social">
                 <a href="#">
-                    <img src="publico/recursos/imagenes/iconos/instagram.svg" alt="Instagram">
+                    <img src="<?= url('publico/recursos/imagenes/iconos/instagram.svg') ?>" alt="Instagram">
                 </a>
                 <a href="#">
-                    <img src="publico/recursos/imagenes/iconos/linkedin.svg" alt="LinkedIn">
+                    <img src="<?= url('publico/recursos/imagenes/iconos/linkedin.svg') ?>" alt="LinkedIn">
                 </a>
             </div>
         </div>
@@ -29,9 +29,9 @@
         <div class="f_col">
             <h4 class="f_subtitulo" data-i18n="footer.col2.titulo">Departamentos</h4>
             <ul class="f_lista">
-                <li><a href="/equipo" data-i18n="footer.col2.trabaja">Trabaja con nosotros</a></li>
-                <li><a href="/blog" data-i18n="footer.col2.blog">Blog</a></li>
-                <li><a href="/equipo" data-i18n="footer.col2.equipo">Equipo</a></li>
+                <li><a href="<?= url('equipo') ?>" data-i18n="footer.col2.trabaja">Trabaja con nosotros</a></li>
+                <li><a href="<?= url('blog') ?>" data-i18n="footer.col2.blog">Blog</a></li>
+                <li><a href="<?= url('equipo') ?>" data-i18n="footer.col2.equipo">Equipo</a></li>
             </ul>
         </div>
 
@@ -39,10 +39,10 @@
         <div class="f_col">
             <h4 class="f_subtitulo" data-i18n="footer.col3.titulo">Leer sobre</h4>
             <ul class="f_lista">
-                <li><a href="/blog" data-i18n="footer.col3.tecnologia">Tecnología educativa</a></li>
-                <li><a href="/blog" data-i18n="footer.col3.metodologia">Metodología e Innovación</a></li>
-                <li><a href="/blog" data-i18n="footer.col3.gestion">Gestión y Liderazgo Educativo</a></li>
-                <li><a href="/blog" data-i18n="footer.col3.formacion">Formación y Recursos</a></li>
+                <li><a href="<?= url('blog') ?>" data-i18n="footer.col3.tecnologia">Tecnología educativa</a></li>
+                <li><a href="<?= url('blog') ?>" data-i18n="footer.col3.metodologia">Metodología e Innovación</a></li>
+                <li><a href="<?= url('blog') ?>" data-i18n="footer.col3.gestion">Gestión y Liderazgo Educativo</a></li>
+                <li><a href="<?= url('blog') ?>" data-i18n="footer.col3.formacion">Formación y Recursos</a></li>
             </ul>
         </div>
 
@@ -50,8 +50,8 @@
         <div class="f_col">
             <h4 class="f_subtitulo" data-i18n="footer.col4.titulo">Soporte</h4>
             <ul class="f_lista">
-                <li><a href="/contacto" data-i18n="footer.col4.contacto">Contacto</a></li>
-                <li><a href="/contacto" data-i18n="footer.col4.soporte">Soporte</a></li>
+                <li><a href="<?= url('contacto') ?>" data-i18n="footer.col4.contacto">Contacto</a></li>
+                <li><a href="<?= url('contacto') ?>" data-i18n="footer.col4.soporte">Soporte</a></li>
             </ul>
         </div>
 
@@ -59,7 +59,8 @@
 
     <!-- BARRA INFERIOR -->
     <div class="f_bottom">
-        <p data-i18n="footer.bottom">© 2026 · Crea Activa Desarrollo y Gestión S.L. · Todos los derechos reservados.</p>
+        <p data-i18n="footer.bottom">© 2026 · Crea Activa Desarrollo y Gestión S.L.</p>
     </div>
 </footer>
+
 </html>

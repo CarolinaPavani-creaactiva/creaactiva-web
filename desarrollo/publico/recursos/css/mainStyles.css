@@ -12,11 +12,13 @@
 @import url('./vistas/serviciosStyles.css');
 @import url('./vistas/contactoStyles.css');
 @import url('./vistas/mantenimientoStyles.css');
+@import url('./vistas/loginStyles.css');
 
 /* ----- RESPONSIVE POR PANTALLA ----- */
 @import url('./vistas/responsive/respHome.css');
 @import url('./vistas/responsive/respServicios.css');
 @import url('./vistas/responsive/respContacto.css');
+@import url('./vistas/responsive/respLogin.css');
 
 /* ======================================================
    🌐 ESTILOS GLOBALÍSIMOS (solo cosas realmente globales)
