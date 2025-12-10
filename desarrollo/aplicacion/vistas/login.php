@@ -1,32 +1,67 @@
-<!-- aplicacion/vistas/login.php -->
-<link rel="stylesheet" href="<?= url('publico/recursos/css/mainStyles.css') ?>">
+<?php
 
-<div class="login-container">
+// Asegurarse de que la función para generar el token CSRF esté disponible
+if (!function_exists('generar_token_csrf')) {
+    $p = __DIR__ . '/../funciones/auth.php';
+    if (file_exists($p)) include_once $p;
+}
 
-    <div class="login-card">
+$token_csrf = function_exists('generar_token_csrf') ? generar_token_csrf() : '';
+$valor_correo = $valor_correo ?? '';
+?>
 
-        <h2 class="login-title">Iniciar sesión</h2>
+<main class="contenedor contenido-login" role="main" aria-labelledby="titulo-login">
+    <h1 id="titulo-login"><?= htmlspecialchars($pageTitle ?? 'Iniciar sesión') ?></h1>
 
-        <?php if (!empty($error)): ?>
-            <div class="login-error"><?= htmlspecialchars($error) ?></div>
-        <?php endif; ?>
+    <?php if (!empty($error)): ?>
+        <div class="alerta alerta-error" role="alert" aria-live="assertive">
+            <?= htmlspecialchars($error) ?>
+        </div>
+    <?php endif; ?>
 
-        <form method="post" action="<?= url('login') ?>" class="login-form">
+    <form id="formLogin" class="form-login" action="<?= url('login') ?>" method="post" novalidate>
+        <input type="hidden" name="_csrf" value="<?= htmlspecialchars($token_csrf) ?>">
 
-            <div class="login-field">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required placeholder="Introduce tu email">
-            </div>
+        <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input
+                id="correo"
+                name="correo"
+                type="email"
+                required
+                placeholder="tucorreo@ejemplo.com"
+                value="<?= htmlspecialchars($valor_correo) ?>"
+                autocomplete="username"
+                aria-describedby="correoHelp"
+            >
+            <small id="correoHelp" class="help">Introduce el correo con el que te registraste.</small>
+        </div>
 
-            <div class="login-field">
-                <label for="password">Contraseña</label>
-                <input type="password" name="password" id="password" required placeholder="Introduce tu contraseña">
-            </div>
+        <div class="campo">
+            <label for="clave">Contraseña</label>
+            <input
+                id="clave"
+                name="clave"
+                type="password"
+                required
+                placeholder="••••••••"
+                autocomplete="current-password"
+                aria-describedby="claveHelp"
+            >
+            <small id="claveHelp" class="help">Tu contraseña debe ser segura.</small>
+        </div>
 
-            <button type="submit" class="login-btn">Entrar</button>
+        <div class="campo acciones">
+            <button type="submit" class="boton-principal">Entrar</button>
+            <a href="<?= url('recuperar_clave') ?>" class="enlace-pequeno">¿Has olvidado la contraseña?</a>
+        </div>
+    </form>
 
-        </form>
+    <section class="registro-aux">
+        <p>¿Aún no tienes cuenta? <a href="<?= url('registro') ?>">Regístrate aquí</a>.</p>
+    </section>
+</main>
 
-    </div>
+<!-- Pequeño script opcional para mejorar UX: no doble submit -->
+<script src="<?= url('publico/recursos/js/formLogin.js') ?>"></script>
 
-</div>

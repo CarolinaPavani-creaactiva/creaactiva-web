@@ -1,7 +1,7 @@
 <?php
 // aplicacion/vistas/admin.php
 require_admin();
-require_once __DIR__ . '/../modelo/usuario_modelo.php';
+require_once __DIR__ . '/../modelso/Modelo_usuario.php';
 $users = usuarios_obtener_todos();
 ?>
 <h2>Panel admin - Usuarios</h2>

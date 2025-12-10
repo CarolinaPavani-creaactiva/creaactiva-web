@@ -18,7 +18,7 @@ $viewPath = __DIR__ . "/aplicacion/vistas/{$page}.php";
 // Si existe un controlador, ejecutarlo y terminar
 if (file_exists($ctrlPath)) {
     require_once $ctrlPath;
-    exit;
+    
 }
 
 // Si existe la vista, inclúyela 

@@ -1,7 +1,7 @@
 <?php
 // aplicacion/vistas/admin_actions.php
 require_admin();
-require_once __DIR__ . '/../modelo/usuario_modelo.php';
+require_once __DIR__ . '/../modelos/Modelo_usuario.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';

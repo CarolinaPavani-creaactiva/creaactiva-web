@@ -1,169 +1,283 @@
-@import url('./base/_variables.css');
-@import url('./base/_layout.css');
-@import url('./vistas/responsive/respHeader.css');
+/* publico/recursos/css/headerStyles.css */
+/* Estilos base para la cabecera (escritorio y grandes pantallas) */
 
-/* HEADER GENERAL */
-.h_header-principal {
-  background-color: #f5f7f9;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+/* Variables globales (ajusta colores para mantener apariencia) */
+:root {
+  --cabecera-bg: #ffffff;
+  --cabecera-text: #1b1b1b;
+  --accent: #0074d9;
+  --muted: #666;
+  --btn-bg: var(--accent);
+  --btn-color: #fff;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --max-width: 1200px;
+  --gap: 1rem;
+  --font-base: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--cabecera-text);
+  margin: 0;
+  font-size: 100%
+}
+
+/* contenedor global centrado */
+.contenedor {
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* header */
+.cabecera {
+  background: var(--cabecera-bg);
+  border-bottom: 1px solid #ececec;
+  box-shadow: var(--shadow);
   position: relative;
-  top: 0;
   z-index: 1000;
 }
 
-/* CONTENEDOR */
-.h_header-contenido {
+.cabecera-contenido {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  height:64px; 
+}
+
+/* logo */
+.cabecera-izq {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.8rem 1.5rem;
-  flex-wrap: nowrap;
+  gap: .5rem;
 }
 
-/* LOGO */
-.h_logo img {
-  height: 50px;
+/* nav principal (desktop) */
+.cabecera-nav {
+  flex: 1;
+  margin-left: 1rem;
+  display: block;
 }
 
-/* NAV + BOTONES */
-.h_nav-acciones {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-/* NAV */
-.h_navegacion ul {
-  display: flex;
+.nav-lista {
   list-style: none;
-  gap: 24px;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
-.h_navegacion a {
+.nav-item a {
   text-decoration: none;
-  color: var(--color-azul-oscuro);
-  font-weight: 500;
-  transition: color 0.3s;
+  color: var(--cabecera-text);
+  padding: .4rem .6rem;
+  display: inline-block;
+  border-radius: 6px;
 }
 
-.h_navegacion a:hover {
-  color: var(--color-azul-medio);
+.nav-item a:hover,
+.nav-item a:focus {
+  color: var(--accent);
+  background: rgba(0, 116, 217, 0.06);
+  outline: none;
 }
 
-/* BOTONES */
-.h_btn-accesibilidad,
-.h_btn-idioma {
-  background-color: transparent;
-  color: var(--color-azul-oscuro);
-  border: none;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  transition: color 0.3s;
-  font-weight: 600;
-}
-
-.h_btn-accesibilidad:hover,
-.h_btn-idioma:hover {
-  color: var(--color-azul-medio);
-}
-
-/* HAMBURGUESA */
-.h_btn-menu {
-  width: 32px;
-  height: 24px;
+/* boton hamburguesa */
+.btn-hamburguesa {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  background: none;
+  /* visible en mobile por respHeader.css */
+  background: transparent;
   border: none;
-  padding: 0;
-  position: relative;
-  z-index: 1001;
+  padding: 8px;
+  cursor: pointer;
 }
 
-.h_btn-menu span {
+.btn-hamburguesa .hamb-line {
   display: block;
-  height: 3px;
-  width: 100%;
-  background: var(--color-azul-oscuro);
-  border-radius: 3px;
-  transition: background-color 0.3s;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 2px;
 }
 
-.h_btn-menu:hover span {
-  background: var(--color-azul-medio);
+/* controles derecha */
+.cabecera-der {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
 }
 
-/* ===== MENÚ DESPLEGABLE DE IDIOMA ===== */
-
-.lang-menu {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(6px);
-    padding: 10px 14px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    transform: translateY(-8px);
-    pointer-events: none;
-    transition: opacity .25s ease, transform .25s ease;
+.cabecera-controles {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin-right: .5rem;
 }
 
-/* Mostrar el menú */
-.lang-menu.show {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+/* idioma select */
+.select-idioma {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.95rem;
 }
 
-.lang-menu span {
-    cursor: pointer;
-    padding: 6px 10px;
-    display: block;
-    white-space: nowrap;
-    border-radius: 4px;
-    transition: background .2s ease;
+/* accesibilidad */
+.btn-accesibilidad {
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: .95rem;
 }
 
-.lang-menu span:hover {
-    background: rgba(0, 0, 0, 0.08);
+.btn-accesibilidad:hover {
+  border-color: var(--accent);
 }
 
-/* ===== BOTÓN LOGIN / LOGOUT (con icono) ===== */
-
-.h_login-logout .btn-login {
-    background: var(--color-azul-oscuro);
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 10px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.18s ease, transform 0.12s ease, box-shadow 0.12s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 6px 14px rgba(8,40,80,0.06);
-    border: 0;
+/* usuario */
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
 }
 
-.h_login-logout .btn-login:hover {
-    background: var(--color-azul-medio);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(8,40,80,0.08);
+.usuario-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.h_login-logout .btn-login img {
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    filter: drop-shadow(0 0 0 rgba(0,0,0,0)); /* placeholder: no color change */
+.usuario-nombre {
+  font-size: .95rem;
+  color: var(--cabecera-text);
 }
 
+/* botones y enlaces */
+.boton-perfil,
+.boton-sencillo,
+.btn-login {
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  color: var(--cabecera-text);
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  border-radius: 6px;
+}
+
+/* nav movil (oculto por defecto) */
+.nav-movil {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1500;
+}
+
+.nav-movil-inner {
+  background: var(--cabecera-bg);
+  width: 320px;
+  max-width: 80%;
+  height: 100%;
+  padding: 1rem;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.12);
+  overflow: auto;
+}
+
+.nav-movil-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.nav-movil-lista li {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-movil-lista li a {
+  display: block;
+  padding: 12px 8px;
+  text-decoration: none;
+  color: var(--cabecera-text);
+}
+
+/* footer del nav movil */
+.nav-movil-footer {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+/* utilidades */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+/* alto contraste */
+body.alto-contraste,
+body.alto-contraste * {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* ajustes para pantallas muy grandes: mejor distribución */
+@media (min-width: 1600px) {
+  :root {
+    --max-width: 1400px;
+  }
+
+  .cabecera-contenido {
+    height: 72px;
+  }
+
+  .nav-lista {
+    gap: 1.25rem;
+  }
+}
+
+/* pequeños refinamientos para desktop normal */
+@media (min-width: 1024px) and (max-width:1599px) {
+  .cabecera-contenido {
+    height: 68px;
+  }
+}
+
+/* ocultar nav-movil en escritorio (se muestra por CSS/JS cuando corresponde) */
+@media (min-width: 801px) {
+  .nav-movil {
+    display: none !important;
+  }
+}

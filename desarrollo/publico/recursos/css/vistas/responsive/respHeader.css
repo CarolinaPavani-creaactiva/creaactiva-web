@@ -1,113 +1,129 @@
-/* ===============================
-   RESPONSIVE TABLET
-================================ */
-@media (max-width: 991px) {
+/* publico/recursos/css/respHeader.css */
+/* Breakpoints y comportamiento por dispositivos */
 
-  .h_header-contenido {
-    padding: 0.6rem 1rem;
+/* Desktop grande / pantallas anchas (>=1600 handled in headerStyles) */
+
+/* Escritorio normal (>=1024) */
+@media (min-width: 1024px) {
+  .btn-hamburguesa {
+    display: none;
   }
 
-  .h_logo img {
-    height: 45px;
+  .nav-lista {
+    display: flex;
+  }
+
+  .select-idioma {
+    display: inline-block;
+  }
+
+  .usuario-nombre {
+    display: inline-block;
   }
 }
 
-/* ===============================
-   MÓVIL (≤768px)
-================================ */
-@media (max-width: 768px) {
+/* Tablets (>= 801px and < 1024px) */
+@media (min-width: 801px) and (max-width: 1023px) {
+  .btn-hamburguesa {
+    display: inline-block;
+  }
 
-  .h_header-contenido {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+  /* mostrar hamburguesa en tablets si quieres simplificar */
+  .nav-lista {
+    display: none;
+  }
+
+  /* mostramos menu movil para tablets */
+  .cabecera-contenido {
+    height: 64px;
+  }
+
+  .select-idioma {
+    display: inline-block;
+  }
+}
+
+/* Móvil grande / Phablet (481 - 800px) */
+@media (min-width: 481px) and (max-width: 800px) {
+  .btn-hamburguesa {
+    display: inline-block;
+  }
+
+  .nav-lista {
+    display: none;
+  }
+
+  .cabecera-contenido {
+    height: 60px;
+    padding: 0 .8rem;
+  }
+
+  .select-idioma {
+    display: none;
+  }
+
+  /* opcional ocultar select en pantallas pequeñas */
+  .cabecera-izq,
+  .cabecera-der {
     align-items: center;
-    padding: 0.6rem;
-    position: relative;
   }
 
-  .h_login-logout .btn-login {
-    padding: 6px 10px;
-    gap: 6px;
-    font-size: 14px;
+  .usuario-nombre {
+    display: none;
   }
 
+  /* optimizar espacio */
+}
 
-  /* FORZAR VISIBILIDAD DE LA HAMBURGUESA */
-  .h_btn-menu {
-    display: flex !important;
-    z-index: 9999 !important;
+/* Móvil pequeño (<=480px) */
+@media (max-width: 480px) {
+  .btn-hamburguesa {
+    display: inline-block;
   }
 
-  .h_btn-menu span {
-    display: block !important;
-    background: var(--color-azul-oscuro) !important;
-    width: 26px !important;
-    height: 3px !important;
-    border-radius: 2px !important;
+  .nav-lista {
+    display: none;
   }
 
-  /* LOGO CENTRADO */
-  .h_logo {
-    grid-column: 2;
-    justify-self: center;
+  .cabecera-contenido {
+    height: 56px;
+    padding: 0 .6rem;
   }
 
-  .h_logo img {
+  .select-idioma {
+    display: none;
+  }
+
+  .cabecera-controles {
+    gap: 0.25rem;
+  }
+
+  .usuario-avatar {
+    width: 32px;
     height: 32px;
-    object-fit: contain;
   }
 
-  /* DERECHA */
-  .h_nav-acciones {
-    grid-column: 3;
-    justify-self: end;
-    display: flex;
-    gap: 12px;
-    align-items: center;
+  .nav-movil-inner {
+    width: 280px;
   }
 
-  .h_acciones-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .nav-movil-lista li a {
+    font-size: 0.95rem;
+    padding: 12px;
   }
+}
 
-  .h_btn-accesibilidad img {
-    width: 22px;
-    height: 22px;
-  }
+/* Animación de apertura del nav-movil: cuando visible, añadimos clase .open con JS */
+.nav-movil.open {
+  display: block;
+}
 
-  /* Menú idioma */
-  #lang-menu {
-    position: absolute;
-    top: calc(100% + 6px);
-    right: 10px;
-  }
+.nav-movil.open .nav-movil-inner {
+  transform: translateX(0);
+  transition: transform .28s ease;
+}
 
-  /* NAV SLIDE DOWN */
-  .h_navegacion {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: 0.35s;
-  }
-
-  .h_navegacion.h_activo {
-    max-height: 360px;
-    opacity: 1;
-  }
-
-  .h_navegacion ul {
-    padding: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    align-items: center;
-  }
+.nav-movil .nav-movil-inner {
+  transform: translateX(-10%);
+  transition: transform .28s ease;
 }
