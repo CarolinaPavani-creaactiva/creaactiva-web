@@ -1,5 +1,9 @@
-/* ===== MAIN.CSS ===== */
-/* Solo importa estilos base y estilos por vista */
+/* ===== MAIN.CSS (corregido) =====
+   - Mantengo imports por vista
+   - Corrijo ruta del fondo home para evitar 404
+   - Evito reglas que puedan interferir con header fijo
+   - Evito width:100vw que a veces provoca overflow
+*/
 
 /* ----- VARIABLES Y LAYOUT ----- */
 @import url('./base/_variables.css');
@@ -22,12 +26,31 @@
 
 /* ======================================================
    🌐 ESTILOS GLOBALÍSIMOS (solo cosas realmente globales)
+   NOTA: aquí evitamos tocar "padding-top" del body respecto al header.
+         El header debe gestionar su propio offset (body padding) desde headerStyles.css
+         o cada vista puede gestionarlo si prefieres.
 ====================================================== */
 
+/* fallback para variables que puedas tener definidas en _variables.css */
+:root {
+  /* Ruta absoluta base a recursos — ajusta si tu proyecto no está en /creaactiva-web/desarrollo */
+  --recursos-base: '/creaactiva-web/desarrollo/publico/recursos';
+  /* Definimos la URL completa como variable PARA usarla en background-image */
+  --img-home: url('/creaactiva-web/desarrollo/publico/recursos/imagenes/fondoBase.jpg');
+  /* Si prefieres usar una ruta relativa, cambia la línea anterior por:
+     --img-home: url('../imagenes/fondoBase.jpg');
+     (esto depende de la ubicación del CSS y de cómo sirves los archivos)
+  */
+}
+
+/* Reset/Global */
 body {
     margin: 0;
-    font-family: var(--fuente-principal);
+    font-family: var(--fuente-principal, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial);
     background-color: #ffffff;
+    /* NOTA: no forzamos padding-top aquí para evitar conflictos.
+       Si el header fija su propio padding (ej: headerStyles.css), debe ser suficiente.
+       Si sigues teniendo solapamiento, añade padding-top desde headerStyles.css o desde la vista. */
 }
 
 a {
@@ -42,7 +65,7 @@ a {
     right: 40px;
     width: 50px;
     height: 50px;
-    background-color: var(--color-azul-medio);
+    background-color: var(--color-azul-medio, #2b8fcc);
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -57,24 +80,35 @@ a {
 }
 
 #btn-subir:hover { 
-    background-color: var(--color-azul-oscuro); 
+    background-color: var(--color-azul-oscuro, #0b66a3); 
 }
 
 #btn-subir.mostrar { 
     opacity: 1; 
 }
 
-/* ---- FONDO HOME GLOBAL (solo para la página Home) ---- */
+/* ---- FONDO HOME GLOBAL (solo para la página Home) ----
+   - Usamos la variable --img-home definida arriba para evitar errores 404 por rutas relativas.
+   - Usamos width:100% en vez de 100vw para evitar overflow horizontal.
+   - La altura la hacemos flexible: max(60vh, 520px) para mantener buena apariencia en alturas y pantallas distintas.
+*/
 .home-fondo {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 750px;
-    background: url('../imagenes/fondoBase.jpg') center/cover no-repeat;
+    right: 0;
+    width: 100%;
+    height: max(60vh, 520px); /* adaptable según pantalla */
+    background: var(--img-home) center/cover no-repeat;
     opacity: 0.14;
     z-index: 0;
 }
+
+/* Si prefieres usar una ruta relativa desde el CSS (y sabes que la estructura es consistente),
+   reemplaza `background: var(--img-home) ...` por:
+   background: url('../imagenes/fondoBase.jpg') center/cover no-repeat;
+   (esto es correcto si mainStyles.css está en publico/recursos/css/).
+*/
 
 /* ---- DIVISOR UNIVERSAL ---- */
 .divisor-decorado {
@@ -88,12 +122,24 @@ a {
 
 .divisor-decorado::after {
     content: "✧";
-    background-color: var(--color-gris-claro);
+    background-color: var(--color-gris-claro, #f3f5f7);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--color-azul-empresa);
+    color: var(--color-azul-empresa, #2b8fcc);
     padding: 0 0.8rem;
     font-size: 1rem;
 }
+
+/* ===== RECOMENDACIONES =====
+   1) Si sigues con 404 para fondoBase.jpg, abre DevTools > Network y copia la ruta que solicita el navegador.
+      Asegúrate de que el archivo físico exista exactamente en:
+      publico/recursos/imagenes/fondoBase.jpg
+   2) Si quieres que cada vista importe su propio CSS (sin mainStyles), puedes eliminar las @import de vistas
+      y en cada vista (home.php, servicios.php...) poner sus <link> a css y responsive.
+   3) Si el header sigue solapando contenido: añade en headerStyles.css (cargado después de este main)
+      la regla:
+         html body { padding-top: var(--height-header, 64px) !important; }
+      (mejor que poner padding en mainStyles.css)
+*/

@@ -362,3 +362,159 @@
     max-width: 90px;
   }
 }
+
+/* ============================================
+   HAMBURGUESA — estilo moderno
+============================================ */
+.btn-hamburguesa {
+  padding: 0;
+  margin: 0;
+  width: 38px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 200000;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Líneas */
+.btn-hamburguesa .hamb-line {
+  width: 26px;
+  height: 3px;
+  background: #003366; /* azul corporativo o color que uses */
+  border-radius: 4px;
+  transition: 0.25s ease;
+  position: absolute;
+}
+
+/* Distribución vertical de las líneas */
+.btn-hamburguesa .hamb-line:nth-child(1) {
+  top: 6px;
+}
+
+.btn-hamburguesa .hamb-line:nth-child(2) {
+  top: 13px;
+}
+
+.btn-hamburguesa .hamb-line:nth-child(3) {
+  top: 20px;
+}
+
+/* Animación a "X" */
+.btn-hamburguesa.active .hamb-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.btn-hamburguesa.active .hamb-line:nth-child(2) {
+  opacity: 0;
+}
+
+.btn-hamburguesa.active .hamb-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================
+   PANEL LATERAL — estilo limpio premium
+============================================ */
+.nav-movil .nav-movil-inner {
+  background: #ffffff;
+  width: min(360px, 86%);
+  height: 100vh;
+  padding: 24px;
+  box-shadow: 4px 0 25px rgba(0, 0, 0, 0.12);
+  border-radius: 0 12px 12px 0;
+  transform: translateX(-100%);
+  transition: transform 300ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.nav-movil.visible .nav-movil-inner {
+  transform: translateX(0);
+}
+
+/* Fondo oscuro elegante */
+.nav-movil.visible {
+  background: rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(3px);
+}
+
+/* ============================================
+   LISTA DE ENLACES — estilo moderno
+============================================ */
+.nav-movil-lista {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.nav-movil-lista a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #003366; /* ajusta el color corporativo */
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.nav-movil-lista a:hover {
+  color: #007bff;
+  transform: translateX(4px);
+}
+
+/* Separador suave */
+.nav-movil-lista li {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+
+/* ---------- FIX OVERLAY POR ENCIMA DEL HERO (añadir al final de respHome.css) ---------- */
+
+/* Asegurar que el overlay del nav movil esté por encima */
+#nav-movil,
+.nav-movil {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 120000 !important;
+  display: none; /* oculto por defecto */
+  background: transparent !important;
+}
+
+/* Mostrar overlay cuando tenga la clase visible */
+#nav-movil.visible,
+.nav-movil.visible {
+  display: block !important;
+  background: rgba(0,0,0,0.35) !important;
+}
+
+/* Panel interior fijo y por delante */
+#nav-movil .nav-movil-inner,
+.nav-movil .nav-movil-inner {
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: min(360px, 92%);
+  box-shadow: 2px 0 24px rgba(0,0,0,0.12);
+  transform: translateX(0);
+  z-index: 120010 !important;
+  overflow-y: auto;
+}
+
+/* Si tu hero tiene z-index mayor, forzamos que quede por debajo */
+.hero-seccion,
+.home-hero,
+.home-principal .hero-seccion,
+.caja-azul-claro,
+.caja-azul-oscuro {
+  z-index: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  will-change: auto !important;
+}

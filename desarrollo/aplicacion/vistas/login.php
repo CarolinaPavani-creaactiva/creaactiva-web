@@ -19,7 +19,7 @@ $valor_correo = $valor_correo ?? '';
         </div>
     <?php endif; ?>
 
-    <form id="formLogin" class="form-login" action="<?= url('login') ?>" method="post" novalidate>
+    <form id="formLogin" class="form-login" action="<?= url('index.php?page=login') ?>" method="post" novalidate>
         <input type="hidden" name="_csrf" value="<?= htmlspecialchars($token_csrf) ?>">
 
         <div class="campo">
@@ -64,4 +64,3 @@ $valor_correo = $valor_correo ?? '';
 
 <!-- Pequeño script opcional para mejorar UX: no doble submit -->
 <script src="<?= url('publico/recursos/js/formLogin.js') ?>"></script>
-
