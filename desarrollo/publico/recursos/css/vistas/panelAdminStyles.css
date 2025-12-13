@@ -1,0 +1,223 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h3, h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilo del Panel */
+.panel-wrap {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.panel-sidebar {
+    width: 250px;
+    background-color: #343a40; 
+    color: #fff; 
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del Panel Admin */
+.panel-sidebar h3 {
+    color: #fff; 
+}
+
+/* Texto de los enlaces del panel de administración (más contraste) */
+.panel-sidebar a {
+    color: #ddd;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+/* Hover sobre los enlaces del sidebar */
+.panel-sidebar a:hover {
+    background-color: #495057; 
+}
+
+/* Eliminar icono en el botón de editar */
+.panel-sidebar a.edit::before {
+    display: none;
+}
+
+/* Área principal */
+.panel-main {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    color: #333; 
+}
+
+/* Texto "Aquí puedes ver, editar..." */
+.panel-main p.small {
+    color: #333;
+    font-size: 16px;
+}
+
+/* Tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Formulario */
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    font-weight: bold;
+    display: block;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Botones generales */
+.btn {
+    background-color: #0063cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-right: 10px;
+    width: 130px; 
+    height: 40px; 
+    font-size: 14px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn.secondary {
+    background-color: #868e96; 
+}
+
+.btn.secondary:hover {
+    background-color: #6c757d;
+}
+
+a.btn.secondary {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Ajuste para los botones de acciones en la tabla */
+.actions-form {
+    display: inline-block;
+    margin: 0;
+}
+
+.actions-form .btn {
+    margin: 5px 0;  
+    padding: 8px 12px; 
+    width: 130px;  
+    height: 40px;
+    text-align: center;
+    font-size: 14px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions-form .btn.secondary {
+    background-color: #6c757d;
+}
+
+.actions-form .btn.secondary:hover {
+    background-color: #495057; 
+}
+
+.actions-form .btn.edit {
+    background-color: #0d2f53; 
+}
+
+.actions-form .btn.edit:hover {
+    background-color: #084b73; 
+}
+
+/* Botón Cancelar (Formulario Crear Usuario) */
+.btn.cancel {
+    background-color: #868e96;
+}
+
+.btn.cancel:hover {
+    background-color: #6c757d; 
+}
+
+/* Mensajes y Errores */
+.msg {
+    background-color: #d4edda; 
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.err {
+    background-color: #f1f3f5; 
+    color: #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.err ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 18px;
+}
+
+.err li {
+    margin: 5px 0;
+}
+
+.small {
+    font-size: 14px;
+    color: #888;
+}

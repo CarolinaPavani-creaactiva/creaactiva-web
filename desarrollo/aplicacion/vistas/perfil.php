@@ -133,4 +133,4 @@ $avatar = $datos_usuario['avatar'] ?? null;
 </main>
 
 <!-- Llamada al script de vista previa del avatar -->
-<script src="<?= url('publico/recursos/js/perfil.js') ?>"></script>
+<script src="<?= url('publico/recursos/js/perfil_avatar.js') ?>"></script>

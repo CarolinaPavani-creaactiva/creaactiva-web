@@ -1,120 +1,78 @@
-// publico/recursos/js/header.js
-// Controla: language dropdown, accesibilidad A+/A-, hamburger toggle.
-// Incluye: reparenting de #nav-movil a <body> para evitar stacking context del hero.
-
-console.log('header.js cargado — inicializando controles de header');
-
+// header.js - Helpers ligeros y ajustes menores para header (no maneja dropdowns)
 (function () {
-
-  /* -------------------- helpers -------------------- */
-  function setCookie(name, value, days) {
-    var expires = "";
-    if (typeof days === "number") {
-      var date = new Date();
-      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-      expires = "; expires=" + date.toUTCString();
+    'use strict';
+    function qs(sel) { return document.querySelector(sel); }
+    function qsa(sel) { return Array.from(document.querySelectorAll(sel)); }
+    function obtenerElemento(id, fallbackSelector) {
+        var el = document.getElementById(id);
+        if (el) return el;
+        if (fallbackSelector) return qs(fallbackSelector);
+        return null;
     }
-    document.cookie = name + "=" + encodeURIComponent(value || "") + expires + "; path=/";
-  }
-  function getCookie(name) {
-    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    return match ? decodeURIComponent(match[2]) : null;
-  }
-
-  /* -------------------- lógica principal -------------------- */
-
-  // Esperamos DOMContentLoaded para manipular el DOM (y mover nav-movil)
-  document.addEventListener('DOMContentLoaded', function () {
-
-    // --- Mover nav-movil al body para evitar stacking context de ancestros ---
-    (function ensureNavMovilAtBody() {
-      var navMovil = document.getElementById('nav-movil');
-      if (!navMovil) return;
-      if (navMovil.parentElement !== document.body) {
+    window.headerHelpers = { qs: qs, qsa: qsa, obtenerElemento: obtenerElemento };
+    document.addEventListener("DOMContentLoaded", function () {
         try {
-          // Guardamos el estado visible para preservarlo tras mover
-          var wasVisible = navMovil.classList.contains('visible');
-          document.body.appendChild(navMovil);
-          // Asegurar estilos pos-movimiento (por si hay overrides)
-          navMovil.style.position = navMovil.style.position || 'fixed';
-          navMovil.style.inset = navMovil.style.inset || '0';
-          navMovil.style.zIndex = navMovil.style.zIndex || '120000';
-          if (wasVisible) navMovil.classList.add('visible');
-        } catch (e) {
-          console.warn('header.js: no se pudo mover #nav-movil al body', e);
-        }
-      }
-    })();
-
-    // --- Selección de elementos ---
-    var btnHamb = document.getElementById('btn-hamburguesa');
-    var navMovil = document.getElementById('nav-movil');
-
-    // Si no está el botón, no hacemos nada
-    if (!btnHamb) {
-      console.warn('header.js: #btn-hamburguesa no encontrado');
-      return;
-    }
-
-    // Funciones abrir/cerrar
-    function abrirNav() {
-      if (!navMovil) return;
-      navMovil.classList.add('visible');
-      navMovil.setAttribute('aria-hidden', 'false');
-      btnHamb.classList.add('active');
-      btnHamb.setAttribute('aria-expanded', 'true');
-      // evitar scroll del fondo
-      document.documentElement.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
-    }
-
-    function cerrarNav() {
-      if (!navMovil) return;
-      navMovil.classList.remove('visible');
-      navMovil.setAttribute('aria-hidden', 'true');
-      btnHamb.classList.remove('active');
-      btnHamb.setAttribute('aria-expanded', 'false');
-      document.documentElement.style.overflow = '';
-      document.body.style.touchAction = '';
-    }
-
-    // Toggle al hacer click en el botón
-    btnHamb.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (!navMovil) return;
-      if (navMovil.classList.contains('visible')) cerrarNav();
-      else abrirNav();
+            var header = document.getElementById("site-header");
+            if (header) header.style.overflow = "visible";
+            var wrappers = document.querySelectorAll(".language-wrapper, .accesibilidad-wrapper");
+            wrappers.forEach(function(w){ w.style.overflow = "visible"; });
+        } catch (e) { console.warn("header.js init error", e); }
     });
 
-    // Cerrar al clickar fuera del panel (click en el overlay)
-    if (navMovil) {
-      navMovil.addEventListener('click', function (e) {
-        if (e.target === navMovil) cerrarNav();
-      });
+    // user-dropdown-toggle.js  (añádelo al final de header.js)
+(function () {
+  'use strict';
+
+  // find all user menu buttons (supports future multiple instances)
+  var userBtns = document.querySelectorAll('.user-btn');
+
+  if (!userBtns || userBtns.length === 0) return;
+
+  userBtns.forEach(function(btn) {
+    var menu = btn.parentElement.querySelector('.user-dropdown');
+    if (!menu) return;
+
+    // ensure ARIA attributes initial state
+    btn.setAttribute('aria-expanded', 'false');
+    menu.hidden = menu.hidden === undefined ? true : !!menu.hidden;
+
+    // toggle function
+    function toggleMenu(open) {
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      var wantOpen = open === undefined ? !isOpen : !!open;
+      btn.setAttribute('aria-expanded', wantOpen ? 'true' : 'false');
+      menu.hidden = !wantOpen;
     }
 
-    // Cerrar con Escape
-    document.addEventListener('keydown', function (e) {
-      if ((e.key === 'Escape' || e.key === 'Esc') && navMovil && navMovil.classList.contains('visible')) {
-        cerrarNav();
+    // click opens / closes
+    btn.addEventListener('click', function (ev) {
+      ev.stopPropagation();
+      toggleMenu();
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', function (ev) {
+      if (!menu.contains(ev.target) && ev.target !== btn) {
+        toggleMenu(false);
       }
     });
 
-    // Si hay enlaces dentro del nav-movil, cerrar al clicar uno (UX típico)
-    if (navMovil) {
-      var enlaces = navMovil.querySelectorAll('a');
-      enlaces.forEach(function (a) {
-        a.addEventListener('click', function () {
-          cerrarNav();
-        });
+    // close on escape
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape') {
+        toggleMenu(false);
+      }
+    });
+
+    // ensure links inside menu behave normally (in case other handlers stop them)
+    var links = menu.querySelectorAll('a, button');
+    links.forEach(function (el) {
+      el.addEventListener('click', function (ev) {
+        // allow navigation; but close the menu after click (useful on mobile)
+        toggleMenu(false);
       });
-    }
-
-    // Inicialización i18n si el proyecto lo usa
-    if (window.i18n && typeof window.i18n.init === 'function') {
-      try { window.i18n.init(); } catch (e) { console.warn('i18n init error', e); }
-    }
-
-  }); // DOMContentLoaded
+    });
+  });
+})();
 
 })();

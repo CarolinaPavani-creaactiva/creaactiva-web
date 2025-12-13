@@ -1,17 +1,168 @@
-/* respHeader.css (RESPONSIVE) */
+/* ===========================================================
+   respHeader.css (correcciones móviles / tablet)
+   Integrado con headerStyles.css:
+   - botón hamburguesa visible en móvil
+   - nav-movil overlay/panel correcto
+   - dropdowns flotantes centrados en móvil
+   - manejo de z-index / stacking contexts
+   =========================================================== */
 
-/* MÓVIL Y TABLET (<= 992px) */
+/* Variables (coherentes con headerStyles) */
+:root {
+  --alto-cabecera: 84px;
+  --alto-cabecera-mobile: 56px;
+  --navmovil-z: 120000;
+  --header-z: 110000;
+  --menu-z: 130000;
+}
+
+/* --------------------------
+   Base: esconder burger por defecto (desktop)
+   -------------------------- */
+header.cabecera .btn-hamburguesa,
+.btn-hamburguesa {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  box-sizing: border-box;
+}
+
+/* Mejor tactilidad */
+.cabecera button,
+.cabecera a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Permitir dropdowns fuera del header */
+header.cabecera,
+.header-controls-wrapper,
+.language-wrapper,
+.accesibilidad-wrapper {
+  overflow: visible !important;
+}
+
+/* --------------------------
+   MÓVIL / TABLET (<= 992px)
+   -------------------------- */
 @media (max-width: 992px) {
-  .cabecera-nav .nav-lista {
-    display: none;
-  }
 
-  .btn-hamburguesa {
+  /* Contenedor cabecera compacto */
+  header.cabecera .cabecera-contenido {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0.6rem 0.8rem;
+    box-sizing: border-box;
   }
 
-  .nav-movil.visible {
-    display: block;
+
+  /* Mostrar burger en móvil */
+  header.cabecera .btn-hamburguesa,
+  .btn-hamburguesa {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    order: -1;
+    width: 38px;
+    height: 30px;
+    min-width: 36px;
+    padding: 0;
+    margin-right: 8px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: calc(var(--header-z) + 1000);
+  }
+
+  .btn-hamburguesa .hamb-line {
+    width: 22px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 3px;
+    position: absolute;
+    left: 8px;
+    transition: transform .22s ease, opacity .18s ease;
+  }
+
+  .btn-hamburguesa .hamb-line:nth-child(1) {
+    top: 6px;
+  }
+
+  .btn-hamburguesa .hamb-line:nth-child(2) {
+    top: 13px;
+  }
+
+  .btn-hamburguesa .hamb-line:nth-child(3) {
+    top: 20px;
+  }
+
+  .btn-hamburguesa.active .hamb-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .btn-hamburguesa.active .hamb-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .btn-hamburguesa.active .hamb-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Ocultar la versión desktop de la navegación */
+  .cabecera-nav {
+    display: none !important;
+  }
+
+  /* NAV MÓVIL: overlay + panel (full viewport overlay) */
+  .nav-movil {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: var(--navmovil-z);
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* States: hidden vs visible */
+  .nav-movil[aria-hidden="true"],
+  .nav-movil:not(.visible) {
+    display: none !important;
+  }
+
+  .nav-movil.visible,
+  .nav-movil[aria-hidden="false"] {
+    display: block !important;
+    background: rgba(0, 0, 0, 0.36);
+    backdrop-filter: blur(2px);
+  }
+
+  /* Panel interior: fixed from left (matches headerStyles) */
+  .nav-movil .nav-movil-inner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: min(360px, 92%);
+    padding: 18px;
+    background: #fff;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.14);
+    border-radius: 0 12px 12px 0;
+    transform: translateX(-100%);
+    transition: transform 260ms cubic-bezier(.4, 0, .2, 1);
+    z-index: calc(var(--navmovil-z) + 10);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-movil.visible .nav-movil-inner,
+  .nav-movil[aria-hidden="false"] .nav-movil-inner {
+    transform: translateX(0);
   }
 
   .nav-movil-lista {
@@ -21,185 +172,381 @@
     margin-top: 20px;
   }
 
-  :root {
-    --alto-cabecera: 64px;
-  }
-
-  .cabecera-contenido {
-    padding: 0.6rem 0.8rem;
-    gap: 0.8rem;
-  }
-
-  /* ---------- ADICIONES MÓVIL: tamaño, posición y overlay ---------- */
-
-  /* Asegurar que el header use flex y permita ordenar elementos */
-  header.cabecera .cabecera-contenido {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-  }
-
-  /* Forzamos que el botón hamburguesa quede a la izquierda del todo */
-  .btn-hamburguesa {
-    display: flex !important;
-    order: -1;
-    /* lo colocamos antes del logo en el flex container */
-    width: 36px !important;
-    height: 28px !important;
-    min-width: 36px;
-    padding: 0;
-    margin-right: 8px;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-
-  /* Si tu markup coloca logo y otros en .cabecera-izq, aseguramos su orden */
-  .cabecera-izq {
-    order: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  /* Ocultamos la navegación desktop en móvil */
-  .cabecera-nav {
-    display: none;
-  }
-
-  /* NAV MOVIL: estado oculto por defecto y overlay cuando .visible */
-  .nav-movil {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: transparent;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .nav-movil.visible {
-    display: block;
-    background: rgba(0, 0, 0, 0.35);
-    /* overlay semitransparente */
-  }
-
-  /* Panel interno (panel deslizable desde la izquierda) */
-  .nav-movil .nav-movil-inner {
-    background: #ffffff;
-    width: min(360px, 92%);
-    height: 100%;
-    max-height: 100vh;
-    padding: 18px;
-    box-shadow: 2px 0 24px rgba(0, 0, 0, 0.12);
-    overflow-y: auto;
-    transform: translateX(-100%);
-    /* oculto inicialmente a la izquierda */
-    transition: transform 260ms ease;
-    will-change: transform;
-  }
-
-  /* Cuando el overlay está visible, movemos el panel dentro */
-  .nav-movil.visible .nav-movil-inner {
-    transform: translateX(0);
-  }
-
-  /* Ajustes del icono hamburguesa (líneas) */
-  .btn-hamburguesa .hamb-line {
-    width: 20px;
-    height: 2px;
-    display: block;
-    margin: 3px 0;
-    background: currentColor;
-    transition: transform 0.18s ease, opacity 0.18s ease;
-  }
-
-  .btn-hamburguesa.active .hamb-line:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .btn-hamburguesa.active .hamb-line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .btn-hamburguesa.active .hamb-line:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  /* Evitar que el contenido del header empuje el botón a tamaños raros */
   header.cabecera {
-    height: auto;
     min-height: 56px;
+    height: auto;
+  }
+
+  /* ===========================
+     DROPDOWNS MÓVILES (centrados)
+     =========================== */
+
+  /* A) Dropdowns abiertos: fixed, centrados y por encima del hero */
+  #languageMenu.abierto,
+  #accesibilidadMenu.abierto,
+  .language-menu.abierto,
+  .accesibilidad-menu.abierto {
+    position: fixed !important;
+    top: calc(var(--alto-cabecera-mobile, 56px) + 8px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(92%, 360px) !important;
+    max-width: 92% !important;
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: calc(var(--navmovil-z) + 100) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  /* B) Asegurar z-index alto para menus específicos */
+  #languageMenu,
+  #accesibilidadMenu {
+    z-index: calc(var(--navmovil-z) + 110) !important;
+    position: fixed !important;
+  }
+
+  /* C) Evitar stacking context en hero/sections que tapen fixed */
+  .hero,
+  .seccion-hero,
+  .hero-section,
+  #hero {
+    transform: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    will-change: auto !important;
+    overflow: visible !important;
+  }
+
+  /* D) Cuando nav-movil está abierto, esconder controles de header para evitar solapamiento */
+  body.nav-abierto .cabecera-der,
+  body.nav-abierto .language-wrapper,
+  body.nav-abierto .accesibilidad-wrapper {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* Añadidos de parche para asegurar dropdown pegado y por encima */
+  #languageMenu.abierto,
+  #accesibilidadMenu.abierto {
+    position: fixed !important;
+    top: calc(var(--alto-cabecera-mobile, 56px) + 8px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(92%, 360px) !important;
+    max-width: 92% !important;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18) !important;
+    border-radius: 10px !important;
+    z-index: calc(var(--navmovil-z) + 120) !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform-origin: top center !important;
+  }
+
+  header.cabecera,
+  .cabecera-contenido,
+  .cabecera-izq,
+  .cabecera-nav,
+  .cabecera-der {
+    transform: none !important;
+    will-change: auto !important;
+  }
+
+  /* Asegurar overlay y ocultación controles */
+  body.nav-abierto header.cabecera,
+  body.nav-abierto #site-header {
+    z-index: calc(var(--navmovil-z) - 10) !important;
+  }
+
+  body.nav-abierto .language-wrapper,
+  body.nav-abierto .accesibilidad-wrapper {
+    display: none !important;
+  }
+
+  /* asegurar dropdowns por encima */
+  #languageMenu.abierto,
+  #accesibilidadMenu.abierto,
+  .nav-movil.visible {
+    z-index: calc(var(--navmovil-z) + 100) !important;
   }
 }
 
-/* INTERMEDIO (993 - 1200px) */
+/* --------------------------
+   Media range 993 - 1200px
+   -------------------------- */
 @media (min-width: 993px) and (max-width: 1200px) {
   .cabecera-contenido {
-    padding: 0.55rem 1rem;
+    padding: .55rem 1rem;
     gap: 10px;
-  }
-
-  :root {
-    --alto-cabecera: 64px;
-  }
-
-  /* Override específico para evitar alturas enormes */
-  header.cabecera .cabecera-contenido {
-    padding-top: 0.45rem !important;
-    padding-bottom: 0.45rem !important;
-    gap: 8px !important;
-    min-height: 62px !important;
-    box-sizing: border-box !important;
+    box-sizing: border-box
   }
 
   header.cabecera .cabecera-izq,
   header.cabecera .cabecera-der,
   header.cabecera .cabecera-nav {
-    align-items: center !important;
-    min-height: 62px !important;
+    align-items: center;
+    min-height: 62px
   }
 
   body {
-    padding-top: 62px !important;
-  }
-
-  /* Si en este rango el botón aparece, mantener tamaño razonable */
-  .btn-hamburguesa {
-    width: 40px;
-    height: 32px;
-    min-width: 40px;
+    padding-top: 62px
   }
 }
 
-/* ESCRITORIO GRANDE (>1200px) */
+/* --------------------------
+   Desktop (>= 1201px)
+   -------------------------- */
 @media (min-width: 1201px) {
-  .cabecera-nav .nav-lista {
-    gap: 26px;
+  .cabecera-contenido {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    box-sizing: border-box;
+    min-height: var(--alto-cabecera);
+    height: var(--alto-cabecera)
   }
 
+  header.cabecera {
+    display: block !important;
+    position: relative;
+    min-height: var(--alto-cabecera);
+    box-sizing: border-box;
+    z-index: var(--header-z);
+    padding-top: 0;
+    padding-bottom: 0
+  }
+
+  .cabecera-izq,
+  .cabecera-nav,
+  .cabecera-der {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box
+  }
+
+  body {
+    padding-top: var(--alto-cabecera)
+  }
+}
+
+/* --------------------------
+   ULTRA WIDE
+   -------------------------- */
+@media (min-width: 1600px) {
   :root {
-    --alto-cabecera: 78px;
+    --alto-cabecera: 88px
   }
 
-  /* En escritorio, normalmente ocultamos el botón hamburguesa */
-  .btn-hamburguesa {
-    display: none;
+  .cabecera-contenido {
+    max-width: 1600px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 28px;
+    min-height: var(--alto-cabecera);
+    height: var(--alto-cabecera)
+  }
+
+  header.cabecera {
+    min-height: var(--alto-cabecera)
+  }
+
+  body {
+    padding-top: var(--alto-cabecera)
   }
 }
 
-/* Animación hamburguesa (global) */
-.btn-hamburguesa.active .hamb-line:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+/* --------------------------
+   Z-index safety overrides
+   -------------------------- */
+header.cabecera {
+  z-index: var(--header-z) !important;
+  isolation: isolate !important;
 }
 
-.btn-hamburguesa.active .hamb-line:nth-child(2) {
-  opacity: 0;
+.cabecera-contenido,
+.cabecera-izq,
+.cabecera-der {
+  position: relative !important;
+  z-index: calc(var(--header-z)+1) !important
 }
 
-.btn-hamburguesa.active .hamb-line:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+.btn-hamburguesa,
+.header-controls-wrapper,
+.language-wrapper,
+.accesibilidad-wrapper {
+  position: relative !important;
+  z-index: calc(var(--header-z)+2) !important
 }
 
+/* Remove list bullets in language/accessibility menus (safety) */
+#languageMenu ul,
+#languageMenu li,
+#accesibilidadMenu ul,
+#accesibilidadMenu li,
+.language-menu ul,
+.language-menu li,
+.accesibilidad-menu ul,
+.accesibilidad-menu li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important
+}
+
+/* --------------------------
+  PATCH final: dropdowns más estrechos en desktop + dropdowns móviles por delante del hero
+  Pegar al final de headerStyles.css
+  -------------------------- */
+
+/* 1) Base: que los dropdowns tomen ancho según su contenido, con límites razonables */
+.language-menu,
+.accesibilidad-menu,
+.user-dropdown,
+#languageMenu,
+#accesibilidadMenu {
+  box-sizing: border-box !important;
+  width: auto !important;
+  /* no ocupar 100% */
+  min-width: 140px !important;
+  /* ancho mínimo */
+  max-width: 360px !important;
+  /* ancho máximo por defecto */
+  padding: 10px !important;
+  white-space: normal !important;
+  /* permitir saltos de línea */
+  word-break: break-word !important;
+  left: auto !important;
+  /* evitar reglas que fijen left:0 */
+  right: auto !important;
+  transform: none !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+}
+
+/* 2) Ajustes live según anchura (más estrecho en pantallas muy grandes) */
+@media (min-width: 1300px) {
+
+  .language-menu,
+  .accesibilidad-menu,
+  .user-dropdown,
+  #languageMenu,
+  #accesibilidadMenu {
+    max-width: 320px !important;
+  }
+}
+
+/* 3) Desktop: position fixed para evitar stacking contexts y permitir posicionamiento por JS */
+@media (min-width: 992px) {
+
+  .language-menu,
+  .accesibilidad-menu,
+  .user-dropdown,
+  #languageMenu,
+  #accesibilidadMenu {
+    position: fixed !important;
+    /* JS colocará top/left; si no hay JS quedarán centrados por CSS fallback */
+    z-index: 1200000 !important;
+    /* muy por encima del hero */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+/* 4) Mobile: asegurar dropdowns encima del hero y centrados */
+@media (max-width: 991px) {
+
+  .language-menu,
+  .accesibilidad-menu,
+  .user-dropdown,
+  #languageMenu,
+  #accesibilidadMenu {
+    position: fixed !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: calc(var(--header-height-mobile, 56px) + 8px) !important;
+    width: min(92%, 360px) !important;
+    max-width: 92% !important;
+    z-index: 1200000 !important;
+    /* encima de hero y overlay del nav-movil */
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  /* asegurar que overlay/nav-movil también están por debajo del dropdown si quieres
+     (si prefieres que el overlay cubra todo y el dropdown encima, deja esto; si no, ajústalo) */
+  .nav-movil {
+    z-index: 1200100 !important;
+  }
+
+  .nav-movil .nav-movil-inner {
+    z-index: 1200150 !important;
+  }
+}
+
+/* 5) Forzar que hero no genere stacking context que tape fixed (solo como último recurso) */
+.hero,
+.seccion-hero,
+.hero-section,
+#hero {
+  transform: none !important;
+  filter: none !important;
+  will-change: auto !important;
+  z-index: 0 !important;
+}
+
+/* 6) Opcional: si quieres que los items no ocupen tanto, reduce padding interno */
+.language-menu li,
+.accesibilidad-menu li,
+.user-dropdown li,
+#languageMenu li,
+#accesibilidadMenu li {
+  padding: 6px 10px !important;
+}
+
+/* 7) Safety: asegurar que botones login/user queden encima para poder activar dropdowns */
+.btn-login,
+.user-btn,
+.language-btn,
+.accesibilidad-btn {
+  position: relative !important;
+  z-index: 1200050 !important;
+}
+
+/* ---------------------------------------------------
+   Dropdown-portal: estilo para dropdowns reubicados en body
+   --------------------------------------------------- */
+.dropdown-portal {
+  position: fixed !important;
+  z-index: 1500000 !important;   /* muy por encima de todo */
+  min-width: 140px !important;
+  max-width: 360px !important;
+  background: #fff !important;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.18) !important;
+  border-radius: 8px !important;
+  padding: 8px 6px !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  box-sizing: border-box !important;
+}
+
+/* pequeños ajustes visuales */
+.dropdown-portal ul { margin:0; padding:0; list-style:none; }
+.dropdown-portal li { padding: 6px 10px; }
+
+/* si hay un overlay activo (ej. nav-movil), aseguramos que portal esté encima */
+.nav-movil.visible ~ .dropdown-portal,
+.dropdown-portal { z-index: 1500000 !important; }
+
+/* en móvil reducir ancho si hace falta */
+@media (max-width: 420px) {
+  .dropdown-portal { width: min(92%, 320px) !important; left: 50% !important; transform: translateX(-50%) !important; top: calc(var(--header-height-mobile,56px) + 8px) !important; }
+}

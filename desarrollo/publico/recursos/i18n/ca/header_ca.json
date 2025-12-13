@@ -1,0 +1,25 @@
+{
+    "header": {
+        "idiomaActual": "CAT",
+        "irInicio": "Anar a l'inici",
+        "abrirMenu": "Obrir menú",
+        "accesibilidad": "Accessibilitat",
+        "entrar": "Entrar",
+        "iniciarSesion": "Iniciar sessió",
+        "usuarioNombre": "",
+        "miPerfil": "El meu perfil",
+        "cerrarSesion": "Tancar sessió"
+    },
+    "nav": {
+        "inicio": "Inici",
+        "equipo": "Equip",
+        "servicios": "Serveis",
+        "blog": "Blog",
+        "contacto": "Contacte",
+        "panelAdmin": "Panell Admin"
+    },
+    "access": {
+        "aumentar": "A+",
+        "disminuir": "A-"
+    }
+}

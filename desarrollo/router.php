@@ -1,7 +1,7 @@
 <?php
 // Obtiene la ruta solicitada
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-$full = __DIR__ . $path;
+$full = ($_SERVER['DOCUMENT_ROOT'] ?? __DIR__) . $path;
 
 // Si el archivo solicitado existe (CSS, JS, imágenes...) lo servimos tal cual
 if ($path !== '/' && file_exists($full)) {

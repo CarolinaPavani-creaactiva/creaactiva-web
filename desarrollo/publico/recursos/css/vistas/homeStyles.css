@@ -95,7 +95,7 @@
     left: 60px;
     max-width: 400px;
     text-align: left;
-    color: var(--color-azul-medio);
+    color: #52abff;
     box-sizing: border-box;
 }
 
@@ -280,7 +280,7 @@
 }
 
 .numero {
-    color: var(--color-azul-claro);
+    color: var(--color-azul-medio);
     font-weight: 600;
     font-size: 1.3rem;
 }
@@ -588,4 +588,48 @@
 .blog-btn:hover {
     background-color: var(--color-azul-oscuro);
     transform: translateY(-2px);
+}
+
+/* =========================
+   FIX HERO STACKING CONTEXT
+   ========================= */
+
+/* Elementos hero principales — forzar que no creen stacking contexts */
+#hero,
+.hero,
+.seccion-hero,
+.home-hero,
+.hero-section,
+.hero-wrap {
+    position: relative !important;
+    z-index: 0 !important;
+    /* garantizar que el hero quede detrás */
+    transform: none !important;
+    filter: none !important;
+    will-change: auto !important;
+    opacity: 1 !important;
+}
+
+/* Evitar que hijos con transform creen nuevos stacking contexts
+   (aplicar a los contenedores internos más comunes) */
+#hero>*,
+.hero>*,
+.seccion-hero>* {
+    transform: none !important;
+    will-change: auto !important;
+    filter: none !important;
+}
+
+/* Si hay animaciones en el hero que deben preservarse, desactívalas
+   solo en anchos problemáticos (ej. <2000px) */
+@media (max-width: 1999px) {
+
+    #hero,
+    .hero,
+    .seccion-hero {
+        transform: none !important;
+        filter: none !important;
+        will-change: auto !important;
+        z-index: 0 !important;
+    }
 }

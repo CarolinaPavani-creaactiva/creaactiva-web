@@ -1,0 +1,240 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-size: 24px;
+}
+
+/* Contenedor del perfil */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Perfil */
+.perfil-contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0px; 
+}
+
+.bloque {
+    margin-bottom: 20px;
+}
+
+.bloque legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.campo input[type="file"] {
+    padding: 5px;
+}
+
+.campo small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #4e4e4e;
+}
+
+/* Estilo de avatar */
+.avatar-actual img,
+.avatar-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-nueva-preview {
+    margin-top: 20px;
+}
+
+.avatar-nueva-preview img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Alertas */
+.alerta {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alerta-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alerta-exito {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Botón principal */
+.boton-principal {
+    background-color: #0063cc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos adicionales para mejorar la estética */
+input[type="file"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #0063cc;
+}
+
+/* Ajuste para el formulario */
+.form-perfil {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Estilos para las leyendas en el formulario */
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    /* En pantallas pequeñas, los formularios se muestran en una sola columna */
+    .form-perfil {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reducir el tamaño del título en móviles */
+    h1 {
+        font-size: 28px;
+    }
+
+    /* Asegurar que los botones tengan un tamaño adecuado */
+    .boton-principal {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /* Ajustar el tamaño de las imágenes del avatar */
+    .avatar-actual img,
+    .avatar-preview,
+    .avatar-nueva-preview img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Ajustar el tamaño de las alertas */
+    .alerta {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* Hacer que el formulario de avatar ocupe el 100% */
+    .avatar-actual, .avatar-nueva-preview {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustar los campos de input */
+    .campo input {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* En pantallas muy pequeñas, aumentar el tamaño de los campos */
+    .campo input {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    /* Reducir el tamaño de las imágenes de avatar aún más */
+    .avatar-actual img,
+    .avatar-preview,
+    .avatar-nueva-preview img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Ajustar el título */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Asegurar que los campos no se vean demasiado grandes */
+    .form-perfil {
+        padding: 15px;
+    }
+
+    .campo label {
+        font-size: 14px;
+    }
+
+    /* Ajustar el botón de guardar */
+    .boton-principal {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+
+    /* Asegurar que las alertas también se ajusten */
+    .alerta {
+        font-size: 12px;
+    }
+}

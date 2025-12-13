@@ -1,0 +1,184 @@
+/* Pantallas grandes (Ultra Wide y pantallas de más de 1600px) */
+@media (max-width: 1600px) {
+    .panel-wrap {
+        flex-direction: row;
+    }
+
+    .panel-sidebar {
+        width: 250px;
+    }
+
+    .panel-main {
+        padding: 30px;
+    }
+
+    .table th,
+    .table td {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 140px;
+    }
+}
+
+/* Pantallas medianas (pantallas de 1200px hasta 1600px) */
+@media (max-width: 1200px) {
+    .panel-wrap {
+        flex-direction: row;
+    }
+
+    .panel-sidebar {
+        width: 230px;
+    }
+
+    .panel-main {
+        padding: 20px;
+    }
+
+    .table th,
+    .table td {
+        padding: 12px;
+    }
+
+    .btn {
+        width: 130px;
+    }
+}
+
+/* Pantallas pequeñas (tabletas y pantallas de hasta 992px) */
+@media (max-width: 992px) {
+    .panel-wrap {
+        flex-direction: column;
+    }
+
+    .panel-sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .panel-main {
+        padding: 20px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+
+    .btn {
+        width: 120px;
+    }
+}
+
+/* Pantallas móviles (pantallas de 768px hasta 600px) */
+@media (max-width: 768px) {
+    .panel-wrap {
+        flex-direction: column;
+    }
+
+    .panel-sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .panel-main {
+        padding: 20px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+    }
+
+    .btn {
+        width: 120px;
+        padding: 8px 12px;
+    }
+
+    .panel-sidebar a {
+        font-size: 14px;
+    }
+
+    h3,
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Pantallas muy pequeñas (móviles de menos de 600px) */
+@media (max-width: 600px) {
+    .panel-wrap {
+        flex-direction: column;
+    }
+
+    .panel-sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .panel-main {
+        padding: 20px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .panel-sidebar a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h3,
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Pantallas ultra pequeñas (móviles de menos de 400px) */
+@media (max-width: 400px) {
+    .panel-wrap {
+        flex-direction: column;
+    }
+
+    .panel-sidebar {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .panel-main {
+        padding: 15px;
+    }
+
+    .table th,
+    .table td {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .panel-sidebar a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    h3,
+    h2 {
+        font-size: 16px;
+    }
+}

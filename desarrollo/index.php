@@ -1,35 +1,54 @@
 <?php
+// index.php - Front controller mejorado
+session_start();
 
-//Cargar configuración, BASE_URL y helper url()
+// Cargar configuración, BASE_URL y helper url()
 require_once __DIR__ . '/bootstrap.php';
-
-//Incluir header
-include 'aplicacion/vistas/header.php';
 
 // Determinar qué vista / controlador cargar
 $page = $_GET['page'] ?? 'home';
 if ($page === '')
     $page = 'home';
 
-// Paths
+// Paths habituales
 $ctrlPath = __DIR__ . "/aplicacion/controladores/{$page}.php";
+$ctrlPrefixPath = __DIR__ . "/aplicacion/controladores/Controlador_{$page}.php";
 $viewPath = __DIR__ . "/aplicacion/vistas/{$page}.php";
 
-// Si existe un controlador, ejecutarlo y terminar
+// Intentar cargar controlador (primero el simple, si no existe el prefijado)
+$controllerLoaded = false;
+$handled = false;
+$renderView = false;
+
 if (file_exists($ctrlPath)) {
     require_once $ctrlPath;
-    
+    $controllerLoaded = true;
+} elseif (file_exists($ctrlPrefixPath)) {
+    require_once $ctrlPrefixPath;
+    $controllerLoaded = true;
 }
 
-// Si existe la vista, inclúyela 
-$allowed_pages = ['home', 'equipo', 'servicios', 'blog', 'contacto', 'login', 'admin', 'admin_actions', 'profile', 'profile_edit', 'logout'];
+if ($controllerLoaded) {
+    // Si el controlador indica que ya ha manejado la respuesta, salimos.
+    if (isset($handled) && $handled === true) {
+        exit;
+    }
+    // NOTA: no hacemos exit aquí. Dejar que el flujo normal renderice
+    // header -> vista -> footer a menos que $handled sea true.
+}
+
+// Incluir header
+include __DIR__ . '/aplicacion/vistas/header.php';
+
+// Lista blanca de vistas permitidas
+$allowed_pages = ['home', 'equipo', 'servicios', 'blog', 'contacto', 'login', 'admin', 'admin_actions', 'perfil', 'panelAdmin', 'logout'];
+
 if (in_array($page, $allowed_pages) && file_exists($viewPath)) {
     include $viewPath;
 } else {
-    include "404.php";
+    include __DIR__ . '/404.php';
 }
 
-//Incluir footer
-include 'aplicacion/vistas/footer.php';
-
+// Incluir footer
+include __DIR__ . '/aplicacion/vistas/footer.php';
 ?>

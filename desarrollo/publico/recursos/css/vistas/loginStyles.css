@@ -1,111 +1,169 @@
-@import url('../base/_variables.css');
-@import url('../base/_layout.css');
-@import url('./responsive/respLogin.css');
+/* ===== LOGIN STYLES ===== */
 
-/* ========== CONTENEDOR GENERAL ========== */
-.login-contenedor {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f5f7f9;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-/* ========== TARJETA ========== */
-.login-tarjeta {
+/* General container for login */
+.login-container {
     width: 100%;
-    max-width: 420px;
+    max-width: 450px;
+    margin: 50px auto; /* Adding margin-top to center the form on the page */
+    padding: 30px;
     background: #ffffff;
-    padding: 2.2rem;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-radius: 16px; /* Larger radius for smoother edges */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
     text-align: center;
-    border-top: 4px solid var(--color-azul-medio, #004aad);
-    box-sizing: border-box;
+    border: 1px solid #ddd; /* Subtle border to define the form */
+    transition: all 0.3s ease; /* Smooth hover effect */
 }
 
-.login-titulo {
-    margin: 0 0 1rem 0;
-    font-size: 1.6rem;
-    color: var(--color-azul-oscuro, #002b5c);
+.login-container:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Hover effect for container */
+}
+
+/* Title styles */
+.login-container h1 {
+    font-size: 2rem;
+    color: var(--color-azul-medio, #004aad);
+    margin-bottom: 25px;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
-/* ========== ERRORES ========== */
+/* Error messages */
 .login-error {
-    background: #fff2f2;
-    color: #a61b1b;
-    padding: 10px 14px;
+    background: #ffe6e6;
+    color: #900;
+    padding: 15px;
     border-radius: 8px;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
     font-size: 0.95rem;
+    text-align: left;
     border: 1px solid #ffd7d7;
-    text-align: left;
 }
 
-/* ========== FORMULARIO ========== */
-.login-formulario {
-    text-align: left;
-}
-
+/* Form field container */
 .login-campo {
-    margin-bottom: 1rem;
+    margin-bottom: 25px; /* Increased margin between fields */
+    text-align: left;
 }
 
+/* Input labels */
 .login-campo label {
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     color: #333;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
+/* Input fields */
 .login-campo input {
     width: 100%;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid rgba(10,30,60,0.12);
+    padding: 14px 18px;
+    border-radius: 10px; /* More rounded borders */
+    border: 1px solid #ddd;
     font-size: 1rem;
-    transition: border-color .2s ease, box-shadow .12s ease;
+    transition: border-color 0.3s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
+    margin-top: 8px;
+    background: #f9f9f9;
 }
 
 .login-campo input:focus {
     outline: none;
     border-color: var(--color-azul-medio, #004aad);
-    box-shadow: 0 6px 18px rgba(3,102,214,0.06);
+    box-shadow: 0 6px 18px rgba(0, 74, 173, 0.15);
+    background-color: #fff; /* Slight color change on focus */
 }
 
-/* ========== BOTÓN ========== */
-.login-boton {
+/* Help text */
+.help {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Submit button */
+.btn-login {
     width: 100%;
-    padding: 12px;
-    margin-top: 6px;
-    background: var(--color-azul-medio, #004aad);
+    padding: 14px;
+    background: var(--color-azul-medio, #1171ee);
+    color: #fff;
     border: none;
     border-radius: 10px;
-    color: #fff;
-    font-size: 1.03rem;
+    font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background .18s ease, transform .08s ease, box-shadow .12s;
-    box-shadow: 0 6px 14px rgba(8,40,80,0.06);
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 6px 14px rgba(8, 40, 80, 0.06);
+    text-transform: uppercase; /* Makes "Entrar" text more uniform */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 50px; /* Set a fixed height to ensure centering works well */
 }
 
-.login-boton:hover {
-    background: var(--color-azul-oscuro, #002b5c);
+.btn-login:hover {
+    background: var(--color-azul-oscuro, #003c8d);
     transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(8,40,80,0.08);
 }
 
-.login-boton:active {
+.btn-login:active {
     transform: translateY(0);
 }
 
-/* ========== PEQUEÑOS AJUSTES ========== */
-.login-campo input::placeholder {
-    color: #98a0aa;
+/* Registration link */
+.login-registro {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #333;
 }
 
+.login-registro a {
+    color: var(--color-azul-medio, #004aad);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-registro a:hover {
+    text-decoration: underline;
+}
+
+
+.btn-salir {
+  background: #2F73D6; /* azul más claro */
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  width: 100%; /* esto hace que quede alineado sin parecer flotante */
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.btn-salir:hover {
+  background: #5d96ec;
+}
+
+
+.user-btn {
+  background: var(--blue-dark) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: .45rem .8rem;
+  border-radius: 8px;
+}
+
+.user-btn:hover {
+  background: var(--blue-mid) !important;
+}
+
+
+.user-dropdown li.logout-item {
+    padding: 6px 10px;   /* igual que los otros */
+    text-align: center;  /* centra solo dentro del li */
+}
+
+.user-dropdown li.logout-item form {
+    margin: 0;           /* elimina separación extra */
+    padding: 0;
+}
