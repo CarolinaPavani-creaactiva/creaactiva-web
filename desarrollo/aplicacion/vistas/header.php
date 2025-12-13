@@ -1,7 +1,3 @@
-<?php
-// header.php - abre documento, coloca <head> y abre <body>
-// No se ejecuta session_start() aquí (index.php ya lo hace)
-?>
 <!doctype html>
 <html lang="ca">
 
@@ -114,9 +110,6 @@
                         <a href="<?= url('login') ?>" class="btn-login" id="loginBtn">Entrar</a>
                     <?php endif; ?>
                 </div>
-
-
-
             </div>
 
             <!-- Menú móvil (overlay + panel) -->

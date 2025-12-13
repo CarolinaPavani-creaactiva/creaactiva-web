@@ -1,13 +1,6 @@
-/* ===========================================================
-   respHeader.css (correcciones móviles / tablet)
-   Integrado con headerStyles.css:
-   - botón hamburguesa visible en móvil
-   - nav-movil overlay/panel correcto
-   - dropdowns flotantes centrados en móvil
-   - manejo de z-index / stacking contexts
-   =========================================================== */
-
-/* Variables (coherentes con headerStyles) */
+/* --------------------------
+   Variables CSS
+   -------------------------- */
 :root {
   --alto-cabecera: 84px;
   --alto-cabecera-mobile: 56px;
@@ -17,7 +10,7 @@
 }
 
 /* --------------------------
-   Base: esconder burger por defecto (desktop)
+   Base: reset y estilos globales
    -------------------------- */
 header.cabecera .btn-hamburguesa,
 .btn-hamburguesa {
@@ -119,7 +112,7 @@ header.cabecera,
     display: none !important;
   }
 
-  /* NAV MÓVIL: overlay + panel (full viewport overlay) */
+  
   .nav-movil {
     display: none;
     position: fixed;
@@ -129,7 +122,6 @@ header.cabecera,
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* States: hidden vs visible */
   .nav-movil[aria-hidden="true"],
   .nav-movil:not(.visible) {
     display: none !important;
@@ -142,7 +134,6 @@ header.cabecera,
     backdrop-filter: blur(2px);
   }
 
-  /* Panel interior: fixed from left (matches headerStyles) */
   .nav-movil .nav-movil-inner {
     position: fixed;
     left: 0;
@@ -228,8 +219,7 @@ header.cabecera,
     visibility: hidden !important;
     pointer-events: none !important;
   }
-
-  /* Añadidos de parche para asegurar dropdown pegado y por encima */
+  /* E) Asegurar dropdowns por encima del nav-movil */
   #languageMenu.abierto,
   #accesibilidadMenu.abierto {
     position: fixed !important;
@@ -245,7 +235,7 @@ header.cabecera,
     pointer-events: auto !important;
     transform-origin: top center !important;
   }
-
+  /* F) Asegurar que hero no genera stacking context que tape fixed */
   header.cabecera,
   .cabecera-contenido,
   .cabecera-izq,
@@ -255,7 +245,7 @@ header.cabecera,
     will-change: auto !important;
   }
 
-  /* Asegurar overlay y ocultación controles */
+  /* G) Ajustes de z-index para evitar solapamientos */
   body.nav-abierto header.cabecera,
   body.nav-abierto #site-header {
     z-index: calc(var(--navmovil-z) - 10) !important;
@@ -266,7 +256,7 @@ header.cabecera,
     display: none !important;
   }
 
-  /* asegurar dropdowns por encima */
+  
   #languageMenu.abierto,
   #accesibilidadMenu.abierto,
   .nav-movil.visible {
@@ -388,7 +378,6 @@ header.cabecera {
   z-index: calc(var(--header-z)+2) !important
 }
 
-/* Remove list bullets in language/accessibility menus (safety) */
 #languageMenu ul,
 #languageMenu li,
 #accesibilidadMenu ul,
@@ -403,11 +392,9 @@ header.cabecera {
 }
 
 /* --------------------------
-  PATCH final: dropdowns más estrechos en desktop + dropdowns móviles por delante del hero
-  Pegar al final de headerStyles.css
-  -------------------------- */
-
-/* 1) Base: que los dropdowns tomen ancho según su contenido, con límites razonables */
+   DROPDOWNS: estilos generales para todos los dropdowns
+   -------------------------- */
+   
 .language-menu,
 .accesibilidad-menu,
 .user-dropdown,
@@ -432,7 +419,6 @@ header.cabecera {
   background: #fff !important;
 }
 
-/* 2) Ajustes live según anchura (más estrecho en pantallas muy grandes) */
 @media (min-width: 1300px) {
 
   .language-menu,
@@ -444,7 +430,6 @@ header.cabecera {
   }
 }
 
-/* 3) Desktop: position fixed para evitar stacking contexts y permitir posicionamiento por JS */
 @media (min-width: 992px) {
 
   .language-menu,
@@ -453,14 +438,11 @@ header.cabecera {
   #languageMenu,
   #accesibilidadMenu {
     position: fixed !important;
-    /* JS colocará top/left; si no hay JS quedarán centrados por CSS fallback */
     z-index: 1200000 !important;
-    /* muy por encima del hero */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
   }
 }
 
-/* 4) Mobile: asegurar dropdowns encima del hero y centrados */
 @media (max-width: 991px) {
 
   .language-menu,
@@ -475,12 +457,9 @@ header.cabecera {
     width: min(92%, 360px) !important;
     max-width: 92% !important;
     z-index: 1200000 !important;
-    /* encima de hero y overlay del nav-movil */
     box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18) !important;
   }
 
-  /* asegurar que overlay/nav-movil también están por debajo del dropdown si quieres
-     (si prefieres que el overlay cubra todo y el dropdown encima, deja esto; si no, ajústalo) */
   .nav-movil {
     z-index: 1200100 !important;
   }
@@ -490,7 +469,6 @@ header.cabecera {
   }
 }
 
-/* 5) Forzar que hero no genere stacking context que tape fixed (solo como último recurso) */
 .hero,
 .seccion-hero,
 .hero-section,
@@ -501,7 +479,6 @@ header.cabecera {
   z-index: 0 !important;
 }
 
-/* 6) Opcional: si quieres que los items no ocupen tanto, reduce padding interno */
 .language-menu li,
 .accesibilidad-menu li,
 .user-dropdown li,
@@ -510,7 +487,6 @@ header.cabecera {
   padding: 6px 10px !important;
 }
 
-/* 7) Safety: asegurar que botones login/user queden encima para poder activar dropdowns */
 .btn-login,
 .user-btn,
 .language-btn,
@@ -524,7 +500,7 @@ header.cabecera {
    --------------------------------------------------- */
 .dropdown-portal {
   position: fixed !important;
-  z-index: 1500000 !important;   /* muy por encima de todo */
+  z-index: 1500000 !important;   
   min-width: 140px !important;
   max-width: 360px !important;
   background: #fff !important;
@@ -538,15 +514,12 @@ header.cabecera {
   box-sizing: border-box !important;
 }
 
-/* pequeños ajustes visuales */
 .dropdown-portal ul { margin:0; padding:0; list-style:none; }
 .dropdown-portal li { padding: 6px 10px; }
 
-/* si hay un overlay activo (ej. nav-movil), aseguramos que portal esté encima */
 .nav-movil.visible ~ .dropdown-portal,
 .dropdown-portal { z-index: 1500000 !important; }
 
-/* en móvil reducir ancho si hace falta */
 @media (max-width: 420px) {
   .dropdown-portal { width: min(92%, 320px) !important; left: 50% !important; transform: translateX(-50%) !important; top: calc(var(--header-height-mobile,56px) + 8px) !important; }
 }

@@ -4,8 +4,6 @@
 
 /* ============================================
    HOME PAGE — ESTILOS PRINCIPALES
-   (Correcciones para centrar contenido y evitar
-   márgenes laterales en móvil)
 ============================================ */
 
 /* Contenedor principal */
@@ -34,7 +32,6 @@
     box-sizing: border-box;
 }
 
-/* Contenido del hero centrado y con límite de anchura */
 .cabecera-contenido {
     display: flex;
     justify-content: center;
@@ -47,7 +44,6 @@
     box-sizing: border-box;
 }
 
-/* Contenedor azul claro: ahora responsive (max-width + width:100%) */
 .caja-azul-claro {
     max-width: 1178px;
     width: 100%;
@@ -63,7 +59,6 @@
     padding: 0 1rem;
 }
 
-/* Contenedor azul oscuro dentro del claro */
 .caja-azul-oscuro {
     max-width: 907px;
     width: 100%;
@@ -78,7 +73,6 @@
     box-sizing: border-box;
 }
 
-/* Imagen dentro del hero: ocupa el contenedor sin forzar overflow */
 .caja-azul-oscuro img {
     width: 100%;
     height: auto;
@@ -89,7 +83,6 @@
     display: block;
 }
 
-/* Texto dentro del hero: relativo al contenedor, usa left en desktop */
 .texto-hero {
     position: absolute;
     left: 60px;
@@ -590,11 +583,7 @@
     transform: translateY(-2px);
 }
 
-/* =========================
-   FIX HERO STACKING CONTEXT
-   ========================= */
 
-/* Elementos hero principales — forzar que no creen stacking contexts */
 #hero,
 .hero,
 .seccion-hero,
@@ -603,15 +592,12 @@
 .hero-wrap {
     position: relative !important;
     z-index: 0 !important;
-    /* garantizar que el hero quede detrás */
     transform: none !important;
     filter: none !important;
     will-change: auto !important;
     opacity: 1 !important;
 }
 
-/* Evitar que hijos con transform creen nuevos stacking contexts
-   (aplicar a los contenedores internos más comunes) */
 #hero>*,
 .hero>*,
 .seccion-hero>* {
@@ -620,8 +606,6 @@
     filter: none !important;
 }
 
-/* Si hay animaciones en el hero que deben preservarse, desactívalas
-   solo en anchos problemáticos (ej. <2000px) */
 @media (max-width: 1999px) {
 
     #hero,

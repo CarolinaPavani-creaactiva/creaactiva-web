@@ -17,7 +17,7 @@
                 <p data-i18n="cabecera.descripcion">Ofrecemos soluciones integrales para la formación, gestión y
                     digitalización educativa.</p>
                 <button class="btn-principal" data-i18n="cabecera.boton">
-                    <!-- Si quieres que haga algo, poner <a href="<?= url('contacto') ?>">Consultar tarifas</a> -->
+                    <?= url('contacto') ?>">Consultar tarifas</a>
                     Consultar tarifas
                 </button>
             </div>

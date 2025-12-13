@@ -1,5 +1,4 @@
 // publico/recursos/js/accesibilidad.js
-// Manejo local del menú de accesibilidad (A+ / A-). NO captura clicks globales.
 
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("accesibilidadBtn");

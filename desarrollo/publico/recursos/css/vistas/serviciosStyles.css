@@ -5,9 +5,6 @@
    ESTILOS SERVICIOS
 ============================================================ */
 
-/* ------------------------------
-   RESET DE SECCIÓN
------------------------------- */
 section {
   width: 100%;
   margin: 0 auto;
@@ -27,7 +24,6 @@ section {
   width: 100%;
   min-height: 739px;
 
-  /* 🟦 CORREGIDO: CENTRADO REAL */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,11 +37,10 @@ section {
   width: 100%;
 }
 
-/* 🟩 CORREGIDO: CONTENIDO PERFECTAMENTE CENTRADO */
 .serviciosCabecera-contenido {
   display: flex;
   align-items: center;
-  justify-content: center;  /* <--- CAMBIADO */
+  justify-content: center; 
   gap: 4rem;
   width: 100%;
 }
@@ -68,7 +63,7 @@ section {
   text-align: left;
 }
 
-/* Botón centrado (funcionando) */
+/* Botón centrado*/
 .btn-principal {
   background-color: var(--color-azul-medio);
   color: #fff;
@@ -79,7 +74,6 @@ section {
   cursor: pointer;
   transition: all 0.3s ease;
 
-  /* 🟦 CENTRADO REAL DEL BOTÓN */
   align-self: center;
 }
 
@@ -116,7 +110,6 @@ section {
   justify-content: center;
 }
 
-/* TABLA */
 .tabla-comparativa {
   width: 100%;
   max-width: 900px;
@@ -160,7 +153,6 @@ section {
   width: 140px;
 }
 
-/* ICONOS */
 .tabla-comparativa td img {
   display: inline-block;
   object-fit: contain;
@@ -169,14 +161,12 @@ section {
   opacity: 0.95;
 }
 
-/* Tick */
 .tabla-comparativa td img[src*="tick"] {
   width: 26px;
   height: 26px;
   filter: brightness(0) saturate(100%) invert(33%) sepia(94%) saturate(1334%) hue-rotate(186deg) brightness(97%) contrast(101%);
 }
 
-/* Cross */
 .tabla-comparativa td img[src*="cross"] {
   width: 22px;
   height: 22px;
@@ -219,7 +209,6 @@ section {
   gap: 2rem;
   margin-bottom: 2.5rem;
 
-  /* 🟧 CORREGIDO: evitar pegarse al borde */
   padding: 0 1.5rem;
 }
 
@@ -255,7 +244,6 @@ section {
   margin-bottom: 1rem;
 }
 
-/* LISTA */
 .tarjeta ul {
   list-style: none;
   padding: 0;
@@ -316,7 +304,6 @@ section {
   overflow-x: auto;
   scroll-behavior: smooth;
 
-  /* 🟧 CORREGIDO: padding que evita cortes */
   padding: 0 1.2rem;
   scroll-padding-left: 1.2rem;
 
@@ -386,13 +373,13 @@ section {
    CONTACTO – ESTILOS BASE
 ============================ */
 .seccion-contacto {
-    padding: 4rem 2rem;      /* → separa del borde en PC y tablet */
+    padding: 4rem 2rem;      
     box-sizing: border-box;
 }
 
 .contenedor-contacto {
-    max-width: 900px;        /* → evita que el texto se extienda demasiado */
-    margin: 0 auto;          /* → centra todo */
+    max-width: 900px;       
+    margin: 0 auto;         
 }
 
 /* ============================================================

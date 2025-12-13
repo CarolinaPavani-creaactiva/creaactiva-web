@@ -1,22 +1,18 @@
-/* Responsive */
 @media (max-width: 768px) {
-    /* En pantallas pequeñas, los formularios se muestran en una sola columna */
+
     .form-perfil {
         grid-template-columns: 1fr;
     }
 
-    /* Reducir el tamaño del título en móviles */
     h1 {
         font-size: 28px;
     }
 
-    /* Asegurar que los botones tengan un tamaño adecuado */
     .boton-principal {
         padding: 10px 15px;
         font-size: 14px;
     }
 
-    /* Ajustar el tamaño de las imágenes del avatar */
     .avatar-actual img,
     .avatar-preview,
     .avatar-nueva-preview img {
@@ -24,20 +20,17 @@
         height: 80px;
     }
 
-    /* Ajustar el tamaño de las alertas */
     .alerta {
         font-size: 14px;
         padding: 10px;
     }
 
-    /* Hacer que el formulario de avatar ocupe el 100% */
     .avatar-actual, .avatar-nueva-preview {
         display: block;
         width: 100%;
         text-align: center;
     }
 
-    /* Ajustar los campos de input */
     .campo input {
         padding: 12px;
         font-size: 14px;
@@ -45,13 +38,11 @@
 }
 
 @media (max-width: 480px) {
-    /* En pantallas muy pequeñas, aumentar el tamaño de los campos */
     .campo input {
         font-size: 16px;
         padding: 15px;
     }
 
-    /* Reducir el tamaño de las imágenes de avatar aún más */
     .avatar-actual img,
     .avatar-preview,
     .avatar-nueva-preview img {
@@ -59,12 +50,10 @@
         height: 60px;
     }
 
-    /* Ajustar el título */
     h1 {
         font-size: 24px;
     }
 
-    /* Asegurar que los campos no se vean demasiado grandes */
     .form-perfil {
         padding: 15px;
     }
@@ -75,13 +64,11 @@
         font-size: 14px;
     }
 
-    /* Ajustar el botón de guardar */
     .boton-principal {
         font-size: 14px;
         padding: 12px 18px;
     }
 
-    /* Asegurar que las alertas también se ajusten */
     .alerta {
         font-size: 12px;
     }

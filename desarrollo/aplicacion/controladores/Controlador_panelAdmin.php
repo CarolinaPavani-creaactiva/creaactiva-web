@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = intval($_POST['id'] ?? 0);
             $name = trim($_POST['name'] ?? '');
             $email = trim($_POST['email'] ?? '');
-            $password = $_POST['password'] ?? ''; // opcional: si vacío no cambiar
+            $password = $_POST['password'] ?? ''; 
             $role = $_POST['role'] ?? 'usuario';
 
             if ($id <= 0)

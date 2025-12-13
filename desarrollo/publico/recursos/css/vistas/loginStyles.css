@@ -1,24 +1,23 @@
 /* ===== LOGIN STYLES ===== */
 
-/* General container for login */
 .login-container {
     width: 100%;
     max-width: 450px;
-    margin: 50px auto; /* Adding margin-top to center the form on the page */
+    margin: 50px auto; 
     padding: 30px;
     background: #ffffff;
-    border-radius: 16px; /* Larger radius for smoother edges */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 16px; 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1); 
     text-align: center;
-    border: 1px solid #ddd; /* Subtle border to define the form */
-    transition: all 0.3s ease; /* Smooth hover effect */
+    border: 1px solid #ddd; 
+    transition: all 0.3s ease; 
 }
 
 .login-container:hover {
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Hover effect for container */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
 }
 
-/* Title styles */
+  
 .login-container h1 {
     font-size: 2rem;
     color: var(--color-azul-medio, #004aad);
@@ -27,7 +26,6 @@
     letter-spacing: 1px;
 }
 
-/* Error messages */
 .login-error {
     background: #ffe6e6;
     color: #900;
@@ -39,13 +37,11 @@
     border: 1px solid #ffd7d7;
 }
 
-/* Form field container */
 .login-campo {
-    margin-bottom: 25px; /* Increased margin between fields */
+    margin-bottom: 25px; 
     text-align: left;
 }
 
-/* Input labels */
 .login-campo label {
     display: block;
     margin-bottom: 8px;
@@ -54,11 +50,10 @@
     font-size: 1rem;
 }
 
-/* Input fields */
 .login-campo input {
     width: 100%;
     padding: 14px 18px;
-    border-radius: 10px; /* More rounded borders */
+    border-radius: 10px;
     border: 1px solid #ddd;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.2s ease;
@@ -71,17 +66,15 @@
     outline: none;
     border-color: var(--color-azul-medio, #004aad);
     box-shadow: 0 6px 18px rgba(0, 74, 173, 0.15);
-    background-color: #fff; /* Slight color change on focus */
+    background-color: #fff;
 }
 
-/* Help text */
 .help {
     font-size: 0.875rem;
     color: #666;
     margin-top: 4px;
 }
 
-/* Submit button */
 .btn-login {
     width: 100%;
     padding: 14px;
@@ -94,11 +87,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.1s ease;
     box-shadow: 0 6px 14px rgba(8, 40, 80, 0.06);
-    text-transform: uppercase; /* Makes "Entrar" text more uniform */
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 50px; /* Set a fixed height to ensure centering works well */
+    text-transform: uppercase; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 50px;
 }
 
 .btn-login:hover {
@@ -110,7 +103,6 @@
     transform: translateY(0);
 }
 
-/* Registration link */
 .login-registro {
     margin-top: 20px;
     font-size: 1rem;
@@ -129,12 +121,12 @@
 
 
 .btn-salir {
-  background: #2F73D6; /* azul más claro */
+  background: #2F73D6; 
   color: white;
   border: none;
   padding: 6px 16px;
   border-radius: 6px;
-  width: 100%; /* esto hace que quede alineado sin parecer flotante */
+  width: 100%; 
   cursor: pointer;
   font-weight: 600;
   transition: background .2s;
@@ -159,11 +151,11 @@
 
 
 .user-dropdown li.logout-item {
-    padding: 6px 10px;   /* igual que los otros */
-    text-align: center;  /* centra solo dentro del li */
+    padding: 6px 10px;   
+    text-align: center; 
 }
 
 .user-dropdown li.logout-item form {
-    margin: 0;           /* elimina separación extra */
+    margin: 0;           
     padding: 0;
 }

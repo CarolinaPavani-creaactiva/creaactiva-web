@@ -4,8 +4,8 @@
 /* ===== BLOG STYLES ===== */
 
 .blog-principal {
-    margin-top: 94px; /* igual a la altura del header */
-    min-height: 1200px; /* suficiente espacio para scroll y probar botón */
+    margin-top: 94px; 
+    min-height: 1200px; 
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -45,6 +45,5 @@ if (!isset($vistaActual)) {
         <p class="mnto_footer" data-i18n="mantenimiento.gracias">
             Gracias por tu paciencia y comprensión
         </p>
-
     </div>
 </div>

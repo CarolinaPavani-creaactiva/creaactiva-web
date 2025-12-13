@@ -34,6 +34,4 @@
 
         <button type="submit" class="btn-login">Entrar</button>
     </form>
-
-
 </div>

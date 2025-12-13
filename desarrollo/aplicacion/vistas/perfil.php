@@ -1,5 +1,4 @@
 <?php
-
 if (!function_exists('url')) {
     function url($ruta = '') { return '/' . ltrim($ruta, '/'); }
 }

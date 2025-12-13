@@ -33,8 +33,6 @@ if ($controllerLoaded) {
     if (isset($handled) && $handled === true) {
         exit;
     }
-    // NOTA: no hacemos exit aquí. Dejar que el flujo normal renderice
-    // header -> vista -> footer a menos que $handled sea true.
 }
 
 // Incluir header

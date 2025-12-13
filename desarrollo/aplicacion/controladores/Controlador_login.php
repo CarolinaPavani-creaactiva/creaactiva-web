@@ -1,10 +1,5 @@
 <?php
 // aplicacion/controladores/Controlador_login.php
-// Controlador de login (producción) con redirección por rol:
-// - Si role === 'admin' -> ?page=panelAdmin
-// - Si role !== 'admin' -> ?page=inicio
-// Mantiene CSRF, migración de hashes legacy y mensajes en modo development.
-
 $renderView = false;
 $handled = false;
 

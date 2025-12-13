@@ -1,6 +1,6 @@
 <?php
 // Modelo_login.php
-// Funciones simples para gestionar usuarios (usa PDO desde el controlador recomendado)
+// Funciones simples para gestionar usuarios
 
 function crear_usuario(PDO $pdo, string $email, string $password, string $nombre = '', string $rol = 'usuario') {
     $hash = password_hash($password, PASSWORD_DEFAULT);

@@ -1,7 +1,5 @@
 /* =============================================
    MOBILE (320px – 480px)
-   2 columnas (arriba Crea Activa + Departamentos,
-   abajo Leer sobre + Soporte)
 ============================================= */
 @media (max-width: 480px) {
 
@@ -15,7 +13,6 @@
     width: 100%;
   }
 
-  /* Ajuste fuerte: evitar que se corten palabras */
   .f_col {
     min-width: 0 !important;
     word-break: normal !important;

@@ -1,10 +1,3 @@
-<?php
-// aplicacion/vistas/panelAdmin.php
-// Vista del Panel de Administración
-// Utiliza variables provenientes del controlador:
-// $errors, $messages, $users, $userToEdit, $token_csrf, $action, $old
-?>
-
 <!-- Estilos principales de tu proyecto -->
 <link rel="stylesheet" href="<?php echo $mainStyles; ?>">
 

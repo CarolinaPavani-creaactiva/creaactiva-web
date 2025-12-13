@@ -33,7 +33,7 @@ h3, h2 {
     color: #fff; 
 }
 
-/* Texto de los enlaces del panel de administración (más contraste) */
+/* Texto de los enlaces del panel de administración*/
 .panel-sidebar a {
     color: #ddd;
     font-weight: bold;

@@ -1,11 +1,4 @@
-/* publico/recursos/js/i18n.js
-   i18n robusto (carga tolerante de JSON, merge y dropdown accesible)
-   - Intenta múltiples nombres de fichero para evitar 404 si algunas páginas
-     usan "mantenimiento" en lugar de "desarrollo", etc.
-   - Mapea "va"/"val" -> "ca".
-   - No rompe si falta un JSON; usa FALLBACK mínimo para header/nav.
-   - Manejo accesible y robusto del dropdown de idioma integrado.
-*/
+/* publico/recursos/js/i18n.js*/
 
 (function () {
   'use strict';
@@ -109,7 +102,6 @@
     });
 
     var urls = [];
-    // header/common/footer: con sufijo de idioma o sin él
     var headerCandidates = ['header_' + folder + '.json', 'header.json'];
     var commonCandidates = ['common_' + folder + '.json', 'common.json'];
     var footerCandidates = ['footer_' + folder + '.json', 'footer.json'];
@@ -125,14 +117,13 @@
 
     footerCandidates.forEach(function (f) { urls.push(base + '/' + folder + '/' + f); });
 
-    // dedup
+    // eliminar duplicados
     var seen = {};
     urls = urls.filter(function (u) { if (seen[u]) return false; seen[u] = true; return true; });
 
     return urls;
   }
-
-  // --- Fetch tolerante ---
+  // --- Carga tolerante de JSON ---
   function fetchJsonTry(url) {
     if (CACHE[url]) return Promise.resolve(CACHE[url]);
     return fetch(url, { cache: 'no-store' }).then(function (res) {
@@ -149,7 +140,6 @@
     });
   }
 
-  // --- Merge helper (fusión superficial; subobjetos se mergean shallow) ---
   function mergeJsons(arr) {
     var merged = {};
     arr.forEach(function (o) {
@@ -195,14 +185,13 @@
       else el.textContent = val;
     });
 
-    // placeholders
     Array.from(document.querySelectorAll('[data-i18n-placeholder]')).forEach(function (el) {
       var key = el.getAttribute('data-i18n-placeholder');
       var v = getByPath(jsonMerged, key);
       if (v !== undefined) el.setAttribute('placeholder', v);
     });
 
-    // title attributes
+
     Array.from(document.querySelectorAll('[data-i18n-title]')).forEach(function (el) {
       var key = el.getAttribute('data-i18n-title');
       var v = getByPath(jsonMerged, key);
@@ -228,19 +217,17 @@
       }
     }
   }
-
-  // --- Core loader: intenta múltiples URLs y mergea resultados ---
+  // --- Carga y aplicación completa ---
   function loadAndApply() {
     var lang = getSavedLang() || (navigator.language || '').slice(0, 2) || 'es';
     lang = (lang === 'va') ? 'ca' : (lang ? lang.slice(0, 2) : 'es');
     var page = detectPageSafe();
 
     var urls = candidateUrlsFor(lang, page);
-    // map a promesas tolerantes
     var promises = urls.map(function (u) { return fetchJsonTry(u); });
 
     return Promise.all(promises).then(function (results) {
-      // results es array de objetos (muchos serán {} si no existen)
+      // results es array de objetos
       var merged = mergeJsons(results);
       // asegurar header/nav/footer fallback
       var headFallback = FALLBACK[lang] || FALLBACK['es'];

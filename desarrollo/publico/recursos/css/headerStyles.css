@@ -310,7 +310,6 @@ header.cabecera {
   transform: none;
 }
 
-/* hide header controls while nav open */
 body.nav-abierto {
   overflow: hidden;
 }
@@ -322,9 +321,6 @@ body.nav-abierto .cabecera-der {
   pointer-events: none;
 }
 
-/* ----------------------
-   Stacking context safety
-   ---------------------- */
 .hero,
 .seccion-hero,
 .hero-section,
@@ -335,9 +331,6 @@ body.nav-abierto .cabecera-der {
   z-index: 0 !important;
 }
 
-/* ----------------------
-   Desktop tweaks
-   ---------------------- */
 @media(min-width:1200px) {
   header.cabecera {
     height: var(--header-h);
@@ -352,9 +345,6 @@ body.nav-abierto .cabecera-der {
   }
 }
 
-/* ----------------------
-   Small helpers
-   ---------------------- */
 .caret {
   margin-left: 6px;
   font-size: .75em;

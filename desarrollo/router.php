@@ -8,11 +8,6 @@ if ($path !== '/' && file_exists($full)) {
     return false; 
 }
 
-// Emula las reglas del .htaccess:
-// /home → index.php?page=home
-// /equipo → index.php?page=equipo
-// /login → index.php?page=login
-
 $segment = trim($path, '/');
 
 if ($segment === '' || $segment === 'index.php') {

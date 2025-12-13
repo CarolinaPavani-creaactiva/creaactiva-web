@@ -114,6 +114,6 @@ body, html {
 
     .mnto_imagen {
         width: 95%;
-        height: 180px; /* rectangular también en móvil */
+        height: 180px; 
     }
 }
